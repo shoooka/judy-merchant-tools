@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-23T20:43 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-23T21:25 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -117,7 +117,7 @@ window.JT_I18N.ar = {
     cat: { performance: 'السرعة على الجوال', seo: 'جاهزية قوقل', accessibility: 'سهولة الاستخدام', 'best-practices': 'سلامة المتجر' },
     lv: { good: 'ممتاز', mid: 'يحتاج تحسين', bad: 'ضعيف' },
     strong: 'نقاط القوة', weak: 'أهم نقاط الضعف', noWeak: 'ما لقينا نقاط ضعف واضحة. ممتاز!',
-    moreN: 'وفيه {n} نقاط ثانية مع شرحها في التقرير الكامل.',
+    moreN: 'وفيه نقاط ثانية عددها {n}، وشرحها في التقرير الكامل.',
     leadT: 'خذ التقرير الكامل PDF', leadP: 'كل النقاط ({n}) مع شرح بسيط لكل نقطة ومين يصلحها: أنت، أو الثيم، أو مصمم المتجر.', leadBtn: 'نزل التقرير',
     pdfTitle: 'تقرير فحص المتجر', pdfAll: 'كل النقاط اللي تحتاج تحسين ({n})', whoL: 'مين يصلحها:',
     who: { you: 'أنت من لوحة سلة', theme: 'الثيم أو سلة، ويخف أثرها بتصميم مرتب', designer: 'مصمم المتجر (نقدر نسويها لك)', dev: 'مبرمج أو مصمم المتجر' },
