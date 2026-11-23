@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-23T15:02 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-23T15:13 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -1161,20 +1161,32 @@ window.JT_THEMES_DATE = '2026-11-22';
   };
 
   /* ---------- mount on Salla (re-mount after the React storefront re-renders) ---------- */
-  var mounted = null;
+  var mounted = null, sig = '';
+  // the Raed storefront can swap pages in place (no reload): undo everything when the page changes
+  function unmount() {
+    if (mounted && mounted.parentNode) mounted.parentNode.removeChild(mounted);
+    [].forEach.call(document.querySelectorAll('.jt-hidden-host'), function (x) { x.classList.remove('jt-hidden-host'); });
+    document.body.classList.remove('jt-page');
+    mounted = null; sig = ''; JT.key = null;
+  }
+  JT.unmount = unmount;
   function mount() {
     var key = pageKey();
-    if (!key) return;
-    JT.key = key;
-    if (mounted && document.body.contains(mounted)) return;
+    if (!key) { if (mounted || document.body.classList.contains('jt-page')) unmount(); return; }
     var card = findHost();
     if (!card) return;
+    var t = card.querySelector('h1');
+    var now = location.pathname + '|' + (t ? t.textContent.trim() : '');
+    if (mounted && document.body.contains(mounted) && sig === now && card.parentElement.classList.contains('jt-hidden-host')) return;
+    if (!t || !t.textContent.trim()) return; // wait until the page card has its title
+    if (mounted) unmount();
+    JT.key = key;
     var app = buildPage(key, card);
     var row = card.parentElement; // div.flex.justify-center inside main .container
     row.parentElement.insertBefore(app, row);
     row.classList.add('jt-hidden-host');
     document.body.classList.add('jt-page');
-    mounted = app;
+    mounted = app; sig = now;
   }
   JT.mount = mount;
   JT.start = function () {
