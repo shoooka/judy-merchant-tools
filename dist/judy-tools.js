@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-23T15:13 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-23T15:34 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -55,6 +55,7 @@ window.JT_I18N.ar = {
   hub: {
     h1: 'أدوات مجانية لتاجر سلة',
     lead: '11 أداة تحسب ربحك، وتفحص متجرك، وتجهزه، وتسوق له. مجانية وبدون تسجيل، ومن جوالك.',
+    leadNoCheck: '10 أدوات تحسب ربحك، وتجهز متجرك، وتسوق له. مجانية وبدون تسجيل، ومن جوالك.',
     say: 'هلا! أنا جودي. قل لي وش تبي تسوي اليوم وأوديك للأداة على طول',
     judyAlt: 'جودي، شخصية جودي ماركتينج، تأشر على أدوات التاجر',
     ask: 'وش تبي تسوي اليوم؟',
@@ -454,6 +455,7 @@ window.JT_I18N.en = {
   hub: {
     h1: 'Free tools for Salla merchants',
     lead: '11 tools that work out your profit, check your store, prepare it and market it. Free, no sign-up, right from your phone.',
+    leadNoCheck: '10 tools that work out your profit, prepare your store and market it. Free, no sign-up, right from your phone.',
     say: "Hi! I'm Judy. Tell me what you want to do today and I'll take you to the right tool",
     judyAlt: 'Judy, the Judy Marketing character, pointing at the merchant tools',
     ask: 'What do you want to do today?',
@@ -1227,7 +1229,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       h('div', { class: 'jt-wrap jt-hero__in' }, [
         h('div', { class: 'jt-hero__txt' }, [
           title,
-          h('p', { class: 'jt-lead', text: T('hub.lead') }),
+          h('p', { class: 'jt-lead', text: T(JT.CFG.psiKey ? 'hub.lead' : 'hub.leadNoCheck') }),
           h('div', { class: 'jt-ask' }, [h('h2', { class: 'jt-ask__q', text: T('hub.ask') }), goals]),
           JT.needStore ? JT.needStore() : null
         ]),
