@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-23T21:54 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-23T22:08 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -2475,7 +2475,11 @@ window.JT_THEMES_DATE = '2026-11-22';
         if (!u) { urlIn.focus(); return; }
         JT.store.set('check', { url: urlIn.value.trim() });
         res.hidden = true; waiting(true);
-        fetchLhr(u).then(function (lhr) { waiting(false); show(u, analyse(lhr)); }, function (x) {
+        fetchLhr(u).then(function (lhr) {
+          waiting(false); var r = analyse(lhr); show(u, r);
+          // every check goes to her sheet (store link + scores, no contact): she sees which stores checked
+          try { JT.sendLead({ tool: 'check', contact: '', type: 'بدون رقم', updates: false, lang: JT.lang, page: location.href.split('#')[0], summary: new URL(u).hostname.replace(/^www\./, '') + ' | ' + CATS.map(function (c) { return c + ':' + (r.scores[c] == null ? '-' : Math.round(r.scores[c] * 100)); }).join(' ') + ' | fails ' + r.fails.length }); } catch (e) {}
+        }, function (x) {
           waiting(false); res.hidden = false; res.innerHTML = '';
           res.appendChild(h('div', { class: 'jt-card jt-ck__fail' }, [h('p', { class: 'jt-warn', text: x && x.code === 429 ? T('check.errBusy') : T('check.errFetch') }), JT.btn(T('lead.needS'), { kind: 'wa', icon: 'wa', href: JT.waUrl(T('check.nextWa') + ' ' + u), blank: true })]));
         });
