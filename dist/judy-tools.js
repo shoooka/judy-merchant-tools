@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-23T21:25 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-23T21:39 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -74,8 +74,8 @@ window.JT_I18N.ar = {
   },
 
   tools: {
-    check: { name: 'افحص متجرك', short: 'نقاط قوة متجرك وضعفه في السرعة وقوقل، والتقرير الكامل PDF', go: 'افحص متجرك', icon: 'search', badge: 'new', tags: 'فحص تحليل متجر سرعة سيو نقاط قوة ضعف تقرير',
-      h1: 'افحص متجرك: نقاط القوة والضعف في السرعة وقوقل', lead: 'اكتب رابط متجرك، ونفحصه بأداة قوقل الرسمية، وتشوف نتيجته في السرعة والظهور في قوقل وسهولة الاستخدام، مع أهم نقاط القوة والضعف.', say: 'خلني أفحص متجرك وأقول لك وش فيه بالضبط', related: ['google', 'profit', 'cost'] },
+    check: { name: 'حسّن متجرك مع جودي', short: 'شكل متجرك على الجوال، ونقاط قوته وضعفه في السرعة وقوقل، والتقرير الكامل PDF', go: 'افحص متجرك', icon: 'search', badge: 'new', tags: 'فحص تحليل متجر سرعة سيو نقاط قوة ضعف تقرير',
+      h1: 'افحص متجرك: نقاط القوة والضعف في السرعة وقوقل', lead: 'اكتب رابط متجرك، وجودي تفحصه لك، وتشوف نتيجته في السرعة والظهور في قوقل وسهولة الاستخدام، مع أهم نقاط القوة والضعف.', say: 'خلني أفحص متجرك وأقول لك وش فيه بالضبط', related: ['google', 'profit', 'cost'] },
     profit: { name: 'حاسبة صافي الربح', short: 'وش يبقى لك من كل طلب بعد التكلفة والشحن والإعلان والضريبة', go: 'احسب ربحك', icon: 'profit', badge: 'hot', tags: 'ربح هامش سعر تسعير ضريبة profit',
       h1: 'حاسبة صافي الربح لمتجر سلة', lead: 'اكتب سعرك وتكاليفك، وتشوف وش يبقى لك من كل طلب، وكم لازم يكون سعرك عشان تربح.', say: 'خلنا نشوف ربحك الحقيقي، مو الربح اللي على الورق', related: ['ads', 'offers', 'cost'] },
     ads: { name: 'ربح إعلانات سناب وتيك توك', short: 'أقل عائد تحتاجه من الإعلان عشان ما تخسر، وأقصى سعر تدفعه للطلب', go: 'احسب إعلانك', icon: 'ads', tags: 'اعلان اعلانات سناب تيك توك roas عائد حملة',
@@ -110,7 +110,7 @@ window.JT_I18N.ar = {
 
   check: {
     pvSub: 'مثال: متجر ممتاز في قوقل وبطيء على الجوال',
-    inTitle: 'وش رابط متجرك؟', urlL: 'رابط متجرك', urlHelp: 'نفحص الصفحة الرئيسية على الجوال بأداة قوقل الرسمية، وياخذ الفحص من 20 إلى 60 ثانية.', go: 'افحص متجري',
+    inTitle: 'وش رابط متجرك؟', urlL: 'رابط متجرك', urlHelp: 'نفحص صفحة متجرك الرئيسية كأنها مفتوحة من جوال، وياخذ الفحص من 20 إلى 60 ثانية.', shotT: 'كذا يطلع متجرك أول ما يفتحه العميل من جواله', shotAlt: 'شكل متجر {host} على الجوال', go: 'افحص متجري',
     errUrl: 'اكتب رابط متجرك، مثلا mystore.com', errBusy: 'أداة فحص قوقل مزحومة الحين. جرب بعد دقايق، أو كلمنا ونفحصه لك.', errFetch: 'ما قدرنا نفحص هالرابط. تأكد إن المتجر مفتوح للزوار وجرب مرة ثانية، أو كلمنا ونفحصه لك.',
     waitMsgs: ['نفتح متجرك مثل ما يفتحه عميل من جواله...', 'نقيس كم ياخذ متجرك عشان يظهر...', 'نشوف متجرك بعين قوقل...', 'نرتب لك النقاط من الأهم...'],
     resT: 'نتيجة فحص', sec: 'ثانية', lcp: 'متجرك يظهر محتواه الأساسي على الجوال خلال',
@@ -474,8 +474,8 @@ window.JT_I18N.en = {
   },
 
   tools: {
-    check: { name: 'Check your store', short: 'Your store strengths and weaknesses in speed and Google, with the full PDF report', go: 'Check your store', icon: 'search', badge: 'new', tags: 'check audit store speed seo strengths weaknesses report',
-      h1: 'Check your store: strengths and weaknesses in speed and Google', lead: "Type your store link and we check it with Google's official tool. You see its speed, Google readiness and ease of use, with the main strengths and weaknesses.", say: 'Let me check your store and tell you exactly what it needs', related: ['google', 'profit', 'cost'] },
+    check: { name: 'Improve your store with Judy', short: 'How your store looks on a phone, its strengths and weaknesses in speed and Google, and the full PDF report', go: 'Check your store', icon: 'search', badge: 'new', tags: 'check audit store speed seo strengths weaknesses report',
+      h1: 'Check your store: strengths and weaknesses in speed and Google', lead: "Type your store link and Judy checks it for you. You see its speed, Google readiness and ease of use, with the main strengths and weaknesses.", say: 'Let me check your store and tell you exactly what it needs', related: ['google', 'profit', 'cost'] },
     profit: { name: 'Net profit calculator', short: 'What you keep from each order after cost, shipping, ads and VAT', go: 'Work out your profit', icon: 'profit', badge: 'hot', tags: 'profit margin price pricing vat',
       h1: 'Net profit calculator for Salla stores', lead: 'Type your price and costs to see what you keep from each order, and what your price should be to make a profit.', say: "Let's see your real profit, not the one on paper", related: ['ads', 'offers', 'cost'] },
     ads: { name: 'Snapchat and TikTok ad profit', short: 'The lowest ad return you need to break even, and the most you can pay per order', go: 'Check your ads', icon: 'ads', tags: 'ads snapchat tiktok roas return campaign',
@@ -510,7 +510,7 @@ window.JT_I18N.en = {
 
   check: {
     pvSub: 'Example: great on Google, slow on phones',
-    inTitle: "What's your store link?", urlL: 'Store link', urlHelp: "We check your home page on mobile with Google's official tool. It takes 20 to 60 seconds.", go: 'Check my store',
+    inTitle: "What's your store link?", urlL: 'Store link', urlHelp: 'We check your home page as if it were opened on a phone. It takes 20 to 60 seconds.', shotT: 'This is how your store looks when a customer opens it on a phone', shotAlt: '{host} store on a phone', go: 'Check my store',
     errUrl: 'Type your store link, e.g. mystore.com', errBusy: "Google's checking tool is busy right now. Try again in a few minutes, or chat with us and we check it for you.", errFetch: "We couldn't check this link. Make sure the store is open to visitors and try again, or chat with us and we check it for you.",
     waitMsgs: ['Opening your store the way a customer opens it on a phone...', 'Measuring how long your store takes to show...', 'Looking at your store through Google eyes...', 'Sorting the points from most important...'],
     resT: 'Check result for', sec: 'seconds', lcp: 'Your store shows its main content on phones in',
@@ -2408,7 +2408,8 @@ window.JT_THEMES_DATE = '2026-11-22';
   // Lighthouse Arabic text carries diacritics; the owner wants none
   function noTash(t) { return (t || '').replace(/[\u064B-\u0652\u0670\u0640]/g, ''); }
   function analyse(lhr) {
-    var a = lhr.audits, out = { scores: {}, fails: [], passes: [], lcp: a['largest-contentful-paint'] && a['largest-contentful-paint'].numericValue };
+    var a = lhr.audits, out = { scores: {}, fails: [], passes: [], lcp: a['largest-contentful-paint'] && a['largest-contentful-paint'].numericValue,
+      shot: a['final-screenshot'] && a['final-screenshot'].details && /^data:image\//.test(a['final-screenshot'].details.data || '') ? a['final-screenshot'].details.data : null };
     CATS.forEach(function (c) { out.scores[c] = lhr.categories[c] ? lhr.categories[c].score : null; });
     var seen = {};
     CATS.forEach(function (c) {
@@ -2497,12 +2498,12 @@ window.JT_THEMES_DATE = '2026-11-22';
           h('h2', { class: 'jt-card__t' }, [T('check.resT') + ' ', h('span', { dir: 'ltr', class: 'jt-ck__host', text: host })]),
           h('div', { class: 'jt-scores' }, CATS.map(function (c) { return scoreTile(c, r.scores[c]); })),
           r.lcp ? h('p', { class: 'jt-ck__lcp' }, [T('check.lcp') + ' ', h('b', { class: 'jt-num', text: JT.ltr(JT.num(r.lcp / 1000, 1)) + ' ' + T('check.sec') })]) : null,
+          r.shot ? h('figure', { class: 'jt-ck__shot' }, [h('div', { class: 'jt-ck__phone' }, [h('img', { src: r.shot, alt: T('check.shotAlt', { host: host }) })]), h('figcaption', { text: T('check.shotT') })]) : null,
           h('div', { class: 'jt-ck__cols' }, [
             h('div', {}, [h('h3', { class: 'jt-mini-t', text: T('check.strong') }), h('ul', { class: 'jt-pts' }, r.passes.slice(0, 3).map(function (it) { return point(it, true); }))]),
             h('div', {}, [h('h3', { class: 'jt-mini-t', text: T('check.weak') }), r.fails.length ? h('ul', { class: 'jt-pts' }, r.fails.slice(0, 3).map(function (it) { return point(it, false); })) : h('p', { class: 'jt-help', text: T('check.noWeak') })])
           ]),
-          h('p', { class: 'jt-ck__more', text: T('check.moreN', { n: Math.max(0, r.fails.length - 3) }) }),
-          JT.how(T('check.howT'), T('check.how'))
+          h('p', { class: 'jt-ck__more', text: T('check.moreN', { n: Math.max(0, r.fails.length - 3) }) })
         ]);
         res.appendChild(card);
         // the full report goes into the PDF for a contact
@@ -2744,7 +2745,7 @@ window.JT_THEMES_DATE = '2026-11-22';
           function () { st0.textContent = T('lead.fail'); st0.className = 'jt-lead__st is-bad'; })
           .then(function () { b0.disabled = false; b0.querySelector('.jt-bl').textContent = T('lead.dl'); });
       });
-      return h('section', { class: 'jt-lead', 'aria-label': T('lead.boxT') }, [JT.img('done', 'jt-lead__judy'),
+      return h('section', { class: 'jt-leadbox', 'aria-label': T('lead.boxT') }, [JT.img('done', 'jt-lead__judy'),
         h('div', { class: 'jt-lead__body' }, [h('h2', { class: 'jt-lead__t', text: T('lead.boxT') }), h('p', { class: 'jt-lead__p', text: T('lead.boxP') }), h('div', { class: 'jt-lead__f' }, [b0, st0])])]);
     }
     var saved = JT.store.get('contact') || {};
@@ -2761,7 +2762,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       h('label', { class: 'jt-cbl jt-cbl--s', for: id + '-u' }, [upd, h('span', { class: 'jt-cbl__box', html: JT.svg('check'), 'aria-hidden': 'true' }), h('span', { class: 'jt-cbl__t' }, [h('b', { text: T('lead.upd') })])]),
       h('p', { class: 'jt-help', id: id + '-p', text: T('lead.privacy') }), status
     ]);
-    var box = h('section', { class: 'jt-lead', 'aria-label': o.title || T('lead.boxT') }, [
+    var box = h('section', { class: 'jt-leadbox', 'aria-label': o.title || T('lead.boxT') }, [
       JT.img('done', 'jt-lead__judy'),
       h('div', { class: 'jt-lead__body' }, [h('h2', { class: 'jt-lead__t', text: o.title || T('lead.boxT') }), h('p', { class: 'jt-lead__p', text: o.text || T('lead.boxP') }), form])
     ]);
