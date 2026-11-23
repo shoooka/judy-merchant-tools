@@ -735,6 +735,7 @@ body.jt-page #main-content > .container { max-width: none !important; padding-le
   #jt-app .jt-leadbox { grid-template-columns: minmax(0, 1fr); padding: 20px 16px 0; }
   #jt-app .jt-lead__judy { display: none; }
   #jt-app .jt-lead__row { flex-direction: column; }
+  #jt-app .jt-lead__row .jt-in { flex: 0 0 auto; }
   #jt-app .jt-lead__btn, #jt-app .jt-ck__go { width: 100%; }
   #jt-app .jt-scores { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   #jt-app .jt-ck__cols { grid-template-columns: minmax(0, 1fr); }
