@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-23T15:34 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-23T15:47 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -858,8 +858,10 @@ window.JT_THEMES_DATE = '2026-11-22';
   /* ---------- config ---------- */
   var CFG = JT.CFG = {
     wa: '966552261549',
-    // Google Apps Script web app that writes leads to her Google Sheet (Judy account). Set at publish.
-    leadUrl: window.JT_LEAD_URL || '',
+    // Google Form «بيانات أدوات التاجر» (Judy account) -> linked sheet «بيانات أدوات التاجر (الردود)». No sign-in, no Allow.
+    leadUrl: window.JT_LEAD_URL || 'https://docs.google.com/forms/d/e/1FAIpQLSdp8TMXQUKh5foox1UkUDV9mpG1iBHlwAlq54Eq9R13wKxUUw/formResponse',
+    // form field ids (read from the published form 23 Nov 2026)
+    leadMap: window.JT_LEAD_MAP || { tool: 335397886, contact: 1118644901, type: 980066915, updates: 1743040491, lang: 1460158235, page: 272572458, summary: 858798890 },
     // Google PageSpeed Insights API key (free, restricted to judymarketing.com). Set at publish.
     psiKey: window.JT_PSI_KEY || '',
     asset: window.JT_ASSET_BASE || 'img/',
@@ -2523,7 +2525,7 @@ window.JT_THEMES_DATE = '2026-11-22';
 
 /* ---- src/lead.js ---- */
 /* «تحتاج متجر؟» WhatsApp button + «خذ النتيجة كاملة PDF» (one field: WhatsApp number or email).
-   The contact goes to her Google Sheet (CFG.leadUrl, Apps Script web app); the PDF is built in the browser
+   The contact goes to her Google Sheet (CFG.leadUrl = Google Form formResponse, linked sheet); the PDF is built in the browser
    (html2pdf loaded from cdnjs only when someone asks for the file) and downloads at once. */
 (function () {
   var JT = window.JT, h = JT.h, T = JT.T;
@@ -2555,7 +2557,15 @@ window.JT_THEMES_DATE = '2026-11-22';
     if (!JT.CFG.leadUrl) return Promise.resolve(false);
     var go;
     try {
-      go = fetch(JT.CFG.leadUrl, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(p), keepalive: true }).then(function () { return true; }, function () { return false; });
+      var form = /\/formResponse$/.test(JT.CFG.leadUrl), body;
+      if (form) {
+        body = new URLSearchParams();
+        Object.keys(JT.CFG.leadMap).forEach(function (k) {
+          var v = p[k]; if (typeof v === 'boolean') v = v ? 'نعم' : 'لا';
+          body.append('entry.' + JT.CFG.leadMap[k], String(v == null ? '' : v).slice(0, 1500));
+        });
+      } else body = JSON.stringify(p);
+      go = fetch(JT.CFG.leadUrl, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': form ? 'application/x-www-form-urlencoded;charset=utf-8' : 'text/plain;charset=utf-8' }, body: form ? body.toString() : body, keepalive: true }).then(function () { return true; }, function () { return false; });
     } catch (e) { return Promise.resolve(false); }
     // never keep the visitor waiting for the sheet
     return Promise.race([go, new Promise(function (r) { setTimeout(function () { r(false); }, 2500); })]);
