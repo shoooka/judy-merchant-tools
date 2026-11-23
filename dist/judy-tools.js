@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-23T15:47 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-23T20:43 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -862,8 +862,9 @@ window.JT_THEMES_DATE = '2026-11-22';
     leadUrl: window.JT_LEAD_URL || 'https://docs.google.com/forms/d/e/1FAIpQLSdp8TMXQUKh5foox1UkUDV9mpG1iBHlwAlq54Eq9R13wKxUUw/formResponse',
     // form field ids (read from the published form 23 Nov 2026)
     leadMap: window.JT_LEAD_MAP || { tool: 335397886, contact: 1118644901, type: 980066915, updates: 1743040491, lang: 1460158235, page: 272572458, summary: 858798890 },
-    // Google PageSpeed Insights API key (free, restricted to judymarketing.com). Set at publish.
-    psiKey: window.JT_PSI_KEY || '',
+    // Google PageSpeed Insights API key: Judy Google Cloud project «judy-merchant-tools», key «judy-tools-pagespeed»,
+    // restricted to referrer https://judymarketing.com/* and the PSI API only (public by design, no billing).
+    psiKey: window.JT_PSI_KEY || 'AIzaSyDjCMr-X-vq3-P3NjvBIUUNa0nsQs7xDIo',
     asset: window.JT_ASSET_BASE || 'img/',
     // Salla static page id -> tool key. Filled when the pages are created.
     pages: window.JT_PAGES || {},
