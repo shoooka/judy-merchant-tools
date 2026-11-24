@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-24T14:25 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-24T14:44 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -862,9 +862,9 @@ window.JT_THEMES_DATE = '2026-11-22';
     leadUrl: window.JT_LEAD_URL || 'https://docs.google.com/forms/d/e/1FAIpQLSdp8TMXQUKh5foox1UkUDV9mpG1iBHlwAlq54Eq9R13wKxUUw/formResponse',
     // form field ids (read from the published form 23 Nov 2026)
     leadMap: window.JT_LEAD_MAP || { tool: 335397886, contact: 1118644901, type: 980066915, updates: 1743040491, lang: 1460158235, page: 272572458, summary: 858798890 },
-    // Google PageSpeed Insights API key: Judy Google Cloud project «judy-merchant-tools», key «judy-tools-pagespeed»,
-    // restricted to referrer https://judymarketing.com/* and the PSI API only (public by design, no billing).
-    psiKey: window.JT_PSI_KEY || 'AIzaSyDjCMr-X-vq3-P3NjvBIUUNa0nsQs7xDIo',
+    // Google PageSpeed Insights API key: Judy Google Cloud project «judy-merchant-tools», key «judy-tools-pagespeed-2» (24 Nov 2026),
+    // restricted to referrer https://judymarketing.com/* and the PSI API only (no billing). The value lives only in the store loader block (publish-work/psi-key.txt -> make-loader.py), never in this public repo.
+    psiKey: window.JT_PSI_KEY || '',
     asset: window.JT_ASSET_BASE || 'img/',
     // Salla static page id -> tool key. Filled when the pages are created.
     pages: window.JT_PAGES || {},
