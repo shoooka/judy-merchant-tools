@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-24T14:19 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-24T14:25 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -1175,11 +1175,19 @@ window.JT_THEMES_DATE = '2026-11-22';
     mounted = null; sig = ''; JT.key = null;
   }
   JT.unmount = unmount;
+  // wait until the storefront (React) has hydrated its page card: touching the page earlier breaks its hydration (#418)
+  var t0 = Date.now(), seen = 0;
+  function hydrated(card) {
+    if (JT.harness || Date.now() - t0 > 6000) return true; // never leave the visitor without the tool
+    if (!Object.keys(card).some(function (k) { return k.indexOf('__react') === 0; })) return false;
+    if (!seen) { seen = Date.now(); setTimeout(mount, 320); }
+    return Date.now() - seen >= 300;
+  }
   function mount() {
     var key = pageKey();
     if (!key) { if (mounted || document.body.classList.contains('jt-page')) unmount(); return; }
     var card = findHost();
-    if (!card) return;
+    if (!card || !hydrated(card)) return;
     var t = card.querySelector('h1');
     var now = location.pathname + '|' + (t ? t.textContent.trim() : '');
     if (mounted && document.body.contains(mounted) && sig === now && card.parentElement.classList.contains('jt-hidden-host')) return;
