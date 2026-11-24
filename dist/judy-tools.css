@@ -127,8 +127,16 @@ body.jt-page #main-content > .container { max-width: none !important; padding-le
 
 /* ---------- groups + tiles ---------- */
 #jt-app .jt-group { padding-top: 44px; scroll-margin-top: 90px; }
-#jt-app .jt-group__h { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
-#jt-app .jt-group__p { color: var(--ink2); font-size: 15px; }
+/* section titles: one brand tint per group, so every new group is seen at once */
+#jt-app .jt-group { --g: #ebe6ff; }
+#jt-app .jt-group[data-g="price"] { --g: #ffefc2; }
+#jt-app .jt-group[data-g="market"] { --g: #dcf3e9; }
+#jt-app .jt-group[data-g="google"] { --g: #e0eaff; }
+#jt-app .jt-group__h { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; padding: 14px 22px; border-radius: var(--r); background: var(--g); }
+#jt-app .jt-group__h .jt-av { background: #fff; }
+#jt-app .jt-group__p { color: #3f3c68; font-size: 15px; }
+#jt-app .jt-lead--hl { display: inline-block; max-width: 60ch; margin-top: 16px; padding: 12px 18px; border-radius: var(--r2); background: var(--goldbg); color: var(--navy); }
+#jt-app .jt-lead--hl b { font-weight: 800; }
 #jt-app .jt-av { width: 58px; height: 58px; border-radius: 50%; background: linear-gradient(160deg, #efeaff, #e2dafe); overflow: hidden; flex: none; display: block; box-shadow: inset 0 0 0 2px #fff, 0 0 0 1px var(--line); }
 #jt-app .jt-av__img { width: 150%; max-width: none; margin-inline-start: -25%; margin-top: 2px; }
 #jt-app .jt-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
@@ -690,6 +698,8 @@ body.jt-page #main-content > .container { max-width: none !important; padding-le
   #jt-app .jt-search { width: 100%; }
   #jt-app .jt-bar__links { margin-inline: -16px; padding-inline: 16px; }
   #jt-app .jt-group { padding-top: 32px; scroll-margin-top: 140px; }
+  #jt-app .jt-group__h { padding: 12px 14px; gap: 12px; }
+  #jt-app .jt-lead--hl { padding: 10px 14px; margin-top: 10px; }
   #jt-app .jt-av { width: 50px; height: 50px; }
   #jt-app .jt-grid, #jt-app .jt-grid--small { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   #jt-app .jt-tile { padding: 16px; }
