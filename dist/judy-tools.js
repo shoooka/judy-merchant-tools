@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-24T14:44 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-24T15:44 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -16,7 +16,13 @@
     upload: S('<path d="M12 16V5"/><path d="M7 10l5-5 5 5"/><path d="M5 20h14"/>'),
     refresh: S('<path d="M20 11a8 8 0 0 0-14.6-4.5L4 8"/><path d="M4 4v4h4"/><path d="M4 13a8 8 0 0 0 14.6 4.5L20 16"/><path d="M20 20v-4h-4"/>'),
     info: S('<circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/>'),
+    clock: S('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/>'),
+    plus: S('<path d="M12 5v14"/><path d="M5 12h14"/>'),
+    trash: S('<path d="M5 7h14"/><path d="M9 7V4h6v3"/><path d="M7 7l1 13h8l1-13"/>'),
     // tools
+    vat: S('<path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M15 12l-5 6"/><circle cx="10.2" cy="12.6" r="1.2"/><circle cx="14.8" cy="17.4" r="1.2"/>'),
+    policy: S('<path d="M12 3l7.5 3v5.5c0 4.6-3.1 8-7.5 9.5-4.4-1.5-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12l2.3 2.3 4.2-4.4"/>'),
+    quote: S('<path d="M6 3h12v18l-2.4-1.6L13.2 21 12 19.8 10.8 21l-2.4-1.6L6 21z"/><path d="M9.5 8h5"/><path d="M9.5 12h5"/>'),
     profit: S('<rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7h7"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01M8.5 14.5h.01M12 14.5h.01M15.5 14.5h.01M8.5 18h.01M12 18h3.5"/>'),
     ads: S('<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>'),
     offers: S('<path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.3"/>'),
@@ -837,6 +843,303 @@ window.JT_I18N.en = {
   }
 };
 
+/* ---- i18n/p15.ar.js ---- */
+/* P15 Arabic words: live services, share, quote, VAT file, policies. Merged into JT_I18N.ar. */
+(function () {
+  var D = window.JT_I18N.ar;
+  D.svc = {
+    free: 'مجانا', from: 'من', in: 'خلال {d}', now: 'نبدأ بعد الطلب مباشرة', fix: 'نصلحها لك',
+    share: 'أرسلها واتساب', shareT: 'أرسل النتيجة لنفسك أو لشريكك في المتجر', brand: 'أدوات جودي ماركتينج المجانية', tryIt: 'جربها مجانا:'
+  };
+  D.check.fixT = { seo: 'تبي متجرك يطلع أوضح في قوقل؟', front: 'تبي واجهة متجرك مرتبة صح؟' };
+  D.check.fixP = { seo: 'نكتب عناوين ووصف صفحات متجرك ونرتب روابطها ونربطه بسيرش كونسول.', front: 'نرتب واجهة متجرك: السلايدر والبنرات وصور الأقسام والألوان، ونراجعها على الجوال.' };
+
+  D.tools.quote = { name: 'عرض سعر لمتجرك', short: 'اختر اللي يحتاجه متجرك، ويطلع لك السعر والمدة على طول بأسعار اليوم', go: 'اطلع عرض سعرك', icon: 'quote', badge: 'new', tags: 'عرض سعر اسعار تسعيرة خدمات تصميم متجر سيو اعلانات quote price',
+    h1: 'عرض سعر لتصميم وتسويق متجرك', lead: 'اختر الخدمات اللي يحتاجها متجرك، ويطلع لك السعر ومدة التنفيذ على طول، بدون ما تنتظر رد أحد.', say: 'اختر اللي تبيه بس، وأنا أطلع لك السعر الحين', related: ['cost', 'theme', 'check'] };
+  D.quote = {
+    pv: ['تصميم', 'سيو', 'إعلانات'], pvSub: 'السعر والمدة من متجر جودي اليوم',
+    inTitle: 'وش يحتاج متجرك؟', name: 'اسم متجرك أو اسمك', nameHelp: 'اختياري، يطلع في عرض السعر', one: '(اختر واحد)',
+    g: { design: 'تصميم المتجر', brand: 'الهوية والصور', google: 'قوقل والذكاء الاصطناعي', ads: 'الإعلانات والسوشيال', store: 'تجهيز المتجر' },
+    bigL: 'المجموع', bigFrom: 'المجموع يبدأ من', count: 'عدد الخدمات: {n}', billT: 'تفاصيل العرض', none: 'اختر خدمة وحدة أو أكثر ويطلع السعر هنا.',
+    total: 'المجموع', for: 'عرض سعر: {n}', date: 'تاريخ العرض: {d}',
+    note: 'الأسعار من متجر جودي ماركتينج بتاريخ {d}. مدة كل خدمة تبدأ من يوم ما توصلنا كل المتطلبات.',
+    fail: 'ما قدرنا نجيب الأسعار الحين. جرب بعد شوي أو اكتب لنا واتساب ونرسلها لك.',
+    order: 'اطلب العرض واتساب', share: 'أرسله لشريكك', all: 'تصفح باقات تصميم المتاجر كاملة',
+    waHi: 'السلام عليكم، سويت عرض سعر في أدوات التاجر وأبي أبدأ:',
+    leadT: 'خذ عرض السعر في ملف PDF', leadP: 'ملف مرتب بشعار جودي فيه الخدمات والأسعار والمدد وتاريخ العرض، ترسله لشريكك أو تحفظه.', leadBtn: 'نزل عرض السعر',
+    pdfT: 'عرض سعر من جودي ماركتينج', pdfFoot: 'جودي ماركتينج، شريك خدمات تجار سلة من 2018.', pdfNote: 'الأسعار مأخوذة من متجر جودي ماركتينج وقت إصدار العرض. مدة كل خدمة تبدأ من يوم ما توصلنا كل المتطلبات.', pdfNext: 'اكتب لنا واتساب ونبدأ لك، أو اطلب الخدمة من متجرنا مباشرة.'
+  };
+  D.quote.nextP = D.quote.pdfNext;
+})();
+
+/* ---- i18n/p15.en.js ---- */
+/* P15 English words: live services, share, quote, VAT file, policies. Merged into JT_I18N.en. */
+(function () {
+  var D = window.JT_I18N.en;
+  D.svc = {
+    free: 'Free', from: 'From', in: 'Done in {d}', now: 'We start right after you order', fix: 'Fix it for me',
+    share: 'Send on WhatsApp', shareT: 'Send the result to yourself or your store partner', brand: 'Judy Marketing free tools', tryIt: 'Try it free:'
+  };
+  D.check.fixT = { seo: 'Want your store to show up better on Google?', front: 'Want your storefront put in order?' };
+  D.check.fixP = { seo: 'We write titles and descriptions for your store pages, tidy their links and connect Search Console.', front: 'We put your storefront in order: slider, banners, category images and colors, and review it on mobile.' };
+
+  D.tools.quote = { name: 'A price quote for your store', short: 'Pick what your store needs and get the price and delivery time at once, at today\'s prices', go: 'Get your quote', icon: 'quote', badge: 'new', tags: 'quote price pricing services design seo ads',
+    h1: 'A price quote for your store design and marketing', lead: 'Pick the services your store needs and see the price and delivery time at once, without waiting for a reply.', say: "Just pick what you want and I'll give you the price now", related: ['cost', 'theme', 'check'] };
+  D.quote = {
+    pv: ['Design', 'SEO', 'Ads'], pvSub: "Price and time from Judy's store today",
+    inTitle: 'What does your store need?', name: 'Your store or your name', nameHelp: 'Optional, it appears on the quote', one: '(choose one)',
+    g: { design: 'Store design', brand: 'Brand and images', google: 'Google and AI answers', ads: 'Ads and social media', store: 'Store setup' },
+    bigL: 'Total', bigFrom: 'Total starts from', count: 'Services: {n}', billT: 'Quote details', none: 'Pick one service or more and the price shows up here.',
+    total: 'Total', for: 'Quote for: {n}', date: 'Quote date: {d}',
+    note: "Prices are from the Judy Marketing store on {d}. Each service's time starts once we receive everything we need.",
+    fail: "We couldn't load the prices right now. Try again shortly, or message us on WhatsApp and we'll send them.",
+    order: 'Order on WhatsApp', share: 'Send to your partner', all: 'Browse all store design packages',
+    waHi: 'Hello, I made a price quote with the merchant tools and would like to start:',
+    leadT: 'Get the quote as a PDF', leadP: "A neat file with Judy's logo, the services, prices, times and quote date, to send to your partner or keep.", leadBtn: 'Download the quote',
+    pdfT: 'Price quote from Judy Marketing', pdfFoot: 'Judy Marketing, a Salla merchant services partner since 2018.', pdfNote: "Prices are taken from the Judy Marketing store when the quote was made. Each service's time starts once we receive everything we need.", pdfNext: 'Message us on WhatsApp and we will start, or order the service directly from our store.'
+  };
+  D.quote.nextP = D.quote.pdfNext;
+})();
+
+/* ---- i18n/p15b.ar.js ---- */
+/* P15 Arabic words: VAT file + store policies. Merged into JT_I18N.ar. */
+(function () {
+  var D = window.JT_I18N.ar;
+
+  D.tools.vat = { name: 'حاسبة الضريبة لكل منتجاتك', short: 'أضف الضريبة 15% أو طلعها من كل أسعارك مرة وحدة، وخذ ملف جاهز لسلة', go: 'احسب أسعارك', icon: 'vat', badge: 'new', tags: 'ضريبة القيمة المضافة اسعار منتجات اكسل csv استيراد سلة 15 vat',
+    h1: 'حاسبة ضريبة القيمة المضافة لكل منتجات متجرك', lead: 'ارفع ملف أسعار متجرك من سلة أو الصق أسعارك، ونحسب الضريبة لكل منتج مرة وحدة، وتنزل ملف جاهز تستورده.', say: 'بدل ما تعدلها منتج منتج، خلني أحسبها لك كلها', related: ['profit', 'offers', 'policy'] };
+  D.vat = {
+    pvSub: 'كل الأسعار مرة وحدة، وملف جاهز لسلة',
+    inTitle: 'أسعارك', modeQ: 'وش تبي تسوي؟', add: 'أضيف الضريبة على السعر', strip: 'أطلع الضريبة من السعر',
+    srcQ: 'من وين نجيب أسعارك؟', srcList: 'ألصقها هنا', srcFile: 'ملف أسعار سلة',
+    listL: 'المنتجات والأسعار', listHelp: 'كل منتج في سطر: الاسم ثم السعر. تقدر تنسخها من إكسل مباشرة (الاسم، رمز المنتج SKU، السعر).',
+    ex: 'عباية كلوش سوداء، 250\nطرحة قطن، 49\nشنطة جلد، 179', item: 'منتج',
+    drop: 'ارفع ملف أسعار سلة', dropS: 'ملف إكسل ينتهي بـ xlsx، ويبقى في جهازك', reading: 'نقرا الملف...', readOk: 'قرينا {n} صف من {f}',
+    errType: 'الملف هذا ما ينفتح. ارفع ملف إكسل ينتهي بـ xlsx مثل ما جاك من سلة.', errCols: 'ما لقينا عمود «سعر المنتج» في الملف. ارفع ملف الأسعار اللي صدرته من سلة بدون تغيير.',
+    getT: 'كيف أجيب ملف الأسعار من سلة؟', get: ['من لوحة سلة: المنتجات، ثم «الاستيراد والتصدير»، ثم «استيراد أسعار المنتجات».', 'اضغط «تصدير الملف»، ويوصلك الملف على إيميل المتجر.', 'ارفعه هنا مثل ما هو، بدون ما تغير فيه شي.'],
+    roundQ: 'التقريب', rNone: 'بدون تقريب', rWhole: 'لأقرب ريال', rNine: 'ينتهي بـ9',
+    bigL: 'أسعار انحسبت', unit: 'سعر', subAdd: 'بعد إضافة ضريبة 15%', subStrip: 'بعد ما طلعنا ضريبة 15%',
+    tblT: 'الأسعار قبل وبعد', tblAria: 'جدول الأسعار قبل وبعد', cName: 'المنتج', cOld: 'السعر الحين', cAdd: 'شامل الضريبة', cStrip: 'بدون الضريبة',
+    rowCb: 'احسب {n}', more: 'وفيه {n} سعر ثاني داخل الملف.', andMore: 'و{n} منتج ثاني',
+    hal: '{n} سعر يفرق هللة: مثلا {p} يطلع للعميل {b} لأن سلة تحسب 15% على سعر مقرب.',
+    warnAdd: 'ارفع الأسعار الشاملة بس إذا خيار «إدخال أسعار المنتجات شاملة الضريبة» مفعل في متجرك. إذا مو مفعل، سلة تضيف 15% مرة ثانية على العميل.',
+    warnStrip: 'هذا السعر يناسبك إذا سلة تضيف الضريبة على أسعارك. إذا خيار «إدخال أسعار المنتجات شاملة الضريبة» مفعل، خل أسعارك شاملة ولا ترفع هذا الملف.',
+    warnFull: 'هذا ملف المنتجات الكامل. لا ترفعه عشان الأسعار لأنه يكتب فوق كل بيانات المنتج. نزل «ملف الأسعار» بس من سلة وارفعه هنا.',
+    dl: 'نزل ملف CSV', dlX: 'نزل الملف جاهز لسلة', copy: 'انسخ الأسعار',
+    upT: 'كيف أرفع الملف في سلة؟',
+    upX: ['من لوحة سلة: المنتجات، ثم «الاستيراد والتصدير»، ثم «استيراد أسعار المنتجات».', 'ارفع الملف اللي نزلته من هنا واضغط «تحديث الأسعار».', 'غيرنا السعر والسعر المخفض بس. أرقام المنتجات والتواريخ وسعر التكلفة مثل ما هي في ملفك.', 'جرب أول بمنتج أو منتجين، وتأكد من السعر في متجرك قبل ما ترفع الكل.'],
+    upC: ['من لوحة سلة: المنتجات، ثم «الاستيراد والتحديث»، ثم «استيراد جديد»، وارفع الملف.', 'اربط الأعمدة: اسم المنتج، ورمز التخزين (SKU)، والسعر.', 'لو المنتجات موجودة عندك، علم على «المنتجات» تحت «تحديث البيانات الحالية»، ولازم يكون فيه SKU لكل منتج، وإلا تنضاف منتجات جديدة.', 'التحديث ما يتراجع عنه، فجرب أول بمنتج واحد. ولو ما عندك SKU، استخدم «ملف أسعار سلة» فوق.'],
+    csvHead: ['اسم المنتج', 'رمز التخزين (SKU)', 'السعر'],
+    nextT: 'تبي أحد يراجع أسعار متجرك؟', nextP: 'نراجع متجرك مجانا ونقول لك وين تقدر تزيد ربحك: الأسعار والعروض والشحن.', nextBtn: 'اطلب المراجعة المجانية', nextWa: 'السلام عليكم، حسبت ضريبة أسعاري في أداة جودي وأبي مراجعة مجانية لمتجري'
+  };
+
+  D.tools.policy = { name: 'سياسات متجرك جاهزة', short: 'سياسة الاسترجاع والشحن والخصوصية باسم متجرك، مبنية على النظام السعودي مع نصه الرسمي', go: 'جهز سياساتك', icon: 'policy', badge: 'new', tags: 'سياسة استرجاع استبدال خصوصية شحن شكاوى نظام التجارة الالكترونية policy privacy return',
+    h1: 'سياسة الاسترجاع والخصوصية لمتجرك', lead: 'جاوب على أسئلة بسيطة، وتطلع لك سياسة الاسترجاع والشحن والخصوصية باسم متجرك، مبنية على نظام التجارة الإلكترونية السعودي ونظام حماية البيانات.', say: 'عميلك يبي يطمن قبل ما يدفع، خلنا نكتبها واضحة', related: ['whatsapp', 'check', 'vat'] };
+  D.policy = {
+    pv: ['سياسة الاسترجاع والاستبدال', 'الشحن والشكاوى', 'سياسة الخصوصية'],
+    inTitle: 'معلومات متجرك', yourStore: '[اسم المتجر]',
+    s: { ret: 'الاسترجاع والاستبدال', ship: 'الشحن والشكاوى', priv: 'الخصوصية', more: 'بيانات إضافية للمتجر' },
+    f: { store: 'اسم المتجر', link: 'رابط المتجر', email: 'إيميل خدمة العملاء', phone: 'واتساب خدمة العملاء', cr: 'رقم السجل أو وثيقة العمل الحر', vat: 'الرقم الضريبي', city: 'المدينة أو العنوان',
+      days: 'مدة الاسترجاع', pays: 'مين يدفع شحن الإرجاع؟', exch: 'تستبدل المنتجات؟', refund: 'ترد المبلغ خلال', prep: 'تجهيز الطلب خلال', ship: 'التوصيل خلال', area: 'توصل لوين؟', reply: 'ترد على الشكوى خلال', solve: 'تحل الشكوى خلال', mkt: 'ترسل عروض على الجوال أو الإيميل؟', exc: 'منتجات ما ترجع عندك', tools: 'أدوات قياس مركبة في متجرك' },
+    h: { cr: 'اختياري', days: 'النظام يعطي العميل 7 أيام من يوم الاستلام، وتقدر تزيدها.', refund: 'ما لقينا مدة محددة في النظام الساري، فهذا وعد منك لعميلك.' },
+    u: { day: 'يوم', hour: 'ساعة' },
+    o: { days: { 7: '7 أيام', 14: '14 يوم', 30: '30 يوم' }, pays: { cust: 'العميل', store: 'المتجر' }, exch: { yes: 'نعم', no: 'لا' }, area: { ksa: 'السعودية', gcc: 'الخليج', world: 'كل العالم' }, mkt: { yes: 'نعم', no: 'لا' } },
+    c: {
+      exc: { custom: 'منتجات تصنع حسب طلب العميل', fresh: 'منتجات سريعة التلف', health: 'منتجات ما تنباع ثانية لأسباب صحية', digital: 'برامج وملفات تتحمل من الإنترنت', books: 'كتب ومجلات', media: 'أقراص وبرامج استخدمت', mixed: 'منتجات اندمجت وما ترجع لحالتها', gold: 'ذهب وفضة وسعرها متقلب' },
+      tools: { ga: 'قوقل أناليتكس', snap: 'بكسل سناب شات', tiktok: 'بكسل تيك توك', meta: 'بكسل ميتا (انستقرام وفيسبوك)', gads: 'إعلانات قوقل' }
+    },
+    tabsAria: 'السياسات', tab: { ret: 'الاسترجاع والاستبدال', ship: 'الشحن والشكاوى', priv: 'الخصوصية' },
+    copy: 'انسخ السياسة', word: 'نزل الكل ملف وورد', shareL: 'سياسات متجر {n} جاهزة', read: 'قريناه من المصدر الرسمي بتاريخ {d}.', src: 'افتح المصدر الرسمي',
+    law: { a13: 'نص النظام: استرجاع خلال 7 أيام (المادة 13 من نظام التجارة الإلكترونية)', r11: 'نص اللائحة: منتجات ما ترجع (من المادة 11 من اللائحة التنفيذية)', a14: 'نص النظام: التأخر في التوصيل (المادة 14 من نظام التجارة الإلكترونية)', p12: 'نص النظام: وش لازم يكون في سياسة الخصوصية (المادة 12 من نظام حماية البيانات الشخصية)', a5: 'نص النظام: استخدام بيانات العميل (المادة 5 من نظام التجارة الإلكترونية)' },
+    howT: 'وين أحط السياسات في سلة؟', how: ['انسخ السياسة من هنا.', 'من لوحة سلة افتح «الصفحات»، واختر صفحة السياسة أو أضف صفحة جديدة.', 'الصق النص واحفظ، وتأكد إن الصفحة ظاهرة في أسفل المتجر.', 'كرر نفس الشي للشحن والشكاوى وللخصوصية.'],
+    newT: 'نظام جديد جاي: نظام حماية المستهلك', newP: 'مجلس الوزراء وافق عليه يوم 10 نوفمبر 2026، ويبدأ بعد 180 يوم من نشره في الجريدة الرسمية، ويحل محل نظام التجارة الإلكترونية. شرح وزارة التجارة يقول إن المتجر يرد المبلغ خلال 14 يوم من إبلاغه بالفسخ. هذه السياسات مبنية على النظام الساري بتاريخ 24 نوفمبر 2026، ونحدثها إذا بدأ الجديد.', newA: 'افتح أسئلة وزارة التجارة عن النظام الجديد',
+    leadT: 'خذ السياسات الثلاث في ملف PDF', leadP: 'ملف مرتب فيه سياسة الاسترجاع والشحن والخصوصية باسم متجرك، تحفظه عندك.', leadBtn: 'نزل السياسات', pdfT: 'سياسات المتجر', pdfFoot: 'جهزت بأدوات جودي ماركتينج المجانية، مبنية على النظام الساري بتاريخ 24 نوفمبر 2026.', pdfRes: 'السياسات',
+    nextT: 'تبي جودي تضيفها في متجرك؟', nextP: 'نضيف السياسات في متجرك، ونربط الواتساب، ونحلل متجرك، في باقة وحدة.', nextBtn: 'تصفح باقة الخدمات الأساسية', nextWa: 'السلام عليكم، جهزت سياسات متجري في أداة جودي وأبي تضيفونها في المتجر',
+
+    /* the three documents, in plain formal Arabic (they are read by shoppers as the store's policy) */
+    docs: function (v) {
+      var contact = []; if (v.phone) contact.push('واتساب: ' + v.phone); if (v.email) contact.push('البريد الإلكتروني: ' + v.email); if (!contact.length) contact.push('وسائل التواصل الموضحة في المتجر');
+      var dayW = { 7: '7 أيام', 14: '14 يوما', 30: '30 يوما' }[v.days];
+      function d(n) { n = Number(n); return n === 1 ? 'يوم واحد' : n === 2 ? 'يومين' : n <= 10 ? n + ' أيام' : n + ' يوما'; }
+      function hr(n) { n = Number(n); return n === 1 ? 'ساعة واحدة' : n === 2 ? 'ساعتين' : n <= 10 ? n + ' ساعات' : n + ' ساعة'; }
+      var EX = { custom: 'المنتجات المصنعة أو المصممة بناء على طلب العميل أو وفق مواصفات حددها، إلا إذا كانت معيبة أو غير مطابقة للمتفق عليه.', fresh: 'المنتجات المعرضة للتلف خلال مدة الاسترجاع.', health: 'المنتجات التي لا يمكن إعادة بيعها لأسباب صحية.', digital: 'برامج وملفات التحميل عبر الإنترنت، إلا إذا كان بها عيب يمنع إتمام التحميل أو كانت غير مطابقة لما اتفق عليه.', books: 'الصحف والمجلات والمنشورات والكتب.', media: 'أشرطة الفيديو والأسطوانات والأقراص المدمجة والبرامج التي جرى استخدامها.', mixed: 'المنتجات التي تتضمن عدة عناصر تم دمجها ولا يمكن إعادتها إلى حالتها الأصلية.', gold: 'المنتجات التي يتغير سعرها باستمرار بحسب السوق، كالذهب والفضة.' };
+      var TL = { ga: 'قوقل أناليتكس', snap: 'سناب شات', tiktok: 'تيك توك', meta: 'ميتا (انستقرام وفيسبوك)', gads: 'إعلانات قوقل' };
+      var who = [{ p: 'هذه السياسة خاصة بمتجر ' + v.store + (v.link ? ' (' + v.link + ')' : '') + '، وآخر تحديث لها ' + v.date + '.' }];
+      var ids = []; if (v.cr) ids.push('السجل التجاري أو وثيقة العمل الحر: ' + v.cr); if (v.vat) ids.push('الرقم الضريبي: ' + v.vat); if (v.city) ids.push('العنوان: ' + v.city);
+
+      var ret = [{ t: 'سياسة الاسترجاع' + (v.exch ? ' والاستبدال' : '') }].concat(who).concat([
+        { h: 'حقك في الاسترجاع', p: 'يحق لك إرجاع المنتج خلال ' + dayW + ' من تاريخ استلامه، بشرط أنك لم تستخدمه ولم تحصل على منفعة منه، وأن يكون بحالته الأصلية وتغليفه. وفي الخدمات تبدأ المدة من تاريخ التعاقد وقبل الاستفادة من الخدمة.' },
+        { h: 'تكلفة الإرجاع', p: v.pays === 'store' ? 'يتحمل المتجر تكلفة شحن الإرجاع.' : 'يتحمل العميل تكلفة شحن الإرجاع، إلا إذا كان المنتج معيبا أو غير مطابق للطلب، فيتحملها المتجر.' },
+        { h: 'خطوات الإرجاع', l: ['تواصل معنا خلال مدة الاسترجاع، واذكر رقم الطلب وسبب الإرجاع.', 'نرسل لك طريقة الإرجاع وعنوانه.', 'نفحص المنتج بعد وصوله، ثم نرد لك المبلغ.'] },
+        { h: 'رد المبلغ', p: 'نرد المبلغ خلال ' + d(v.refund) + ' من استلام المنتج المرتجع والتأكد من حالته، وبنفس وسيلة الدفع التي استخدمتها، إلا إذا اتفقنا معك على وسيلة أخرى.' }
+      ]);
+      if (v.exch) ret.push({ h: 'الاستبدال', p: 'يمكنك استبدال المنتج بمقاس أو لون أو منتج آخر خلال مدة الاسترجاع نفسها إذا كان متوفرا، ونحسب فرق السعر إن وجد.' });
+      ret.push({ h: 'المنتج المعيب أو غير المطابق', p: 'إذا وصلك المنتج معيبا أو غير مطابق لما طلبته، تواصل معنا ونستبدله لك أو نرد لك المبلغ كاملا مع تكلفة الشحن. هذه السياسة لا تمس حقك في الضمان.' });
+      if (v.exc.length) ret.push({ h: 'منتجات لا تسترجع', l: v.exc.map(function (k) { return EX[k]; }) });
+      ret.push({ h: 'تصحيح الخطأ في الطلب', p: 'إذا أخطأت في طلبك، أبلغنا خلال 24 ساعة من إرسال الطلب ونصححه لك، ما لم تكن استفدت من المنتج أو الخدمة.' });
+      ret.push({ h: 'التواصل معنا', l: contact });
+
+      var AREA = { ksa: 'نوصل إلى جميع مناطق المملكة العربية السعودية.', gcc: 'نوصل إلى المملكة العربية السعودية ودول الخليج.', world: 'نوصل إلى المملكة العربية السعودية وإلى خارجها.' };
+      var ship = [{ t: 'سياسة الشحن والتوصيل والشكاوى' }].concat(who).concat([
+        { h: 'نطاق التوصيل', p: AREA[v.area] },
+        { h: 'مدة التجهيز والتوصيل', p: 'نجهز طلبك خلال ' + d(v.prep) + ' من تأكيده، ويصلك خلال ' + d(v.ship) + ' بعد التجهيز.' },
+        { h: 'تكلفة الشحن', p: 'تظهر لك تكلفة الشحن وإجمالي السعر شاملا الرسوم والضرائب قبل إتمام الدفع.' },
+        { h: 'التأخر في التوصيل', p: 'إذا توقعنا تأخيرا نبلغك به. وإذا تأخر التسليم أكثر من 15 يوما من تاريخ الطلب أو عن الموعد المتفق عليه، يحق لك فسخ العقد واسترداد ما دفعته، ما لم يكن التأخير بسبب قوة قاهرة.' },
+        { h: 'الشكاوى والاقتراحات', p: 'نستقبل شكواك على وسائل التواصل أدناه، ونرد عليها خلال ' + hr(v.reply) + '، ونعمل على حلها خلال ' + d(v.solve) + '.' },
+        { h: 'التواصل معنا', l: contact.concat(ids) }
+      ]);
+
+      var share = ['شركات الشحن: الاسم ورقم الجوال والعنوان، لتوصيل الطلب.', 'بوابات الدفع: لإتمام الدفع. بيانات البطاقة تعالج عند بوابة الدفع.', 'منصة سلة: لأنها المنصة التي يعمل عليها المتجر.'];
+      if (v.tools.length) share.push('أدوات القياس والإعلان: ' + v.tools.map(function (k) { return TL[k]; }).join('، ') + '. وقد تعالج هذه الأدوات بياناتها خارج المملكة.');
+      share.push('الجهات المختصة إذا طلب النظام ذلك.');
+      var purpose = ['تنفيذ الطلب وتوصيله وإصدار فاتورته.', 'التواصل معك بخصوص طلبك وخدمة ما بعد البيع.', 'حماية المتجر ومنع الاحتيال.'];
+      if (v.tools.length) purpose.push('قياس زيارات المتجر وتحسينه وقياس الإعلانات.');
+      if (v.mkt) purpose.push('إرسال العروض، إذا وافقت على ذلك فقط.');
+      var priv = [{ t: 'سياسة الخصوصية' }].concat(who).concat([
+        { h: 'من نحن وطريقة التواصل', p: 'يجمع بياناتك متجر ' + v.store + '.', l: contact.concat(ids) },
+        { h: 'البيانات التي نجمعها', l: ['بيانات إلزامية لتنفيذ الطلب: الاسم، ورقم الجوال، والعنوان، وتفاصيل الطلب.', 'بيانات اختيارية: البريد الإلكتروني وملاحظات الطلب والتقييمات.', 'بيانات تقنية: نوع الجهاز والصفحات التي زرتها' + (v.tools.length ? '، عبر ملفات تعريف الارتباط.' : '.')] },
+        { h: 'كيف نجمعها', p: 'نجمعها منك مباشرة عند التسجيل أو الطلب أو التواصل معنا، وبعضها تقنيا أثناء تصفحك للمتجر.' },
+        { h: 'لماذا نجمعها', l: purpose },
+        { h: 'المسوغ النظامي', p: 'نعالج بيانات الطلب لتنفيذ اتفاقنا معك، ونعالج ما عداها بناء على موافقتك أو إذا ألزمنا النظام بذلك. ويمكنك الرجوع عن موافقتك في أي وقت.' },
+        { h: 'مع من نشاركها', p: 'لا نبيع بياناتك. نشاركها بالقدر اللازم فقط مع:', l: share },
+        { h: 'حفظ البيانات وحمايتها', p: 'تحفظ بياناتك في حساب المتجر على منصة سلة، ولا يصل إليها إلا من يحتاجها لتنفيذ طلبك. وإذا تعرضت بياناتك لاختراق، نبلغك ونبلغ الجهة المختصة خلال المدة التي حددها النظام.' },
+        { h: 'مدة الاحتفاظ وطريقة الإتلاف', p: 'نحتفظ ببياناتك ما دامت الحاجة إليها قائمة لتنفيذ الطلب وخدمتك، أو المدة التي يلزمنا بها النظام مثل الفواتير، ثم نتلفها.' },
+        v.tools.length ? { h: 'ملفات تعريف الارتباط', p: 'نستخدم ملفات تعريف الارتباط لتشغيل المتجر وقياس الزيارات. يمكنك إيقافها من إعدادات متصفحك، وقد لا تعمل بعض أجزاء المتجر بدونها.' } : null,
+        v.mkt ? { h: 'الرسائل التسويقية', p: 'لا نرسل لك عروضا إلا بموافقتك، وفي كل رسالة طريقة واضحة لإيقافها.' } : null,
+        { h: 'حقوقك', l: ['أن تعرف لماذا نجمع بياناتك وعلى أي أساس.', 'أن تصل إلى بياناتك وتطلب نسخة منها بصيغة واضحة.', 'أن تصححها أو تكملها أو تحدثها.', 'أن تطلب إتلاف ما انتهت الحاجة إليه منها.', 'أن ترجع عن موافقتك، وأن تغلق حسابك.'] },
+        { h: 'كيف تمارس حقوقك', p: 'أرسل طلبك على وسائل التواصل أعلاه، ونرد عليك خلال 30 يوما. وإذا لم تكن راضيا عن ردنا، يمكنك التقدم بشكوى إلى الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا).' },
+        { h: 'تحديث السياسة', p: 'إذا غيرنا هذه السياسة ننشر النسخة الجديدة هنا مع تاريخ تحديثها.' }
+      ]).filter(Boolean);
+      return { ret: ret, ship: ship, priv: priv };
+    }
+  };
+
+  // hub
+  D.hub.lead = D.hub.lead.replace('11 أداة', '14 أداة').replace('تحسب ربحك، وتفحص متجرك، وتجهزه، وتسوق له', 'تحسب ربحك، وتفحص متجرك، وتجهزه، وتسوق له');
+  D.hub.leadNoCheck = D.hub.leadNoCheck.replace('10 أدوات', '13 أداة');
+  D.hub.groups.start.goalSub = 'التكلفة، عرض السعر، الثيم';
+  D.hub.groups.start.line = 'اعرف التكلفة والسعر والثيم قبل ما تبدأ.';
+  D.hub.groups.ready = { icon: 'policy', goal: 'أجهز متجري', goalSub: 'الألوان، السياسات، الضريبة', name: 'جهز متجرك', line: 'ألوانك وسياساتك وأسعارك بالضريبة، جاهزة تحطها في متجرك.' };
+  })();
+
+/* ---- i18n/p15b.en.js ---- */
+/* P15 English words: VAT file + store policies. Merged into JT_I18N.en. */
+(function () {
+  var D = window.JT_I18N.en;
+
+  D.tools.vat = { name: 'VAT for all your products', short: 'Add 15% VAT to all your prices at once, or take it out, and get a file ready for Salla', go: 'Work out your prices', icon: 'vat', badge: 'new', tags: 'vat tax prices products excel csv import salla 15',
+    h1: 'VAT calculator for all your store products', lead: 'Upload your Salla prices file or paste your prices. We work out VAT for every product at once and you download a file ready to import.', say: "Instead of editing them one by one, let me do them all", related: ['profit', 'offers', 'policy'] };
+  D.vat = {
+    pvSub: 'All prices at once, and a file for Salla',
+    inTitle: 'Your prices', modeQ: 'What do you want to do?', add: 'Add VAT to the price', strip: 'Take VAT out of the price',
+    srcQ: 'Where are your prices?', srcList: 'Paste them here', srcFile: 'Salla prices file',
+    listL: 'Products and prices', listHelp: 'One product per line: name, then price. You can paste straight from Excel (name, SKU, price).',
+    ex: 'Black abaya, 250\nCotton scarf, 49\nLeather bag, 179', item: 'Product',
+    drop: 'Upload your Salla prices file', dropS: 'An .xlsx Excel file. It stays on your device', reading: 'Reading the file...', readOk: 'Read {n} rows from {f}',
+    errType: "This file can't be opened. Upload an .xlsx Excel file just as Salla sent it.", errCols: 'We found no product price column («سعر المنتج») in the file. Upload the prices file you exported from Salla, unchanged.',
+    getT: 'How do I get the prices file from Salla?', get: ['In your Salla dashboard: Products, then "Import and export" («الاستيراد والتصدير»), then "Import product prices" («استيراد أسعار المنتجات»).', 'Press "Export file" («تصدير الملف») and the file arrives at your store email.', 'Upload it here just as it is, without changing anything.'],
+    roundQ: 'Rounding', rNone: 'No rounding', rWhole: 'Nearest riyal', rNine: 'Ends in 9',
+    bigL: 'Prices worked out', unit: 'prices', subAdd: 'After adding 15% VAT', subStrip: 'After taking out 15% VAT',
+    tblT: 'Prices before and after', tblAria: 'Prices before and after table', cName: 'Product', cOld: 'Price now', cAdd: 'With VAT', cStrip: 'Before VAT',
+    rowCb: 'Include {n}', more: 'and {n} more prices inside the file.', andMore: 'and {n} more products',
+    hal: '{n} prices are off by one halala: for example {p} shows to the shopper as {b}, because 15% is added to a rounded price.',
+    warnAdd: 'Upload VAT-inclusive prices only if "Enter product prices including VAT" («إدخال أسعار المنتجات شاملة الضريبة») is on in your store. If it is off, Salla adds 15% again on top.',
+    warnStrip: 'Use this price if Salla adds VAT on top of your prices. If "Enter product prices including VAT" is on, keep your prices inclusive and do not upload this file.',
+    warnFull: 'This is the full products file. Do not upload it for prices, because it writes over all product data. Export only the prices file from Salla and upload it here.',
+    dl: 'Download CSV file', dlX: 'Download the file for Salla', copy: 'Copy prices',
+    upT: 'How do I upload the file to Salla?',
+    upX: ['In your Salla dashboard: Products, then «الاستيراد والتصدير», then «استيراد أسعار المنتجات».', 'Upload the file you downloaded here and press «تحديث الأسعار».', 'We changed only the price and the sale price. Product numbers, dates and cost price are exactly as in your file.', 'Try one or two products first and check the price in your store before you upload everything.'],
+    upC: ['In your Salla dashboard: Products, then «الاستيراد والتحديث», then «استيراد جديد», and upload the file.', 'Match the columns: product name, SKU and price.', 'If the products already exist, tick «المنتجات» under «تحديث البيانات الحالية». Each product needs a SKU, or new products will be added.', 'Updates cannot be undone, so try one product first. If you have no SKUs, use the Salla prices file option above.'],
+    csvHead: ['اسم المنتج', 'رمز التخزين (SKU)', 'السعر'],
+    nextT: 'Want someone to review your store prices?', nextP: 'We review your store for free and tell you where you can earn more: prices, offers and shipping.', nextBtn: 'Ask for the free review', nextWa: 'Hello, I worked out my VAT prices with the Judy tool and would like a free store review'
+  };
+
+  D.tools.policy = { name: 'Your store policies, ready', short: 'Return, shipping and privacy policies in your store name, based on Saudi law with its official text', go: 'Prepare your policies', icon: 'policy', badge: 'new', tags: 'policy return exchange privacy shipping complaints saudi e-commerce law',
+    h1: 'Return and privacy policy for your store', lead: 'Answer a few simple questions and get return, shipping and privacy policies in your store name, based on the Saudi E-Commerce Law and the Personal Data Protection Law.', say: "Your customer wants to feel safe before paying. Let's write it clearly", related: ['whatsapp', 'check', 'vat'] };
+  D.policy = {
+    pv: ['Return and exchange policy', 'Shipping and complaints', 'Privacy policy'],
+    inTitle: 'Your store details', yourStore: '[Store name]',
+    s: { ret: 'Returns and exchange', ship: 'Shipping and complaints', priv: 'Privacy', more: 'More store details' },
+    f: { store: 'Store name', link: 'Store link', email: 'Customer service email', phone: 'Customer service WhatsApp', cr: 'Commercial registration or freelance document no.', vat: 'VAT number', city: 'City or address',
+      days: 'Return period', pays: 'Who pays return shipping?', exch: 'Do you exchange products?', refund: 'Refund within', prep: 'Order prepared within', ship: 'Delivered within', area: 'Where do you deliver?', reply: 'Complaint answered within', solve: 'Complaint solved within', mkt: 'Do you send offers by phone or email?', exc: 'Products you do not take back', tools: 'Tracking tools in your store' },
+    h: { cr: 'Optional', days: 'The law gives the customer 7 days from receiving the product. You can offer more.', refund: 'We found no set period in the law in force, so this is your own promise.' },
+    u: { day: 'days', hour: 'hours' },
+    o: { days: { 7: '7 days', 14: '14 days', 30: '30 days' }, pays: { cust: 'Customer', store: 'Store' }, exch: { yes: 'Yes', no: 'No' }, area: { ksa: 'Saudi Arabia', gcc: 'GCC', world: 'Worldwide' }, mkt: { yes: 'Yes', no: 'No' } },
+    c: {
+      exc: { custom: 'Products made to the customer\'s order', fresh: 'Perishable products', health: 'Products that cannot be resold for health reasons', digital: 'Downloaded software and files', books: 'Books and magazines', media: 'Discs and software already used', mixed: 'Products mixed so they cannot be restored', gold: 'Gold, silver and market-priced goods' },
+      tools: { ga: 'Google Analytics', snap: 'Snapchat pixel', tiktok: 'TikTok pixel', meta: 'Meta pixel (Instagram and Facebook)', gads: 'Google Ads' }
+    },
+    tabsAria: 'Policies', tab: { ret: 'Returns', ship: 'Shipping and complaints', priv: 'Privacy' },
+    copy: 'Copy the policy', word: 'Download all as Word', shareL: 'Policies for {n} are ready', read: 'Read from the official source on {d}. The official text is in Arabic.', src: 'Open the official source',
+    law: { a13: 'Official text: 7-day return (Article 13, E-Commerce Law)', r11: 'Official text: products not returned (from Article 11, Executive Regulations)', a14: 'Official text: late delivery (Article 14, E-Commerce Law)', p12: 'Official text: what a privacy policy must include (Article 12, Personal Data Protection Law)', a5: 'Official text: using customer data (Article 5, E-Commerce Law)' },
+    howT: 'Where do I put the policies in Salla?', how: ['Copy the policy from here.', 'In your Salla dashboard open the pages section («الصفحات»), then choose the policy page or add a new one.', 'Paste the text, save, and make sure the page shows in your store footer.', 'Do the same for shipping and complaints, and for privacy.'],
+    newT: 'A new law is coming: the Consumer Protection Law', newP: 'The Cabinet approved it on 10 November 2026. It starts 180 days after it is published in the Official Gazette and replaces the E-Commerce Law. The Ministry of Commerce explains that stores refund within 14 days of being told of the cancellation. These policies follow the law in force on 24 November 2026, and we will update them when the new one starts.', newA: 'Open the Ministry of Commerce questions on the new law',
+    leadT: 'Get the three policies as a PDF', leadP: 'A neat file with the return, shipping and privacy policies in your store name, to keep.', leadBtn: 'Download the policies', pdfT: 'Store policies', pdfFoot: 'Prepared with the free Judy Marketing tools, based on the law in force on 24 November 2026.', pdfRes: 'Policies',
+    nextT: 'Want Judy to add them to your store?', nextP: 'We add the policies to your store, connect WhatsApp and review your store, all in one package.', nextBtn: 'Browse the basic services package', nextWa: 'Hello, I prepared my store policies with the Judy tool and would like you to add them to my store',
+
+    docs: function (v) {
+      var contact = []; if (v.phone) contact.push('WhatsApp: ' + v.phone); if (v.email) contact.push('Email: ' + v.email); if (!contact.length) contact.push('The contact details shown in the store');
+      function d(n) { return Number(n) === 1 ? '1 day' : n + ' days'; }
+      function hr(n) { return Number(n) === 1 ? '1 hour' : n + ' hours'; }
+      var EX = { custom: 'Products made or designed at the customer\'s request or to their specifications, unless they are defective or do not match what was agreed.', fresh: 'Products that may spoil within the return period.', health: 'Products that cannot be resold for health reasons.', digital: 'Software and files downloaded from the internet, unless a defect prevents the download or they do not match what was agreed.', books: 'Newspapers, magazines, publications and books.', media: 'Video tapes, discs and software that have been used.', mixed: 'Products made of elements that were combined and cannot be restored to their original state.', gold: 'Products whose price keeps changing with the market, such as gold and silver.' };
+      var TL = { ga: 'Google Analytics', snap: 'Snapchat', tiktok: 'TikTok', meta: 'Meta (Instagram and Facebook)', gads: 'Google Ads' };
+      var who = [{ p: 'This policy belongs to ' + v.store + (v.link ? ' (' + v.link + ')' : '') + ' and was last updated on ' + v.date + '.' }];
+      var ids = []; if (v.cr) ids.push('Commercial registration or freelance document: ' + v.cr); if (v.vat) ids.push('VAT number: ' + v.vat); if (v.city) ids.push('Address: ' + v.city);
+
+      var ret = [{ t: v.exch ? 'Return and exchange policy' : 'Return policy' }].concat(who).concat([
+        { h: 'Your right to return', p: 'You may return the product within ' + d(v.days) + ' of receiving it, as long as you have not used it or benefited from it and it is in its original condition and packaging. For services, the period starts on the contract date and before you benefit from the service.' },
+        { h: 'Cost of returning', p: v.pays === 'store' ? 'The store pays the return shipping.' : 'The customer pays the return shipping, unless the product is defective or does not match the order, in which case the store pays.' },
+        { h: 'How to return', l: ['Contact us within the return period with your order number and the reason.', 'We send you the return method and address.', 'We check the product when it arrives, then refund you.'] },
+        { h: 'Refund', p: 'We refund you within ' + d(v.refund) + ' of receiving the returned product and checking its condition, by the same payment method you used, unless we agree on another method with you.' }
+      ]);
+      if (v.exch) ret.push({ h: 'Exchange', p: 'You may exchange the product for another size, color or product within the same return period if it is available. Any price difference is settled.' });
+      ret.push({ h: 'Defective or wrong product', p: 'If the product arrives defective or does not match your order, contact us and we will replace it or refund the full amount with the shipping cost. This policy does not affect your warranty rights.' });
+      if (v.exc.length) ret.push({ h: 'Products that cannot be returned', l: v.exc.map(function (k) { return EX[k]; }) });
+      ret.push({ h: 'Correcting an order mistake', p: 'If you made a mistake in your order, tell us within 24 hours of sending it and we will correct it, unless you have already benefited from the product or service.' });
+      ret.push({ h: 'Contact us', l: contact });
+
+      var AREA = { ksa: 'We deliver to all regions of Saudi Arabia.', gcc: 'We deliver to Saudi Arabia and the GCC countries.', world: 'We deliver inside and outside Saudi Arabia.' };
+      var ship = [{ t: 'Shipping, delivery and complaints policy' }].concat(who).concat([
+        { h: 'Delivery area', p: AREA[v.area] },
+        { h: 'Preparation and delivery time', p: 'We prepare your order within ' + d(v.prep) + ' of confirming it, and it reaches you within ' + d(v.ship) + ' after that.' },
+        { h: 'Shipping cost', p: 'You see the shipping cost and the total price, with all fees and taxes, before you pay.' },
+        { h: 'Late delivery', p: 'We tell you if we expect a delay. If delivery is late by more than 15 days from the order date, or past the agreed date, you may cancel the contract and get back what you paid, unless the delay is due to force majeure.' },
+        { h: 'Complaints and suggestions', p: 'We receive your complaint through the contact details below, reply within ' + hr(v.reply) + ' and work to solve it within ' + d(v.solve) + '.' },
+        { h: 'Contact us', l: contact.concat(ids) }
+      ]);
+
+      var share = ['Shipping companies: name, mobile number and address, to deliver the order.', 'Payment gateways: to complete the payment. Card details are handled by the payment gateway.', 'Salla: the platform the store runs on.'];
+      if (v.tools.length) share.push('Measurement and advertising tools: ' + v.tools.map(function (k) { return TL[k]; }).join(', ') + '. These tools may process their data outside Saudi Arabia.');
+      share.push('The competent authorities when the law requires it.');
+      var purpose = ['To fulfil, deliver and invoice your order.', 'To contact you about your order and after-sales service.', 'To protect the store and prevent fraud.'];
+      if (v.tools.length) purpose.push('To measure store visits, improve the store and measure ads.');
+      if (v.mkt) purpose.push('To send offers, only if you agree.');
+      var priv = [{ t: 'Privacy policy' }].concat(who).concat([
+        { h: 'Who we are and how to reach us', p: 'Your data is collected by ' + v.store + '.', l: contact.concat(ids) },
+        { h: 'Data we collect', l: ['Required to fulfil the order: name, mobile number, address and order details.', 'Optional: email, order notes and reviews.', 'Technical: device type and the pages you visited' + (v.tools.length ? ', through cookies.' : '.')] },
+        { h: 'How we collect it', p: 'We collect it directly from you when you register, order or contact us, and some of it technically while you browse the store.' },
+        { h: 'Why we collect it', l: purpose },
+        { h: 'Legal basis', p: 'We process order data to carry out our agreement with you, and other data based on your consent or when the law requires it. You may withdraw your consent at any time.' },
+        { h: 'Who we share it with', p: 'We do not sell your data. We share only what is needed with:', l: share },
+        { h: 'Storage and protection', p: 'Your data is kept in the store account on the Salla platform and is seen only by those who need it to fulfil your order. If your data is breached, we tell you and the competent authority within the period set by law.' },
+        { h: 'Retention and destruction', p: 'We keep your data while it is needed to fulfil your order and serve you, or for the period the law requires, such as for invoices, then we destroy it.' },
+        v.tools.length ? { h: 'Cookies', p: 'We use cookies to run the store and measure visits. You can turn them off in your browser settings, and some parts of the store may not work without them.' } : null,
+        v.mkt ? { h: 'Marketing messages', p: 'We send you offers only with your consent, and every message has a clear way to stop them.' } : null,
+        { h: 'Your rights', l: ['To know why we collect your data and on what basis.', 'To access your data and ask for a clear copy of it.', 'To correct, complete or update it.', 'To ask us to destroy what is no longer needed.', 'To withdraw your consent and close your account.'] },
+        { h: 'How to use your rights', p: 'Send your request through the contact details above and we reply within 30 days. If you are not satisfied, you may complain to the Saudi Data and AI Authority (SDAIA).' },
+        { h: 'Policy updates', p: 'If we change this policy, we publish the new version here with its update date.' }
+      ]).filter(Boolean);
+      return { ret: ret, ship: ship, priv: priv };
+    }
+  };
+
+  D.hub.lead = D.hub.lead.replace('11 tools', '14 tools');
+  D.hub.leadNoCheck = D.hub.leadNoCheck.replace('10 tools', '13 tools');
+  D.hub.groups.start.goalSub = 'Cost, quote, theme';
+  D.hub.groups.start.line = 'Know the cost, the price and the theme before you start.';
+  D.hub.groups.ready = { icon: 'policy', goal: 'Set up my store', goalSub: 'Colors, policies, VAT', name: 'Set up your store', line: 'Your colors, policies and VAT prices, ready to put in your store.' };
+  })();
+
 /* ---- src/data/themes.js ---- */
 /* Salla theme store data, read 2026-11-22 from salla.com/themes (research/facts-20261122.md). [id, name, developer, shown price SAR, rating, ratings count, demo store categories, by Salla] */
 window.JT_THEMES = [[1375036016, "رائد", "سلة", 0, 4.5, 2, ["electronics"], 1], [946727618, "كليك", "سلة", 0, 4.9, 1140, ["home"], 1], [1661298851, "عطاء", "سلة", 0, 4.9, 28, ["charity"], 1], [1046112065, "وسام", "سلة", 228, 4.9, 166, ["home"], 1], [1355517291, "ماركت", "سلة", 228, 4.9, 20, ["grocery"], 1], [1307231275, "منيو", "سلة", 228, 4.9, 11, ["food"], 1], [1587789257, "رقمي", "سلة", 228, 5, 11, ["digital"], 1], [1248180887, "موعد", "سلة", 228, 4.5, 4, ["clinic"], 1], [520022191, "مُختلف", "سلة", 228, 4.9, 34, ["grocery"], 1], [170177462, "زين", "سلة", 228, 4.9, 45, ["electronics"], 1], [546250460, "امتياز", "سلة", 228, 4.6, 90, ["electronics"], 1], [3401524, "عالي", "مؤسسة عادل الجهمي لتقنية المعلومات", 296.4, 5, 1560, ["digital"], 0], [1777895842, "اروماتك", "أحمد عبدالغني", 330.6, 5, 4, ["beauty"], 0], [1399399001, "سيليا", "Selia Tech", 395.58, 5, 1391, ["fashion"], 0], [1499917793, "ملاك", "أفتر أدز", 342, 4.9, 1048, ["electronics"], 0], [137195413, "جلامور", "Madar Technical Solutions FZC", 285, 4.7, 815, ["gifts", "beauty", "home"], 0], [468249652, "لوفيزا", "Madar Technical Solutions FZC", 285, 4.8, 282, ["home"], 0], [1556551807, "فخامة", "الشريف بونعاس", 285, 4.7, 262, ["fashion", "electronics", "beauty", "home"], 0], [188267752, "ساجي", "Ahmed Abdel Hamid", 395.58, 5, 200, ["fashion", "gifts", "beauty", "digital"], 0], [1948506485, "متجر", "باسم تركي", 296.4, 4.9, 192, ["grocery", "gifts", "home"], 0], [1894386675, "يافا", "BAYO LTD", 285, 4.2, 152, ["electronics", "digital"], 0], [491378254, "بريستيج", "كرافو لتقنية المعلومات", 285, 4.6, 113, ["fashion", "electronics", "jewelry", "beauty"], 0], [1248491026, "بلور", "Madar Technical Solutions FZC", 285, 4.6, 101, ["electronics"], 0], [1448593138, "رناواي", "Madar Technical Solutions FZC", 467.4, 4.7, 88, ["fashion"], 0], [85911406, "علا", "كرافو لتقنية المعلومات", 296.4, 4.6, 85, ["fashion", "jewelry", "beauty", "home"], 0], [471614860, "قصص", "Madar Technical Solutions FZC", 285, 4.8, 77, ["books"], 0], [71816946, "كيان", "كرافو لتقنية المعلومات", 296.4, 4.7, 71, ["fashion", "electronics", "jewelry", "beauty"], 0]];
@@ -873,13 +1176,13 @@ window.JT_THEMES_DATE = '2026-11-22';
       hub: 'point-both', season: 'idea-bulb', know: 'microphone', cta: 'thumbs-up', done: 'clapping',
       profit: 'calculator', ads: 'tablet-chart', offers: 'box-surprise', cost: 'blueprint',
       colors: 'painter', theme: 'idea-bulb', seasons: 'megaphone', check: 'magnifier', whatsapp: 'headset',
-      prompts: 'vr', google: 'chart-board',
-      g_start: 'blueprint', g_price: 'calculator', g_market: 'megaphone', g_google: 'magnifier'
+      prompts: 'vr', google: 'chart-board', vat: 'card-pay', policy: 'umbrella', quote: 'cart',
+      g_start: 'blueprint', g_ready: 'painter', g_price: 'calculator', g_market: 'megaphone', g_google: 'magnifier'
     },
     // her real services (prices read from the store 2026-11-22)
     svc: {
       basic: { id: 1514969843, price: 499 }, silver: { id: 837163313, price: 799 }, gold: { id: 1571309363, price: 999 },
-      redesign: { id: 955821044, price: 350 }, seo: { id: 1681749402, price: 499 }, geo: { id: 804605573, price: 599 },
+      redesign: { id: 955821044, price: 350 }, front: { id: 467939401, price: 99 }, care: { id: 245739294, price: 25 }, seo: { id: 1681749402, price: 499 }, geo: { id: 804605573, price: 599 },
       snap: { id: 698503056, price: 299 }, gads: { id: 900983740, price: 299 }, social: { id: 675496799, price: 300 },
       consult: { id: 408047677, price: 0 }, review: { id: 1069491163, price: 0 }, wa: { id: 1518367887, price: 0 },
       packages: { page: 1085189397 }
@@ -1075,6 +1378,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       h('div', { class: 'jt-next__body' }, [
         h('h3', { class: 'jt-next__t', text: o.title }),
         h('p', { class: 'jt-next__p', text: o.text }),
+        o.svc && JT.fixLine ? JT.fixLine(o.svc) : null,
         h('div', { class: 'jt-next__btns' }, [
           JT.btn(o.btn, { href: o.href }),
           JT.btn(T('common.askWa'), { kind: 'wa', icon: 'wa', href: JT.waUrl(o.wa || T('common.waHello')), blank: true })
@@ -1129,9 +1433,13 @@ window.JT_THEMES_DATE = '2026-11-22';
     var main = h('section', { class: 'jt-wrap jt-tool', 'aria-label': t.name });
     root.appendChild(main);
     if (tool && tool.render) tool.render(main); else main.appendChild(h('p', { text: '…' }));
+    if (JT.shareBar && tool && !tool.noShare) {
+      var sb = JT.shareBar(key), nx0 = main.querySelector('.jt-next');
+      if (nx0) main.insertBefore(sb, nx0); else main.appendChild(sb);
+    }
     // «خذ النتيجة كاملة PDF»: after the result, before the service suggestion
     if (JT.leadBox && tool && !tool.noLead) {
-      var box = JT.leadBox(key), nx = main.querySelector('.jt-next');
+      var box = JT.leadBox(key, tool.lead ? tool.lead() : null), nx = main.querySelector('.jt-next');
       if (nx) main.insertBefore(box, nx); else main.appendChild(box);
     }
     var rel = (t.related || []).filter(function (k) { return k !== key; });
@@ -1178,7 +1486,7 @@ window.JT_THEMES_DATE = '2026-11-22';
   // wait until the storefront (React) has hydrated its page card: touching the page earlier breaks its hydration (#418)
   var t0 = Date.now(), seen = 0;
   function hydrated(card) {
-    if (JT.harness || Date.now() - t0 > 6000) return true; // never leave the visitor without the tool
+    if (JT.harness || Date.now() - t0 > 10000) return true; // never leave the visitor without the tool
     if (!Object.keys(card).some(function (k) { return k.indexOf('__react') === 0; })) return false;
     if (!seen) { seen = Date.now(); setTimeout(mount, 320); }
     return Date.now() - seen >= 300;
@@ -1212,18 +1520,126 @@ window.JT_THEMES_DATE = '2026-11-22';
   };
 })();
 
+/* ---- src/svc.js ---- */
+/* live services: price + delivery time read from her store at that moment (public Store API, no key),
+   the «نصلحها لك» line under every result, and the WhatsApp share bar. Nothing here holds a price of its own:
+   when the store cannot be reached the line is hidden and the button still opens the product. */
+(function () {
+  var JT = window.JT, h = JT.h, T = JT.T, CFG = JT.CFG;
+  var API = 'https://api.salla.dev/store/v1/products', STORE = '763876861', TTL = 20 * 60e3, mem = {};
+  function cached(k) { try { var v = JSON.parse(sessionStorage.getItem('jt:svc:' + k)); return v && Date.now() - v.t < TTL ? v.d : null; } catch (e) { return null; } }
+  function keep(k, d) { try { sessionStorage.setItem('jt:svc:' + k, JSON.stringify({ t: Date.now(), d: d })); } catch (e) { /* private mode */ } }
+  function get(path) {
+    var key = JT.lang + path;
+    mem[key] = mem[key] || fetch(API + path, { headers: { 'Store-Identifier': STORE, 'Accept-Language': JT.lang } })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (j) { return j.data; });
+    return mem[key].then(function (d) { return d; }, function (e) { delete mem[key]; throw e; });
+  }
+  /* «مدة التنفيذ 5 أيام من استلامنا ...» -> «5 أيام» ; «Delivery time 2 weeks from ...» -> «2 weeks» */
+  function daysOf(html) {
+    var t = String(html || '').replace(/<[^>]+>/g, ' ').replace(/&nbsp;| /g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ');
+    var ar = JT.lang === 'ar';
+    var m = ar ? /مدة التنفيذ:?\s*([^.،]{2,60})/.exec(t) : /Delivery(?: time)?:?\s+([^.,]{2,70})/.exec(t);
+    if (!m) { m = ar ? /خلال (\d+ (?:أيام عمل|أيام|يوم|أسابيع)|أسبوع|أسبوعين|شهر)(?=[ .،:]|$)/.exec(t) : /[Ww]ithin (\d+ (?:working )?(?:days?|weeks?))/.exec(t); if (!m) return ''; }
+    var d = m[1].replace(ar ? /\s+(من يوم|من استلام|من وصول|تبدأ|بعد استلام).*$/ : /\s+(from|starting|after)\s.*$/i, '').trim();
+    if (ar ? /^نبدأ/.test(d) : /^We start/i.test(d)) return T('svc.now');
+    return d.length <= 26 ? T('svc.in', { d: d }) : '';
+  }
+  function pack(p) {
+    var was = Number(p.regular_price);
+    return { id: Number(p.id), name: p.name, price: Number(p.price), was: p.is_on_sale && was > Number(p.price) ? was : 0, ok: p.is_available !== false && p.status === 'sale', from: !!(p.has_options || (p.options && p.options.length)) };
+  }
+  JT.liveOne = function (id) {
+    var k = 'one' + JT.lang + id, c = cached(k); if (c) return Promise.resolve(c);
+    return get('/' + id + '/details').then(function (p) { var d = pack(p); d.days = daysOf(p.description); keep(k, d); return d; });
+  };
+  /* many prices in one request (no delivery time) */
+  JT.livePrices = function (ids) {
+    var q = ids.map(function (i) { return 'source_value[]=' + i; }).join('&'), k = 'many' + JT.lang + q, c = cached(k);
+    if (c) return Promise.resolve(c);
+    return get('?source=selected&' + q + '&per_page=32').then(function (a) { var o = {}; a.forEach(function (p) { o[p.id] = pack(p); }); keep(k, o); return o; });
+  };
+  // the tools that print her prices (cost) use today's price from the store
+  JT.refreshSvc = function (then) {
+    var ids = Object.keys(CFG.svc).filter(function (k) { return CFG.svc[k].id; });
+    JT.livePrices(ids.map(function (k) { return CFG.svc[k].id; })).then(function (o) {
+      ids.forEach(function (k) { var p = o[CFG.svc[k].id]; if (p && isFinite(p.price)) CFG.svc[k].price = p.price; });
+      if (then) then();
+    }, function () { /* keep the last known prices */ });
+  };
+  JT.priceText = function (p) { return p.price === 0 ? T('svc.free') : (p.from ? T('svc.from') + ' ' : '') + JT.money(p.price, 2); };
+
+  /* one line: service name, price, delivery time (live) */
+  JT.fixLine = function (key) {
+    var s = CFG.svc[key]; if (!s || !s.id) return null;
+    var name = h('span', { class: 'jt-fix__n' }), price = h('b', { class: 'jt-fix__p jt-num' }), was = h('s', { class: 'jt-fix__w jt-num' }), days = h('span', { class: 'jt-fix__d' });
+    var el = h('div', { class: 'jt-fix is-wait' }, [name, h('span', { class: 'jt-fix__m' }, [price, was, days])]);
+    JT.liveOne(s.id).then(function (p) {
+      if (!p.ok) { el.remove(); return; }
+      el.classList.remove('is-wait');
+      name.textContent = p.name; price.textContent = JT.priceText(p);
+      if (p.was) was.textContent = JT.money(p.was, 2); else was.remove();
+      if (p.days) { days.appendChild(h('span', { class: 'jt-ic', html: JT.svg('clock'), 'aria-hidden': 'true' })); days.appendChild(document.createTextNode(p.days)); } else days.remove();
+    }, function () { el.remove(); });
+    return el;
+  };
+  /* compact «نصلحها لك» card that sits right under a result */
+  JT.fixBox = function (o) {
+    return h('aside', { class: 'jt-fixbox', 'aria-label': o.title }, [
+      h('div', { class: 'jt-fixbox__t' }, [h('h3', { class: 'jt-fixbox__h', text: o.title }), o.text ? h('p', { class: 'jt-help', text: o.text }) : null, JT.fixLine(o.svc)]),
+      JT.btn(o.btn || T('svc.fix'), { href: JT.prod(o.svc) })
+    ]);
+  };
+
+  /* WhatsApp share of the result */
+  function txt(sel, root) { var e = (root || document).querySelector(sel); return e ? e.textContent.replace(/\s+/g, ' ').trim() : ''; }
+  function head(el) { return el && el.firstChild ? el.firstChild.textContent.trim() : ''; }
+  function all(a, sel, fn) { return [].map.call(a.querySelectorAll(sel), fn).filter(Boolean); }
+  function stats(a) { return all(a, '.jt-tool .jt-card--res .jt-stat', function (s) { var v = txt('.jt-stat__v', s); return !s.hidden && v && v !== '—' ? txt('.jt-stat__l', s) + ': ' + v : ''; }); }
+  function big(a) { var v = txt('.jt-tool .jt-res__big', a); return v && v.indexOf('—') !== 0 ? [txt('.jt-tool .jt-res__l', a) + ': ' + v] : []; }
+  var LINES = {
+    ads: function (a) { return big(a).concat(stats(a)); },
+    cost: function (a) { return big(a).concat(stats(a)).concat(all(a, '.jt-bill li:not(.is-total)', function (li) { return '- ' + txt('a, span', li) + ': ' + txt('b', li); })); },
+    google: function (a) { return big(a).concat([txt('.jt-serp__t', a), txt('.jt-serp__d', a)]); },
+    offers: function (a) { return all(a, '.jt-rank__i', function (li) { return '- ' + head(li.querySelector('.jt-rank__n')) + ': ' + txt('.jt-rank__v', li) + ' ' + T('common.sar'); }); },
+    theme: function (a) { return all(a, '.jt-theme', function (li) { var l = li.querySelector('a'); return '- ' + head(li.querySelector('.jt-theme__t')) + (l ? '\n' + l.href : ''); }); },
+    colors: function (a) { return all(a, '.jt-role', function (r) { return txt('label', r) + ': ' + txt('code', r); }); },
+    seasons: function () { var s = JT.nextSeason && JT.nextSeason(); return s ? [T('hub.stripTitle', { name: s.name }) + ': ' + (s.days === 0 ? T('seasons.today') : JT.num(s.days) + ' ' + T('seasons.daysLeft')), s.idea] : []; },
+    check: function (a) {
+      if (!a.querySelector('.jt-scores')) return [];
+      return [txt('.jt-ck__host', a)].concat(all(a, '.jt-score', function (s) { return txt('.jt-score__c', s) + ': ' + txt('b', s) + '/100'; })).concat(all(a, '.jt-ck__cols .is-bad .jt-pt__t', function (p) { return '- ' + head(p); }));
+    }
+  };
+  JT.shareUrl = function (key) { return JT.harness ? 'https://judymarketing.com/' + JT.lang : location.origin + JT.pageUrl(key); };
+  JT.shareText = function (key, lines) {
+    var app = document.getElementById('jt-app');
+    lines = lines || (LINES[key] ? LINES[key](app) : []);
+    return [T('tools.' + key + '.name') + ' | ' + T('svc.brand')].concat(lines.length ? lines.filter(Boolean) : [T('tools.' + key + '.short')]).concat(['', T('svc.tryIt') + ' ' + JT.shareUrl(key)]).join('\n');
+  };
+  JT.shareBtn = function (key, getLines, label, kind) {
+    var b = JT.btn(label || T('svc.share'), { kind: kind || 'wa', icon: 'wa', href: 'https://wa.me/', blank: true });
+    var set = function () { b.href = 'https://wa.me/?text=' + encodeURIComponent(JT.shareText(key, getLines ? getLines() : null)); };
+    ['pointerdown', 'focus', 'mouseenter', 'click'].forEach(function (e) { b.addEventListener(e, set); });
+    return b;
+  };
+  JT.shareBar = function (key, getLines) {
+    return h('div', { class: 'jt-share' }, [h('p', { class: 'jt-share__t', text: T('svc.shareT') }), JT.shareBtn(key, getLines)]);
+  };
+})();
+
 /* ---- src/hub.js ---- */
 /* hub page: «أدوات التاجر» — Judy guides by goal, season strip, groups, search, know section */
 (function () {
   var JT = window.JT, h = JT.h, T = JT.T;
   JT.GROUPS = [
-    { k: 'start', tools: ['cost', 'theme', 'colors'] },
+    { k: 'start', tools: ['cost', 'quote', 'theme'] },
+    { k: 'ready', tools: ['colors', 'policy', 'vat'] },
     { k: 'price', tools: ['profit', 'ads', 'offers'] },
     { k: 'market', tools: ['seasons', 'whatsapp', 'prompts'] },
     { k: 'google', tools: ['check', 'google'] }
   ];
   // the store check needs the free PageSpeed key (keyless quota is blocked); hide it until the key is set
-  if (!JT.CFG.psiKey) JT.GROUPS[3].tools = ['google'];
+  if (!JT.CFG.psiKey) JT.GROUPS[4].tools = ['google'];
 
   JT.hub = function (root, h1, body) {
     var title = h1 || h('h1', { text: T('hub.h1') });
@@ -1407,6 +1823,7 @@ window.JT_THEMES_DATE = '2026-11-22';
      1) صافي الربح
      ========================================================= */
   JT.tools.profit = {
+    noShare: true, // has its own buttons
     preview: function () {
       var r = calc({ price: 149, incl: true, reg: true, cost: 60, ship: 25, pack: 3, ad: 15, feePct: 0, feeFix: 0, ret: 0 });
       return h('div', {}, [h('p', { class: 'jt-pv__big' }, [h('b', { class: 'jt-num', text: JT.num(r.profit, 1) }), ' ' + T('common.sar') + ' ' + T('profit.pvLine')]), h('p', { class: 'jt-pv__s', text: T('profit.pvSub') })]);
@@ -1456,7 +1873,7 @@ window.JT_THEMES_DATE = '2026-11-22';
         JT.how(T('common.howT'), T('profit.how'))
       ], 'jt-card--res');
       el.appendChild(h('div', { class: 'jt-tool__grid' }, [inputs, res]));
-      var next = JT.nextStep({ title: T('profit.nextT'), text: T('profit.nextP'), btn: T('profit.nextBtn'), href: JT.prod('review'), wa: T('profit.nextWa') });
+      var next = JT.nextStep({ title: T('profit.nextT'), text: T('profit.nextP'), btn: T('profit.nextBtn'), svc: 'review', href: JT.prod('review'), wa: T('profit.nextWa') });
       el.appendChild(next);
       var mbar = JT.mobileBar(T('profit.perOrder'));
 
@@ -1495,7 +1912,7 @@ window.JT_THEMES_DATE = '2026-11-22';
         if (isFinite(need)) revOut.appendChild(h('span', {}, [T(o.reg ? (o.incl ? 'profit.revOutIncl' : 'profit.revOutExcl') : 'profit.revOutNoReg'), ' ', h('b', { class: 'jt-num', text: JT.money(Math.ceil(need * 100) / 100) })]));
         else revOut.textContent = T('profit.revNo');
         // summary for copy / WhatsApp
-        var sum = T('profit.sum', { price: JT.money(o.price), profit: JT.money(r.profit), margin: JT.pct(r.margin) }) + '\n' + T('common.madeWith') + ' ' + location.href.split('#')[0];
+        var sum = T('profit.sum', { price: JT.money(o.price), profit: JT.money(r.profit), margin: JT.pct(r.margin) }) + '\n' + T('common.madeWith') + ' ' + JT.shareUrl('profit');
         copyBtn.onclick = function () { JT.copy(sum, copyBtn); };
         waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(sum);
         mbar.set((loss ? '-' : '') + JT.num(Math.abs(r.profit), 2) + ' ' + T('common.sar'), loss);
@@ -1546,7 +1963,7 @@ window.JT_THEMES_DATE = '2026-11-22';
         JT.how(T('common.howT'), T('ads.how'))
       ], 'jt-card--res');
       el.appendChild(h('div', { class: 'jt-tool__grid' }, [inputs, res]));
-      el.appendChild(JT.nextStep({ title: T('ads.nextT'), text: T('ads.nextP'), btn: T('ads.nextBtn'), href: JT.prod('snap'), wa: T('ads.nextWa') }));
+      el.appendChild(JT.nextStep({ title: T('ads.nextT'), text: T('ads.nextP'), btn: T('ads.nextBtn'), svc: 'snap', href: JT.prod('snap'), wa: T('ads.nextWa') }));
       var mbar = JT.mobileBar(T('ads.bigL'));
       function run() {
         if (!(f.aov.get() > 0) || !isFinite(f.cost.get())) { res.classList.add('is-empty'); return; }
@@ -1647,7 +2064,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       var baseP = h('p', { class: 'jt-base' });
       var res = card(T('offers.resT'), [baseP, list, JT.how(T('common.howT'), T('offers.how'))], 'jt-card--res');
       el.appendChild(h('div', { class: 'jt-tool__grid' }, [inputs, res]));
-      el.appendChild(JT.nextStep({ title: T('offers.nextT'), text: T('offers.nextP'), btn: T('offers.nextBtn'), href: JT.prod('snap'), wa: T('offers.nextWa') }));
+      el.appendChild(JT.nextStep({ title: T('offers.nextT'), text: T('offers.nextP'), btn: T('offers.nextBtn'), svc: 'snap', href: JT.prod('snap'), wa: T('offers.nextWa') }));
       var mbar = JT.mobileBar(T('offers.winner'));
       function run() {
         if (!(f.price.get() > 0) || !isFinite(f.cost.get())) { res.classList.add('is-empty'); return; }
@@ -1757,13 +2174,14 @@ window.JT_THEMES_DATE = '2026-11-22';
       var sStart = h('b', { class: 'jt-stat__v jt-num' }), sPlan = h('b', { class: 'jt-stat__v jt-num' });
       var list = h('ul', { class: 'jt-bill' });
       var pkBox = h('div', { class: 'jt-pk' });
+      var fixHost = h('div'), fixKey = '';
       var note = h('p', { class: 'jt-warn', hidden: true });
       var orderBtn = JT.btn(T('cost.order'), { href: '#' });
       var waBtn = JT.btn(T('cost.askWa'), { kind: 'wa', icon: 'wa', href: '#', blank: true });
       var res = h('div', { class: 'jt-card jt-card--res' }, [
         h('div', { class: 'jt-res' }, [h('p', { class: 'jt-res__l', text: T('cost.bigL') }), h('p', { class: 'jt-res__big' }, [big, h('span', { class: 'jt-res__u', text: T('common.sar') })]), h('p', { class: 'jt-res__sub', text: T('cost.bigSub') })]),
         h('div', { class: 'jt-stats jt-stats--2' }, [h('div', { class: 'jt-stat' }, [h('span', { class: 'jt-stat__l', text: T('cost.startL') }), sStart]), h('div', { class: 'jt-stat' }, [h('span', { class: 'jt-stat__l', text: T('cost.planL') }), sPlan])]),
-        pkBox, h('h3', { class: 'jt-mini-t', text: T('cost.billT') }), list, note,
+        pkBox, h('h3', { class: 'jt-mini-t', text: T('cost.billT') }), list, fixHost, note,
         h('div', { class: 'jt-actions' }, [orderBtn, waBtn]),
         JT.how(T('cost.howT'), T('cost.how'))
       ]);
@@ -1792,12 +2210,15 @@ window.JT_THEMES_DATE = '2026-11-22';
         note.hidden = !warns.length; note.textContent = warns.join(' ');
         var main = r.lines[0];
         orderBtn.href = main ? main.href : JT.prod('basic');
+        var fk = r.pkg ? r.pkg.k : 'redesign';
+        if (JT.fixLine && fk !== fixKey) { fixKey = fk; fixHost.innerHTML = ''; var fl = JT.fixLine(fk); if (fl) fixHost.appendChild(fl); }
         var sum = T('cost.waText', { items: r.lines.map(function (l) { return T('cost.line.' + l.k); }).join(' + '), total: JT.money(r.once, 0) });
         waBtn.href = JT.waUrl(sum);
         mbar.set(JT.money(r.firstYear, 0));
         JT.store.set('cost', { mode: o.mode, products: prodF.raw(), logo: logo.get(), plan: o.plan, bill: o.bill, seo: o.seo, geo: o.geo, ads: o.ads });
       }
       run();
+      if (JT.refreshSvc) JT.refreshSvc(run);
     }
   };
 
@@ -1847,7 +2268,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       var out = h('ol', { class: 'jt-themes' });
       var res = h('div', { class: 'jt-card jt-card--res' }, [h('h2', { class: 'jt-card__t', text: T('theme.resT') }), out, JT.how(T('theme.howT'), T('theme.how'))]);
       el.appendChild(h('div', { class: 'jt-tool__grid' }, [inputs, res]));
-      el.appendChild(JT.nextStep({ title: T('theme.nextT'), text: T('theme.nextP'), btn: T('theme.nextBtn'), href: JT.prod('basic'), wa: T('theme.nextWa') }));
+      el.appendChild(JT.nextStep({ title: T('theme.nextT'), text: T('theme.nextP'), btn: T('theme.nextBtn'), svc: 'basic', href: JT.prod('basic'), wa: T('theme.nextWa') }));
       function run() {
         var o = { cat: catSel.value, budget: budget.get(), pri: pri.get() };
         JT.store.set('theme', o);
@@ -1968,7 +2389,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       var checks = h('ul', { class: 'jt-checks' });
       var res = h('div', { class: 'jt-card jt-card--res' }, [h('h2', { class: 'jt-card__t', text: T('colors.pvTitle') }), h('div', { class: 'jt-phone' }, [pv]), checks, JT.how(T('colors.howSallaT'), T('colors.howSalla'))]);
       el.appendChild(h('div', { class: 'jt-tool__grid' }, [inputs, res]));
-      el.appendChild(JT.nextStep({ title: T('colors.nextT'), text: T('colors.nextP'), btn: T('colors.nextBtn'), href: JT.prod('basic'), wa: T('colors.nextWa') }));
+      el.appendChild(JT.nextStep({ title: T('colors.nextT'), text: T('colors.nextP'), btn: T('colors.nextBtn'), svc: 'basic', href: JT.prod('basic'), wa: T('colors.nextWa') }));
 
       var ROLES = ['primary', 'second', 'text', 'bg', 'onPrimary'];
       var pickers = {};
@@ -2142,7 +2563,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       var tl = h('ol', { class: 'jt-tl' });
       el.appendChild(h('div', { class: 'jt-season-top' }, [lead, h('div', { class: 'jt-card jt-card--in' }, [storeF.el, h('p', { class: 'jt-help', text: T('seasons.hijriNote') })])]));
       el.appendChild(h('div', { class: 'jt-card jt-card--plain' }, [h('div', { class: 'jt-season-bar' }, [h('h2', { class: 'jt-card__t', text: T('seasons.listT') }), chips]), tl]));
-      el.appendChild(JT.nextStep({ title: T('seasons.nextT'), text: T('seasons.nextP'), btn: T('seasons.nextBtn'), href: JT.prod('snap'), wa: T('seasons.nextWa') }));
+      el.appendChild(JT.nextStep({ title: T('seasons.nextT'), text: T('seasons.nextP'), btn: T('seasons.nextBtn'), svc: 'snap', href: JT.prod('snap'), wa: T('seasons.nextWa') }));
 
       function item(s, open) {
         var store = (prof.store || '').trim();
@@ -2229,7 +2650,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       var list = h('div', { class: 'jt-msgs' });
       var res = h('div', { class: 'jt-card jt-card--res jt-card--plain' }, [chips, list]);
       el.appendChild(h('div', { class: 'jt-tool__grid jt-tool__grid--wide' }, [inputs, res]));
-      el.appendChild(JT.nextStep({ title: T('wa.nextT'), text: T('wa.nextP'), btn: T('wa.nextBtn'), href: JT.prod('wa'), wa: T('wa.nextWa') }));
+      el.appendChild(JT.nextStep({ title: T('wa.nextT'), text: T('wa.nextP'), btn: T('wa.nextBtn'), svc: 'wa', href: JT.prod('wa'), wa: T('wa.nextWa') }));
       function run() {
         var v = { store: f.store.get(), link: f.link.get(), name: f.name.get() };
         var prof = profileStore(); prof.store = v.store; prof.link = v.link; prof.tone = tone.get(); JT.store.set('profile', prof);
@@ -2275,7 +2696,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       var list = h('div', { class: 'jt-msgs' });
       var res = h('div', { class: 'jt-card jt-card--res jt-card--plain' }, [list]);
       el.appendChild(h('div', { class: 'jt-tool__grid jt-tool__grid--wide' }, [inputs, res]));
-      el.appendChild(JT.nextStep({ title: T('pr.nextT'), text: T('pr.nextP'), btn: T('pr.nextBtn'), href: JT.prod('geo'), wa: T('pr.nextWa') }));
+      el.appendChild(JT.nextStep({ title: T('pr.nextT'), text: T('pr.nextP'), btn: T('pr.nextBtn'), svc: 'geo', href: JT.prod('geo'), wa: T('pr.nextWa') }));
       function run() {
         var v = {}; Object.keys(f).forEach(function (k) { v[k] = f[k].get(); });
         v.tone = tone.get() === 'formal' ? T('pr.toneFormal') : T('pr.toneFriendly');
@@ -2349,7 +2770,7 @@ window.JT_THEMES_DATE = '2026-11-22';
         checks, JT.how(T('google.howSallaT'), T('google.howSalla'))
       ]);
       el.appendChild(h('div', { class: 'jt-tool__grid' }, [inputs, res]));
-      el.appendChild(JT.nextStep({ title: T('google.nextT'), text: T('google.nextP'), btn: T('google.nextBtn'), href: JT.prod('seo'), wa: T('google.nextWa') }));
+      el.appendChild(JT.nextStep({ title: T('google.nextT'), text: T('google.nextP'), btn: T('google.nextBtn'), svc: 'seo', href: JT.prod('seo'), wa: T('google.nextWa') }));
       function run() {
         var t = f.title.get(), d = f.desc.get(), kw = f.kw.get(), url = f.url.get().replace(/^https?:\/\//, '').replace(/\/$/, ''), brand = f.brand.get();
         var mobile = view.get() === 'm';
@@ -2443,6 +2864,7 @@ window.JT_THEMES_DATE = '2026-11-22';
   function itemWho(it) { return it.known ? T('check.who.' + T('check.a.' + it.id + '.who')) : T('check.who.dev'); }
 
   JT.tools.check = {
+    noShare: true, // the bar is added with the result
     noLead: true,
     preview: function () {
       return h('div', { class: 'jt-pv__scores' }, [['seo', 100], ['performance', 38]].map(function (x) { return h('p', {}, [h('b', { class: 'jt-num jt-lv-' + level(x[1] / 100), text: String(x[1]) }), h('span', { text: T('check.cat.' + x[0]) })]); }).concat([h('p', { class: 'jt-pv__s', text: T('check.pvSub') })]));
@@ -2462,7 +2884,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       var wait = h('div', { class: 'jt-ck__wait', hidden: true, role: 'status' }, [JT.img('check', 'jt-ck__judy'), h('p', { class: 'jt-ck__msg' }), h('div', { class: 'jt-ck__bar' }, [h('span')])]);
       var res = h('div', { class: 'jt-ck__res', hidden: true });
       el.appendChild(top); el.appendChild(wait); el.appendChild(res);
-      el.appendChild(JT.nextStep({ title: T('check.nextT'), text: T('check.nextP'), btn: T('check.nextBtn'), href: JT.prod('review'), wa: T('check.nextWa') }));
+      el.appendChild(JT.nextStep({ title: T('check.nextT'), text: T('check.nextP'), btn: T('check.nextBtn'), svc: 'review', href: JT.prod('review'), wa: T('check.nextWa') }));
 
       var timer;
       function waiting(on) {
@@ -2520,6 +2942,10 @@ window.JT_THEMES_DATE = '2026-11-22';
           h('p', { class: 'jt-ck__more', text: T('check.moreN', { n: Math.max(0, r.fails.length - 3) }) })
         ]);
         res.appendChild(card);
+        // the weakest of the four scores decides which service is suggested (SEO score -> SEO service, the rest -> storefront service)
+        var weak = CATS.filter(function (c) { return r.scores[c] != null; }).sort(function (a, b) { return r.scores[a] - r.scores[b]; })[0];
+        if (JT.fixBox && weak && r.scores[weak] < 0.9) { var sv = weak === 'seo' ? 'seo' : 'front'; res.appendChild(JT.fixBox({ svc: sv, title: T('check.fixT.' + sv), text: T('check.fixP.' + sv) })); }
+        if (JT.shareBar) res.appendChild(JT.shareBar('check'));
         // the full report goes into the PDF for a contact
         var full = function () {
           var list = h('div', {}, [h('h2', { text: T('check.pdfAll', { n: r.fails.length }) })].concat(r.fails.map(function (it) {
@@ -2535,6 +2961,456 @@ window.JT_THEMES_DATE = '2026-11-22';
         res.appendChild(JT.leadBox('check', { title: T('check.leadT'), text: T('check.leadP', { n: r.fails.length }), btn: T('check.leadBtn'), pdf: full, summary: function () { return host + ' | ' + CATS.map(function (c) { return c + ':' + (r.scores[c] == null ? '-' : Math.round(r.scores[c] * 100)); }).join(' ') + ' | fails ' + r.fails.length; } }));
         card.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
+    }
+  };
+})();
+
+/* ---- src/tools/vat.js ---- */
+/* ضريبة القيمة المضافة بالجملة: one click for every price.
+   Excel: the merchant's own Salla prices file («استيراد أسعار المنتجات»). Only the number inside the price cells is
+   changed in the sheet XML; every other byte of the workbook (No., options, dates, grey cells) stays as Salla made it.
+   List: pasted names + prices -> CSV for Salla's new import (Mushammer, CSV or XLSX, any headers).
+   Format facts: research/salla-import-format-20261124.md (read 24 Nov 2026). Everything runs in the browser. */
+(function () {
+  var JT = window.JT, h = JT.h, T = JT.T, VAT = 0.15;
+  var ZIP = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
+  var NS = 'http://schemas.openxmlformats.org/spreadsheetml/2006/main';
+  function m2(n) { return n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/, ','); }
+  function r2(n) { return Math.round((n + 1e-9) * 100) / 100; }
+  // mode: add (before VAT -> with VAT) | strip (with VAT -> before VAT); round: none | whole | nine (only for add)
+  function convert(p, mode, round) {
+    if (mode === 'strip') return r2(p / (1 + VAT));
+    var v = p * (1 + VAT);
+    if (round === 'whole') return Math.max(1, Math.round(v + 1e-9));
+    if (round === 'nine') { var up = Math.ceil(v - 1e-9); return up % 10 === 9 ? up : up + ((9 - (up % 10) + 10) % 10); }
+    return r2(v);
+  }
+  // what the shopper pays when the store adds 15% to the stored price
+  function offBy(p) { var back = r2(r2(p / (1 + VAT)) * (1 + VAT)); return Math.abs(back - r2(p)) > 0.001 ? back : 0; }
+  JT.vatConvert = convert; JT.vatOffBy = offBy;
+
+  /* ---------- pasted list ---------- */
+  function parseList(text) {
+    var out = [];
+    text.split(/\r?\n/).forEach(function (line) {
+      line = line.trim().replace(/([\d٠-٩۰-۹])[,٬](?=[\d٠-٩۰-۹]{3}(?![\d٠-٩۰-۹]))/g, '$1'); if (!line) return; // 1,250 -> 1250
+      var parts = line.split(/\t|\s*[;|]\s*/); if (parts.length < 2) parts = line.split(/\s*[,،]\s*(?=[^,،]*$)/);
+      if (parts.length < 2) { var m = /^(.*\S)\s+([\d٠-٩۰-۹][\d٠-٩۰-۹.,٫٬]*)\s*(?:ر\.?س|ريال|SAR)?$/i.exec(line); if (m) parts = [m[1], m[2]]; else { var only = JT.parse(line.replace(/ر\.?س|ريال|SAR/gi, '')); if (only > 0) parts = ['', line]; } }
+      if (parts.length < 2) return;
+      var price = NaN, pi = -1;
+      for (var i = parts.length - 1; i >= 0; i--) { var v = JT.parse(parts[i].replace(/ر\.?س|ريال|SAR/gi, '').trim()); if (v > 0) { price = v; pi = i; break; } }
+      if (!(price > 0)) return;
+      var rest = parts.filter(function (x, i) { return i !== pi; });
+      out.push({ name: rest[0] || '', sku: rest[1] || '', price: price });
+    });
+    return out;
+  }
+  JT.vatParse = parseList;
+
+  /* ---------- xlsx (zip + sheet XML) ---------- */
+  var zl;
+  function loadZip() { if (window.JSZip) return Promise.resolve(); zl = zl || new Promise(function (ok, bad) { var sc = h('script', { src: ZIP, crossorigin: 'anonymous', referrerpolicy: 'no-referrer' }); sc.onload = ok; sc.onerror = function () { zl = null; bad(new Error('lib')); }; document.head.appendChild(sc); }); return zl; }
+  function colOf(ref) { return /^[A-Z]+/.exec(ref)[0]; }
+  function norm(s) { return String(s || '').replace(/[‎‏﻿]/g, '').replace(/[أإآ]/g, 'ا').replace(/\s+/g, ' ').trim(); }
+  function readBook(file) {
+    return loadZip().then(function () { return window.JSZip.loadAsync(file); }).then(function (zip) {
+      var names = Object.keys(zip.files).filter(function (n) { return /^xl\/worksheets\/[^/]+\.xml$/.test(n); }).sort();
+      if (!names.length) throw new Error('type');
+      var ssf = zip.file('xl/sharedStrings.xml');
+      return Promise.all([ssf ? ssf.async('string') : Promise.resolve('')].concat(names.map(function (n) { return zip.file(n).async('string'); }))).then(function (x) {
+        var dp = new DOMParser(), ss = [];
+        if (x[0]) [].forEach.call(dp.parseFromString(x[0], 'application/xml').getElementsByTagNameNS(NS, 'si'), function (si) { ss.push([].map.call(si.getElementsByTagNameNS(NS, 't'), function (t) { return t.parentNode.localName === 'rPh' ? '' : t.textContent; }).join('')); });
+        function val(c) {
+          var t = c.getAttribute('t');
+          if (t === 'inlineStr') return [].map.call(c.getElementsByTagNameNS(NS, 't'), function (n) { return n.textContent; }).join('');
+          var v = c.getElementsByTagNameNS(NS, 'v')[0]; if (!v) return '';
+          return t === 's' ? (ss[Number(v.textContent)] || '') : v.textContent;
+        }
+        for (var s = 0; s < names.length; s++) {
+          var doc = dp.parseFromString(x[s + 1], 'application/xml'), rows = [].slice.call(doc.getElementsByTagNameNS(NS, 'row'));
+          var H = null, start = 0;
+          for (var i = 0; i < Math.min(rows.length, 6) && !H; i++) {
+            var m = {};
+            [].forEach.call(rows[i].getElementsByTagNameNS(NS, 'c'), function (c) { var n = norm(val(c)); if (n) m[n] = colOf(c.getAttribute('r')); });
+            if (m[norm('سعر المنتج')] || m.price || m.Price) { H = m; start = i + 1; }
+          }
+          if (!H) continue;
+          var C = { no: H['No.'], type: H[norm('النوع')], name: H[norm('أسم المنتج')] || H[norm('اسم المنتج')], sku: H[norm('رمز المنتج sku')], price: H[norm('سعر المنتج')] || H.price || H.Price, sale: H[norm('السعر المخفض')], tax: H[norm('خاضع للضريبة ؟')] || H[norm('خاضع للضريبة؟')] };
+          var list = [];
+          rows.slice(start).forEach(function (row) {
+            var o = { cells: {} };
+            [].forEach.call(row.getElementsByTagNameNS(NS, 'c'), function (c) {
+              var col = colOf(c.getAttribute('r'));
+              Object.keys(C).forEach(function (k) { if (C[k] && C[k] === col) { o[k] = val(c); if (k === 'price' || k === 'sale') o.cells[k] = c; } });
+            });
+            o.price = JT.parse(o.price); o.sale = JT.parse(o.sale);
+            if (o.name || o.price > 0) list.push(o);
+          });
+          return { zip: zip, doc: doc, part: names[s], rows: list, full: Object.keys(H).length > 14, file: file.name };
+        }
+        throw new Error('cols');
+      });
+    });
+  }
+  function setCell(c, n) {
+    c.removeAttribute('t');
+    [].slice.call(c.childNodes).forEach(function (k) { if (k.localName === 'is' || k.localName === 'v' || k.localName === 'f') c.removeChild(k); });
+    var v = c.ownerDocument.createElementNS(NS, 'v'); v.textContent = String(n); c.appendChild(v);
+  }
+  function save(blob, name) { var u = URL.createObjectURL(blob), a = h('a', { href: u, download: name }); document.body.appendChild(a); a.click(); a.remove(); setTimeout(function () { URL.revokeObjectURL(u); }, 4000); }
+
+  JT.tools.vat = {
+    noShare: true, // has its own buttons
+    preview: function () {
+      return h('div', {}, [h('p', { class: 'jt-pv__big' }, [h('b', { class: 'jt-num', text: '100' }), ' ', h('span', { class: 'jt-arr', html: JT.svg('arrow') }), ' ', h('b', { class: 'jt-num', text: '115' })]), h('p', { class: 'jt-pv__s', text: T('vat.pvSub') })]);
+    },
+    render: function (el) {
+      var saved = JT.store.get('vat') || {}, book = null, off = {};
+      var upd = function () { run(); };
+      var mode = JT.seg({ id: 'vt-mode', label: T('vat.modeQ'), value: saved.mode || 'add', options: [['add', T('vat.add')], ['strip', T('vat.strip')]], onChange: upd });
+      var src = JT.seg({ id: 'vt-src', label: T('vat.srcQ'), value: saved.src || 'list', options: [['list', T('vat.srcList')], ['file', T('vat.srcFile')]], onChange: upd });
+      var round = JT.seg({ id: 'vt-round', label: T('vat.roundQ'), value: saved.round || 'none', options: [['none', T('vat.rNone')], ['whole', T('vat.rWhole')], ['nine', T('vat.rNine')]], onChange: upd });
+      var list = JT.textField({ id: 'vt-list', label: T('vat.listL'), area: true, rows: 7, value: saved.list != null ? saved.list : T('vat.ex'), help: T('vat.listHelp'), onInput: upd });
+      var file = h('input', { type: 'file', id: 'vt-file', class: 'jt-sr-only', accept: '.xlsx' });
+      var drop = h('label', { class: 'jt-drop', for: 'vt-file' }, [h('span', { class: 'jt-drop__ic', html: JT.svg('upload'), 'aria-hidden': 'true' }), h('b', { text: T('vat.drop') }), h('span', { text: T('vat.dropS') })]);
+      var fst = h('p', { class: 'jt-help', role: 'status' });
+      var steps = JT.how(T('vat.getT'), T('vat.get'));
+      var fileBox = h('div', { class: 'jt-vt__file' }, [file, drop, fst, steps]);
+      var inputs = h('div', { class: 'jt-card jt-card--in' }, [h('h2', { class: 'jt-card__t', text: T('vat.inTitle') }), mode.el, h('div', { style: 'margin-top:18px' }, [src.el]), h('div', { style: 'margin-top:18px' }, [list.el, fileBox]), h('div', { style: 'margin-top:18px' }, [round.el])]);
+
+      var big = h('b', { class: 'jt-res__v jt-num' }), bigS = h('p', { class: 'jt-res__sub' });
+      var warn = h('p', { class: 'jt-warn' }), hal = h('p', { class: 'jt-help', hidden: true });
+      var tbody = h('tbody'), th3 = h('th', { scope: 'col' });
+      var table = h('div', { class: 'jt-vt__wrap', tabindex: '0', role: 'region', 'aria-label': T('vat.tblAria') }, [h('table', { class: 'jt-vt' }, [h('thead', {}, [h('tr', {}, [h('th', { scope: 'col', text: T('vat.cName') }), h('th', { scope: 'col', text: T('vat.cOld') }), th3])]), tbody])]);
+      var moreP = h('p', { class: 'jt-help', hidden: true });
+      var dl = JT.btn(T('vat.dl'), { icon: 'download' });
+      var copyB = JT.btn(T('vat.copy'), { kind: 'soft', icon: 'copy' });
+      var share = JT.shareBtn('vat', function () { return lines(); }, null, 'soft');
+      var up = JT.how(T('vat.upT'), []);
+      var res = h('div', { class: 'jt-card jt-card--res jt-vt__res' }, [
+        h('div', { class: 'jt-res', 'aria-live': 'polite' }, [h('p', { class: 'jt-res__l', text: T('vat.bigL') }), h('p', { class: 'jt-res__big' }, [big, h('span', { class: 'jt-res__u', text: T('vat.unit') })]), bigS]),
+        h('h3', { class: 'jt-mini-t', text: T('vat.tblT') }), table, moreP, hal, warn,
+        h('div', { class: 'jt-actions' }, [dl, share, copyB]), up
+      ]);
+      el.appendChild(h('div', { class: 'jt-tool__grid' }, [inputs, res]));
+      el.appendChild(JT.nextStep({ title: T('vat.nextT'), text: T('vat.nextP'), btn: T('vat.nextBtn'), svc: 'review', href: JT.prod('review'), wa: T('vat.nextWa') }));
+      var mbar = JT.mobileBar(T('vat.bigL'));
+
+      file.addEventListener('change', function () { if (file.files[0]) take(file.files[0]); file.value = ''; });
+      ['dragover', 'dragenter'].forEach(function (e) { drop.addEventListener(e, function (ev) { ev.preventDefault(); drop.classList.add('is-over'); }); });
+      ['dragleave', 'drop'].forEach(function (e) { drop.addEventListener(e, function (ev) { ev.preventDefault(); drop.classList.remove('is-over'); }); });
+      drop.addEventListener('drop', function (ev) { var f = ev.dataTransfer && ev.dataTransfer.files[0]; if (f) take(f); });
+      function take(f) {
+        fst.className = 'jt-help'; fst.textContent = T('vat.reading');
+        if (!/\.xlsx$/i.test(f.name)) { fst.className = 'jt-err'; fst.textContent = T('vat.errType'); return; }
+        readBook(f).then(function (b) { book = b; off = {}; fst.textContent = T('vat.readOk', { n: b.rows.length, f: f.name }); run(); }, function (e) { book = null; fst.className = 'jt-err'; fst.textContent = T(e.message === 'cols' ? 'vat.errCols' : 'vat.errType'); run(); });
+      }
+      function rows() {
+        var a = src.get() === 'file' ? (book ? book.rows : []) : parseList(list.get());
+        return a.map(function (o, i) {
+          var skip = !!off[i] || /^لا$/.test(norm(o.tax));
+          var x = { i: i, name: o.name, sku: o.sku, type: o.type, price: o.price, sale: o.sale, cells: o.cells, skip: skip, tax: o.tax };
+          x.to = o.price > 0 && !skip ? convert(o.price, mode.get(), round.get()) : o.price;
+          x.saleTo = o.sale > 0 && !skip ? convert(o.sale, mode.get(), round.get()) : o.sale;
+          x.off = !skip && mode.get() === 'strip' && o.price > 0 ? offBy(o.price) : 0;
+          return x;
+        });
+      }
+      function lines() {
+        var r = rows().filter(function (x) { return x.price > 0; });
+        return r.slice(0, 15).map(function (x) { return '- ' + (x.name || T('vat.item') + ' ' + (x.i + 1)) + ': ' + JT.num(x.price, 2) + ' ← ' + JT.num(x.to, 2); }).concat(r.length > 15 ? [T('vat.andMore', { n: r.length - 15 })] : []);
+      }
+      function run() {
+        var isFile = src.get() === 'file', m = mode.get();
+        list.el.hidden = isFile; fileBox.hidden = !isFile; round.el.hidden = m !== 'add';
+        th3.textContent = T(m === 'add' ? 'vat.cAdd' : 'vat.cStrip');
+        var all = rows(), r = all.filter(function (x) { return x.price > 0; }), ch = r.filter(function (x) { return !x.skip; });
+        JT.tween(big, ch.length, function (v) { return JT.num(Math.round(v), 0); });
+        bigS.textContent = T(m === 'add' ? 'vat.subAdd' : 'vat.subStrip');
+        tbody.innerHTML = '';
+        r.slice(0, 60).forEach(function (x) {
+          var cb = h('input', { type: 'checkbox', class: 'jt-vt__cb', id: 'vt-r' + x.i, 'aria-label': T('vat.rowCb', { n: x.name || (x.i + 1) }) }); cb.checked = !x.skip; cb.disabled = /^لا$/.test(norm(x.tax));
+          cb.addEventListener('change', function () { off[x.i] = !cb.checked; run(); var back = document.getElementById('vt-r' + x.i); if (back) back.focus(); });
+          tbody.appendChild(h('tr', { class: x.skip ? 'is-skip' : '' }, [
+            h('td', {}, [h('label', { class: 'jt-vt__n', for: 'vt-r' + x.i }, [cb, h('span', { text: x.name || T('vat.item') + ' ' + (x.i + 1) })])]),
+            h('td', { class: 'jt-num' }, [m2(x.price), x.sale > 0 ? h('s', { text: m2(x.sale) }) : null]),
+            h('td', { class: 'jt-num' }, [h('b', { text: m2(x.to) }), x.sale > 0 ? h('small', { text: m2(x.saleTo) }) : null])
+          ]));
+        });
+        moreP.hidden = r.length <= 60; moreP.textContent = T('vat.more', { n: r.length - 60 });
+        var bad = ch.filter(function (x) { return x.off; });
+        hal.hidden = !bad.length; if (bad.length) hal.textContent = T('vat.hal', { n: bad.length, p: JT.num(bad[0].price, 2), b: JT.num(bad[0].off, 2) });
+        warn.textContent = isFile && book && book.full ? T('vat.warnFull') : T(m === 'add' ? 'vat.warnAdd' : 'vat.warnStrip');
+        var none = !ch.length; [dl, share, copyB].forEach(function (b) { b.classList.toggle('is-off', none); });
+        var block = isFile && book && book.full;
+        dl.hidden = block; dl.querySelector('.jt-bl').textContent = T(isFile ? 'vat.dlX' : 'vat.dl');
+        var ub = up.querySelector('.jt-how__b'); ub.innerHTML = '';
+        T(isFile ? 'vat.upX' : 'vat.upC').forEach(function (t) { ub.appendChild(h('p', { text: t })); });
+        mbar.set(JT.num(ch.length, 0) + ' ' + T('vat.unit'));
+        JT.store.set('vat', { mode: m, src: src.get(), round: round.get(), list: list.get().slice(0, 20000) });
+      }
+      copyB.onclick = function () { JT.copy(rows().filter(function (x) { return x.price > 0; }).map(function (x) { return [x.name, x.to].join('\t'); }).join('\n'), copyB); };
+      dl.onclick = function () {
+        var r = rows().filter(function (x) { return x.price > 0; });
+        if (src.get() === 'file') {
+          if (!book) return;
+          // the cells are rewritten from the numbers read at upload time, so pressing twice never adds VAT twice
+          rows().forEach(function (x) {
+            if (x.cells && x.cells.price && x.price > 0) setCell(x.cells.price, x.to);
+            if (x.cells && x.cells.sale && x.sale > 0) setCell(x.cells.sale, x.saleTo);
+          });
+          var xml = new XMLSerializer().serializeToString(book.doc);
+          if (xml.indexOf('<?xml') !== 0) xml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n' + xml;
+          book.zip.file(book.part, xml);
+          book.zip.generateAsync({ type: 'blob', compression: 'DEFLATE', mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }).then(function (b) { save(b, book.file.replace(/\.xlsx$/i, '') + '-judy.xlsx'); });
+        } else {
+          var q = function (s) { return '"' + String(s == null ? '' : s).replace(/"/g, '""') + '"'; };
+          var head = T('vat.csvHead'), csv = '﻿' + [head.map(q).join(',')].concat(r.map(function (x) { return [q(x.name || T('vat.item') + ' ' + (x.i + 1)), q(x.sku), x.to].join(','); })).join('\r\n') + '\r\n';
+          save(new Blob([csv], { type: 'text/csv;charset=utf-8' }), 'judy-salla-prices.csv');
+        }
+      };
+      run();
+    }
+  };
+})();
+
+/* ---- src/tools/policy.js ---- */
+/* سياسات المتجر: الاسترجاع، الشحن والشكاوى، الخصوصية. The wording templates live in i18n/p15.*.js (T('policy.docs')).
+   Official texts quoted: research/saudi-ecommerce-law-20261124.md (read from the official sources on 24 Nov 2026). */
+(function () {
+  var JT = window.JT, h = JT.h, T = JT.T;
+  var READ = new Date(2026, 10, 24);
+  // official Arabic text, word for word (Ministry of Commerce copy of the law, SDAIA copy of the data law)
+  var LAW = { ecom: 'https://mc.gov.sa/ar/ECC/ECC_Docs/E-commerce-system.pdf', reg: 'https://mc.gov.sa/ar/ECC/pages/default.aspx', pdpl: 'https://dgp.sdaia.gov.sa/', faq: 'https://mc.gov.sa/ar/cps/Documents/CPS-FAQ.pdf' };
+  var QUOTES = {
+    ret: [
+      { k: 'a13', u: LAW.ecom, t: ['1- مع عدم الإخلال بأحكام الضمان الاتفاقية والنظامية، للمستهلك -في غير الحالات المنصوص عليها في الفقرة (2) من هذه المادة- فسخ العقد خلال الأيام السبعة التالية لتاريخ تسلمه المنتج أو لتاريخ التعاقد على تقديم الخدمة، ما دام أنه لم يستخدم منتج موفر الخدمة أو لم يستفد من خدمته أو لم يحصل على منفعة من أيّ منهما، وفي هذه الحالة يتحمل المستهلك التكاليف المترتبة على فسخ العقد إلا إذا اتفق أطراف العقد على غير ذلك.'] },
+      { k: 'r11', u: LAW.reg, t: ['مع مراعاة حكم الفقرة (2) من المادة (الثالثة عشرة) من النظام، لا يحق للمستهلك فسخ العقد في الحالات الآتية ما لم يُتفق على خلاف ذلك:', 'أ. إذا كان محل العقد منتجًا معرضًا للتلف خلال مدة جواز فسخ العقد.', 'ب. إذا كان محل العقد منتجًا لا يمكن إعادة بيعه لأسباب صحية.', 'ج. إذا كان محل العقد منتجًا يتضمن عدة عناصر تم دمجها ولا يمكن معه إعادتها إلى حالتها الأصلية التي سلمت بها.', 'ه. إذا كان محل العقد منتجًا تم تصميمه وإنتاجه خصيصًا للمستهلك وفقًا لمواصفات طلبها.', 'ز. إذا كان محل العقد منتجًا أو خدمة يمكن أن يتغير سعرها خلال المدة التي يجوز فيها فسخ العقد اعتمادًا على سوق يتسم بالتقلب السعري المستمر بشكل لا يتحكم فيه موفر الخدمة، كالذهب والفضة.'] }
+    ],
+    ship: [{ k: 'a14', u: LAW.ecom, t: ['1- ما لم يتفق موفر الخدمة والمستهلك على مدة أخرى لتسليم محل العقد أو تنفيذه، يحق للمستهلك فسخ العقد إذا تأخر موفر الخدمة عن التسليم أو التنفيذ مدة تزيد على (خمسة عشر) يوماً من تاريخ إبرام العقد أو عن الموعد المتفق عليه، وله استرداد ما دفعه بمقتضى العقد مقابل المنتج أو الخدمة أو غير ذلك من تكاليف ترتبت على هذا التأخير، ما لم يكن التأخير بسبب قوة قاهرة.', '2- دون إخلال بما ورد في الفقرة (1) من هذه المادة، يلتزم موفر الخدمة بإبلاغ المستهلك عن أي تأخير متوقع أو صعوبات يكون لها تأثير جوهري في تسليم محل العقد أو تنفيذه.'] }],
+    priv: [
+      { k: 'p12', u: LAW.pdpl, t: ['على جهة التحكم أن تعتمد سياسة للخصوصية، وأن تجعلها متاحة لأصحاب البيانات الشخصية ليطلعوا عليها عند جمع بياناتهم. على أن تشتمل تلك السياسة على تحديد الغرض من جمعها، ومُحتوى البيانات الشخصية المطلوب جمعها، وطريقة جمعها، ووسيلة حفظها، وكيفية معالجتها، وكيفية إتلافها، وحقوق صاحبها فيما يتعلق بها، وكيفية ممارسة هذه الحقوق.'] },
+      { k: 'a5', u: LAW.ecom, t: ['2- لا يجوز لموفر الخدمة استعمال بيانات المستهلك الشخصية أو اتصالاته الإلكترونية لأغراض غير مصرح لها أو مسموح بها، أو الإفصاح عنها لجهة أخرى، بمقابل أو بدون مقابل، إلا بموافقة المستهلك الذي تتعلق به البيانات الشخصية أو إذا اقتضت الأنظمة ذلك.'] }
+    ]
+  };
+  var EXC = ['custom', 'fresh', 'health', 'digital', 'books', 'media', 'mixed', 'gold'];
+  var TOOLS = ['ga', 'snap', 'tiktok', 'meta', 'gads'];
+  var TABS = ['ret', 'ship', 'priv'];
+
+  function toNodes(doc) {
+    var out = [];
+    doc.forEach(function (b) {
+      if (b.t) out.push(h('h3', { class: 'jt-pol__t', text: b.t }));
+      if (b.h) out.push(h('h4', { text: b.h }));
+      if (b.p) out.push(h('p', { text: b.p }));
+      if (b.l) out.push(h('ul', {}, b.l.map(function (x) { return h('li', { text: x }); })));
+    });
+    return out;
+  }
+  function toText(doc) {
+    return doc.map(function (b) { return (b.t ? b.t + '\n' : '') + (b.h ? '\n' + b.h + '\n' : '') + (b.p ? b.p + '\n' : '') + (b.l ? b.l.map(function (x) { return '- ' + x; }).join('\n') + '\n' : ''); }).join('').replace(/\n{3,}/g, '\n\n').trim();
+  }
+  function toHtml(doc) {
+    return doc.map(function (b) { return (b.t ? '<h2>' + JT.esc(b.t) + '</h2>' : '') + (b.h ? '<h3>' + JT.esc(b.h) + '</h3>' : '') + (b.p ? '<p>' + JT.esc(b.p) + '</p>' : '') + (b.l ? '<ul>' + b.l.map(function (x) { return '<li>' + JT.esc(x) + '</li>'; }).join('') + '</ul>' : ''); }).join('\n');
+  }
+
+  JT.tools.policy = {
+    noShare: true, // has its own buttons
+    preview: function () {
+      return h('div', { class: 'jt-pv__pol' }, T('policy.pv').map(function (x) { return h('p', {}, [h('span', { class: 'jt-ic', html: JT.svg('check') }), x]); }));
+    },
+    lead: function () { return { title: T('policy.leadT'), text: T('policy.leadP'), btn: T('policy.leadBtn'), pdf: JT.tools.policy.pdf }; },
+    render: function (el) {
+      var s = JT.store.get('policy') || {}, prof = JT.store.get('profile') || {}, upd = function () { run(); };
+      function tf(k, o) { o = o || {}; return JT.textField({ id: 'po-' + k, label: T('policy.f.' + k), value: s[k] != null ? s[k] : (o.value || ''), placeholder: o.ph || '', dir: o.dir, help: o.help ? T('policy.h.' + k) : null, onInput: upd }); }
+      function nf(k, v, o) { o = o || {}; return JT.field({ id: 'po-' + k, label: T('policy.f.' + k), unit: T('policy.u.' + (o.unit || 'day')), value: s[k] != null && s[k] !== '' ? s[k] : v, min: o.min || 1, max: o.max || 365, help: o.help ? T('policy.h.' + k) : null, onInput: upd }); }
+      function sg(k, opts, v, help) { return JT.seg({ id: 'po-' + k, label: T('policy.f.' + k), value: s[k] || v, options: opts.map(function (x) { return [x, T('policy.o.' + k + '.' + x)]; }), help: help ? T('policy.h.' + k) : null, onChange: upd }); }
+      function checks(k, keys, def) {
+        var map = {}, box = h('fieldset', { class: 'jt-checks-in jt-pol__cks' }, [h('legend', { class: 'jt-lab', text: T('policy.f.' + k) })]);
+        keys.forEach(function (x) {
+          var i = h('input', { type: 'checkbox', id: 'po-' + k + '-' + x, class: 'jt-cb' }); i.checked = s[k] ? s[k].indexOf(x) >= 0 : def.indexOf(x) >= 0; i.addEventListener('change', upd); map[x] = i;
+          box.appendChild(h('label', { class: 'jt-cbl', for: 'po-' + k + '-' + x }, [i, h('span', { class: 'jt-cbl__box', html: JT.svg('check'), 'aria-hidden': 'true' }), h('span', { class: 'jt-cbl__t' }, [h('b', { text: T('policy.c.' + k + '.' + x) })])]));
+        });
+        return { el: box, get: function () { return keys.filter(function (x) { return map[x].checked; }); } };
+      }
+      var f = {
+        store: tf('store', { value: prof.store, ph: T('wa.exStore') }), link: tf('link', { value: prof.link, ph: 'mystore.com', dir: 'ltr' }),
+        email: tf('email', { ph: 'care@mystore.com', dir: 'ltr' }), phone: tf('phone', { ph: '05xxxxxxxx', dir: 'ltr' }),
+        cr: tf('cr', { dir: 'ltr', help: true }), vat: tf('vat', { dir: 'ltr' }), city: tf('city'),
+        days: sg('days', ['7', '14', '30'], '7', true), pays: sg('pays', ['cust', 'store'], 'cust'), exch: sg('exch', ['yes', 'no'], 'yes'),
+        refund: nf('refund', '14', { help: true, max: 30 }), prep: nf('prep', '2', { max: 60 }), ship: nf('ship', '5', { max: 60 }),
+        area: sg('area', ['ksa', 'gcc', 'world'], 'ksa'), reply: nf('reply', '24', { unit: 'hour', max: 120 }), solve: nf('solve', '5', { max: 30 }),
+        mkt: sg('mkt', ['yes', 'no'], 'yes')
+      };
+      var exc = checks('exc', EXC, ['custom', 'health']), tools = checks('tools', TOOLS, ['ga']);
+      function sec(t, kids, open) { return h('details', { class: 'jt-more jt-pol__sec', open: open || null }, [h('summary', {}, [h('span', { text: t }), h('span', { class: 'jt-how__ch', html: JT.svg('chev'), 'aria-hidden': 'true' })]), h('div', { class: 'jt-more__b' }, kids)]); }
+      function grid(a) { return h('div', { class: 'jt-fields' }, a.map(function (x) { return x.el; })); }
+      var inputs = h('div', { class: 'jt-card jt-card--in' }, [
+        h('h2', { class: 'jt-card__t', text: T('policy.inTitle') }),
+        grid([f.store, f.link, f.email, f.phone]),
+        sec(T('policy.s.ret'), [grid([f.days, f.pays, f.exch, f.refund]), exc.el], true),
+        sec(T('policy.s.ship'), [grid([f.prep, f.ship, f.area, f.reply, f.solve])]),
+        sec(T('policy.s.priv'), [tools.el, h('div', { style: 'margin-top:14px' }, [f.mkt.el])]),
+        sec(T('policy.s.more'), [grid([f.cr, f.vat, f.city])])
+      ]);
+
+      var tab = 'ret', tabs = h('div', { class: 'jt-chips', role: 'tablist', 'aria-label': T('policy.tabsAria') }), btns = {};
+      TABS.forEach(function (k, n) {
+        var b = h('button', { type: 'button', class: 'jt-chip', role: 'tab', id: 'po-tab-' + k, 'aria-controls': 'po-paper', text: T('policy.tab.' + k) });
+        b.addEventListener('click', function () { tab = k; run(); });
+        b.addEventListener('keydown', function (e) { var d = e.key === 'ArrowLeft' ? 1 : e.key === 'ArrowRight' ? -1 : 0; if (!d) return; if (JT.lang !== 'ar') d = -d; tab = TABS[(n + d + TABS.length) % TABS.length]; run(); btns[tab].focus(); });
+        btns[k] = b; tabs.appendChild(b);
+      });
+      var paper = h('article', { class: 'jt-pol', id: 'po-paper', role: 'tabpanel', tabindex: '0' });
+      var quote = h('div', { class: 'jt-pol__law' });
+      var copyB = JT.btn(T('policy.copy'), { icon: 'copy' }), allB = JT.btn(T('policy.word'), { kind: 'soft', icon: 'download' });
+      var share = JT.shareBtn('policy', function () { return [T('policy.shareL', { n: f.store.get() || T('wa.exStore') }), T('policy.tab.ret') + ', ' + T('policy.tab.ship') + ', ' + T('policy.tab.priv')]; }, null, 'soft');
+      var res = h('div', { class: 'jt-card jt-card--res jt-pol__res' }, [tabs, paper, h('div', { class: 'jt-actions' }, [copyB, allB, share]), quote, JT.how(T('policy.howT'), T('policy.how'))]);
+      el.appendChild(h('div', { class: 'jt-tool__grid jt-tool__grid--pol' }, [inputs, res]));
+      el.appendChild(h('aside', { class: 'jt-pol__new' }, [h('h3', { class: 'jt-mini-t', text: T('policy.newT') }), h('p', { text: T('policy.newP') }), h('p', {}, [h('a', { href: LAW.faq, target: '_blank', rel: 'noopener', text: T('policy.newA') })])]));
+      el.appendChild(JT.nextStep({ title: T('policy.nextT'), text: T('policy.nextP'), btn: T('policy.nextBtn'), svc: 'care', href: JT.prod('care'), wa: T('policy.nextWa') }));
+
+      function vals() {
+        var n = function (x, d) { var v = x.get(); return v > 0 ? JT.num(v, 0) : d; };
+        return { store: f.store.get() || T('policy.yourStore'), link: f.link.get().replace(/^https?:\/\//, '').replace(/\/$/, ''), email: f.email.get(), phone: f.phone.get(), cr: f.cr.get(), vat: f.vat.get(), city: f.city.get(), days: f.days.get(), pays: f.pays.get(), exch: f.exch.get() === 'yes', refund: n(f.refund, '14'), prep: n(f.prep, '2'), ship: n(f.ship, '5'), area: f.area.get(), reply: n(f.reply, '24'), solve: n(f.solve, '5'), mkt: f.mkt.get() === 'yes', exc: exc.get(), tools: tools.get(), date: JT.gDate ? JT.gDate(new Date()) : new Date().toISOString().slice(0, 10) };
+      }
+      var docs = {};
+      function run() {
+        docs = T('policy.docs')(vals());
+        TABS.forEach(function (k) { btns[k].classList.toggle('is-on', k === tab); btns[k].setAttribute('aria-selected', k === tab ? 'true' : 'false'); btns[k].tabIndex = k === tab ? 0 : -1; });
+        paper.innerHTML = ''; paper.setAttribute('aria-labelledby', 'po-tab-' + tab); toNodes(docs[tab]).forEach(function (n) { paper.appendChild(n); });
+        quote.innerHTML = '';
+        QUOTES[tab].forEach(function (q) {
+          quote.appendChild(h('details', { class: 'jt-how jt-law' }, [h('summary', {}, [h('span', { text: T('policy.law.' + q.k) }), h('span', { class: 'jt-how__ch', html: JT.svg('chev'), 'aria-hidden': 'true' })]),
+            h('div', { class: 'jt-how__b' }, [h('blockquote', { class: 'jt-law__q', lang: 'ar', dir: 'rtl' }, q.t.map(function (x) { return h('p', { text: x }); })), h('p', { class: 'jt-law__s' }, [T('policy.read', { d: JT.gDate ? JT.gDate(READ) : '2026-11-24' }) + ' ', h('a', { href: q.u, target: '_blank', rel: 'noopener', text: T('policy.src') })])])]));
+        });
+        var keep = {}; Object.keys(f).forEach(function (k) { keep[k] = f[k].raw ? f[k].raw() : f[k].get(); }); keep.exc = exc.get(); keep.tools = tools.get(); JT.store.set('policy', keep);
+      }
+      copyB.onclick = function () {
+        var t = toText(docs[tab]), ht = '<div dir="' + (JT.lang === 'ar' ? 'rtl' : 'ltr') + '">' + toHtml(docs[tab]) + '</div>';
+        var mark = function () { var l = copyB.querySelector('.jt-bl'); l.textContent = T('common.copied'); copyB.classList.add('is-done'); setTimeout(function () { l.textContent = T('policy.copy'); copyB.classList.remove('is-done'); }, 1800); };
+        if (navigator.clipboard && window.ClipboardItem && window.isSecureContext) navigator.clipboard.write([new ClipboardItem({ 'text/html': new Blob([ht], { type: 'text/html' }), 'text/plain': new Blob([t], { type: 'text/plain' }) })]).then(mark, function () { JT.copy(t, copyB); });
+        else JT.copy(t, copyB);
+      };
+      allB.onclick = function () {
+        var dir = JT.lang === 'ar' ? 'rtl' : 'ltr';
+        var html = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><style>body{font-family:Arial;font-size:14pt;line-height:1.7;direction:' + dir + '}h2{font-size:20pt}h3{font-size:15pt}</style></head><body dir="' + dir + '">' + TABS.map(function (k) { return toHtml(docs[k]); }).join('<br style="page-break-before:always">') + '</body></html>';
+        var u = URL.createObjectURL(new Blob(['﻿' + html], { type: 'application/msword' })), a = h('a', { href: u, download: 'store-policies.doc' });
+        document.body.appendChild(a); a.click(); a.remove(); setTimeout(function () { URL.revokeObjectURL(u); }, 4000);
+      };
+      JT.tools.policy.pdf = function () {
+        return JT.makePdf('policy', { title: T('policy.pdfT'), sub: f.store.get(), rows: [], node: h('div', { class: 'jt-pol jt-pol--pdf' }, TABS.reduce(function (a, k) { return a.concat(toNodes(docs[k])); }, [])), nextText: T('policy.nextP'), file: 'store-policies', resT: T('policy.pdfRes'), foot: T('policy.pdfFoot') });
+      };
+      JT.policyDocs = function () { return docs; };
+      run();
+    }
+  };
+})();
+
+/* ---- src/tools/quote.js ---- */
+/* عرض سعر جودي: the visitor picks services, names + prices + delivery times come from her store at that moment */
+(function () {
+  var JT = window.JT, h = JT.h, T = JT.T;
+  // only product ids here: names, prices and delivery times are read live
+  var GROUPS = [
+    { k: 'design', one: true, ids: [1514969843, 837163313, 1571309363, 467939401, 955821044] },
+    { k: 'brand', ids: [1955962506, 449806217, 1655602479, 1624929129] },
+    { k: 'google', ids: [1681749402, 804605573, 347402666, 1378365316, 4391099] },
+    { k: 'ads', ids: [698503056, 900983740, 675496799, 1270385799] },
+    { k: 'store', ids: [1203736051, 39542453, 664664498, 813580212, 1518367887] }
+  ];
+  var ALL = GROUPS.reduce(function (a, g) { return a.concat(g.ids); }, []);
+  // which of these a page link asked for (?svc=ID or a saved choice)
+  JT.tools.quote = {
+    noShare: true, // has its own buttons
+    preview: function () {
+      return h('div', {}, [h('div', { class: 'jt-pv__theme' }, T('quote.pv').map(function (x) { return h('span', { text: x }); })), h('p', { class: 'jt-pv__s', style: 'margin-top:8px', text: T('quote.pvSub') })]);
+    },
+    lead: function () { return { title: T('quote.leadT'), text: T('quote.leadP'), btn: T('quote.leadBtn'), summary: function () { return JT.tools.quote.sum ? JT.tools.quote.sum() : ''; }, pdf: JT.tools.quote.pdf }; },
+    render: function (el) {
+      var saved = JT.store.get('quote') || {}, picked = {}, data = null;
+      (saved.ids || [1514969843]).forEach(function (i) { if (ALL.indexOf(i) >= 0) picked[i] = true; });
+      var name = JT.textField({ id: 'qt-name', label: T('quote.name'), value: saved.name || (JT.store.get('profile') || {}).store || '', placeholder: T('wa.exStore'), help: T('quote.nameHelp'), onInput: function () { save(); } });
+      var body = h('div', { class: 'jt-qt' }), boxes = {};
+      GROUPS.forEach(function (g) {
+        var fs = h('fieldset', { class: 'jt-qt__g' }, [h('legend', { class: 'jt-lab', text: T('quote.g.' + g.k) + (g.one ? ' ' + T('quote.one') : '') })]);
+        var grid = h('div', { class: 'jt-qt__grid' });
+        g.ids.forEach(function (id) {
+          var i = h('input', { type: 'checkbox', id: 'qt-' + id, class: 'jt-cb' }); i.checked = !!picked[id];
+          i.addEventListener('change', function () {
+            if (i.checked && g.one) g.ids.forEach(function (x) { if (x !== id) { picked[x] = false; boxes[x].i.checked = false; } });
+            picked[id] = i.checked; run();
+          });
+          var n = h('b', { text: '' }), p = h('span', { class: 'jt-qt__p jt-num' });
+          var row = h('label', { class: 'jt-cbl jt-qt__r is-wait', for: 'qt-' + id }, [i, h('span', { class: 'jt-cbl__box', html: JT.svg('check'), 'aria-hidden': 'true' }), h('span', { class: 'jt-qt__t' }, [n, p])]);
+          boxes[id] = { i: i, row: row, n: n, p: p }; grid.appendChild(row);
+        });
+        fs.appendChild(grid); body.appendChild(fs);
+      });
+      var inputs = h('div', { class: 'jt-card jt-card--in' }, [h('h2', { class: 'jt-card__t', text: T('quote.inTitle') }), name.el, body]);
+
+      var big = h('b', { class: 'jt-res__v jt-num' }), bigL = h('p', { class: 'jt-res__l', text: T('quote.bigL') }), sub = h('p', { class: 'jt-res__sub' });
+      var list = h('ul', { class: 'jt-bill jt-bill--q' }), none = h('p', { class: 'jt-help', text: T('quote.none') });
+      var note = h('p', { class: 'jt-help' });
+      var fail = h('p', { class: 'jt-warn', hidden: true, text: T('quote.fail') });
+      var order = JT.btn(T('quote.order'), { kind: 'wa', icon: 'wa', href: '#', blank: true });
+      var copyB = JT.btn(T('common.copyResult'), { kind: 'soft', icon: 'copy' });
+      var share = JT.shareBtn('quote', function () { return lines(); }, T('quote.share'), 'soft');
+      var res = h('div', { class: 'jt-card jt-card--res' }, [
+        h('div', { class: 'jt-res', 'aria-live': 'polite' }, [bigL, h('p', { class: 'jt-res__big' }, [big, h('span', { class: 'jt-res__u', text: T('common.sar') })]), sub]),
+        fail, h('h3', { class: 'jt-mini-t', text: T('quote.billT') }), none, list, note,
+        h('div', { class: 'jt-actions' }, [order, share, copyB]),
+        h('p', { class: 'jt-qt__all' }, [h('a', { href: '/' + JT.lang + '/-/page-' + JT.CFG.svc.packages.page, text: T('quote.all') })])
+      ]);
+      el.appendChild(h('div', { class: 'jt-tool__grid' }, [inputs, res]));
+      var mbar = JT.mobileBar(T('quote.bigL'));
+      var days = {};
+
+      function chosen() { return ALL.filter(function (id) { return picked[id] && data && data[id]; }).map(function (id) { return data[id]; }); }
+      function total(c) { return c.reduce(function (s, p) { return s + p.price; }, 0); }
+      function lines() {
+        var c = chosen();
+        return (name.get() ? [T('quote.for', { n: name.get() })] : []).concat(c.map(function (p) { return '- ' + p.name + ': ' + JT.priceText(p) + (days[p.id] ? ' (' + days[p.id] + ')' : ''); })).concat([T('quote.total') + ': ' + (c.some(function (p) { return p.from; }) ? T('svc.from') + ' ' : '') + JT.money(total(c), 2), T('quote.date', { d: JT.gDate ? JT.gDate(new Date()) : new Date().toISOString().slice(0, 10) })]);
+      }
+      JT.tools.quote.sum = function () { return lines().join(' | '); };
+      JT.tools.quote.pdf = function () {
+        var c = chosen();
+        var tbl = h('table', { class: 'jt-pdf__tbl' }, c.map(function (p) { return h('tr', {}, [h('th', { text: p.name + (days[p.id] ? ' (' + days[p.id] + ')' : '') }), h('td', { text: JT.priceText(p) })]); }).concat([h('tr', {}, [h('th', { text: T('quote.total') }), h('td', { text: (c.some(function (p) { return p.from; }) ? T('svc.from') + ' ' : '') + JT.money(total(c), 2) })])]));
+        return JT.makePdf('quote', { title: T('quote.pdfT'), sub: name.get(), rows: [], node: tbl, extra: [h('p', { text: T('quote.pdfNote') })], nextText: T('quote.pdfNext'), file: 'judy-quote', resT: T('quote.billT'), foot: T('quote.pdfFoot') });
+      };
+      function save() { JT.store.set('quote', { ids: ALL.filter(function (i) { return picked[i]; }), name: name.get() }); if (data) order.href = JT.waUrl(T('quote.waHi') + '\n' + lines().join('\n')); }
+      function run() {
+        save();
+        if (!data) return;
+        var c = chosen(), from = c.some(function (p) { return p.from; });
+        JT.tween(big, total(c), function (v) { return JT.num(Math.round(v * 100) / 100, 2); });
+        bigL.textContent = from ? T('quote.bigFrom') : T('quote.bigL');
+        sub.textContent = c.length ? T('quote.count', { n: c.length }) : '';
+        list.innerHTML = ''; list.hidden = !c.length; none.hidden = !!c.length; note.hidden = !c.length;
+        c.forEach(function (p) {
+          var d = h('small', { class: 'jt-bill__d' });
+          list.appendChild(h('li', {}, [h('span', { class: 'jt-bill__n' }, [h('a', { href: '/' + JT.lang + '/-/p' + p.id, text: p.name }), d]), h('b', { class: 'jt-num', text: JT.priceText(p) })]));
+          if (days[p.id] != null) d.textContent = days[p.id];
+          else JT.liveOne(p.id).then(function (x) { days[p.id] = x.days || ''; d.textContent = days[p.id]; save(); }, function () { days[p.id] = ''; });
+        });
+        if (c.length) list.appendChild(h('li', { class: 'is-total' }, [h('span', { text: T('quote.total') }), h('b', { class: 'jt-num', text: (from ? T('svc.from') + ' ' : '') + JT.money(total(c), 2) })]));
+        note.textContent = T('quote.note', { d: JT.gDate ? JT.gDate(new Date()) : '' });
+        copyB.onclick = function () { JT.copy(JT.shareText('quote', lines()), copyB); };
+        order.href = JT.waUrl(T('quote.waHi') + '\n' + lines().join('\n'));
+        [order, share, copyB].forEach(function (b) { b.classList.toggle('is-off', !c.length); });
+        mbar.set(JT.money(total(c), 2));
+      }
+      JT.livePrices(ALL).then(function (o) {
+        data = {};
+        ALL.forEach(function (id) {
+          var p = o[id], b = boxes[id];
+          if (!p || !p.ok) { b.row.remove(); picked[id] = false; return; }
+          data[id] = p; b.row.classList.remove('is-wait'); b.n.textContent = p.name; b.p.textContent = JT.priceText(p);
+          if (p.was) b.p.appendChild(h('s', { class: 'jt-fix__w', text: JT.money(p.was, 2) }));
+        });
+        run();
+      }, function () { fail.hidden = false; order.href = JT.waUrl(T('quote.waHi')); body.hidden = true; });
+      order.href = JT.waUrl(T('quote.waHi'));
     }
   };
 })();
@@ -2664,14 +3540,14 @@ window.JT_THEMES_DATE = '2026-11-22';
         h('img', { class: 'jt-pdf__judy', src: JT.CFG.asset + 'judy-' + (JT.CFG.judy[key] || 'thumbs-up') + '.webp', alt: '', crossorigin: 'anonymous' })
       ]),
       rows.length ? h('section', { class: 'jt-pdf__sec' }, [h('h2', { text: T('lead.pdf.yours') }), h('table', { class: 'jt-pdf__tbl' }, rows.map(function (r) { return h('tr', {}, [h('th', { text: r[0] }), h('td', { text: r[1] })]); }))]) : null,
-      result ? h('section', { class: 'jt-pdf__sec' }, [h('h2', { text: T('lead.pdf.result') }), result]) : null,
+      result ? h('section', { class: 'jt-pdf__sec' }, [h('h2', { text: opt.resT || T('lead.pdf.result') }), result]) : null,
       opt.extra ? h('section', { class: 'jt-pdf__sec' }, opt.extra) : null,
       h('section', { class: 'jt-pdf__sec jt-pdf__next' }, [
         h('h2', { text: T('lead.pdf.next') }),
         h('p', { text: opt.nextText || T(({ whatsapp: 'wa', prompts: 'pr', cost: 'hub.cta' })[key] ? (key === 'cost' ? 'hub.ctaP' : ({ whatsapp: 'wa', prompts: 'pr' })[key] + '.nextP') : key + '.nextP') }),
         h('p', { class: 'jt-pdf__contact', text: T('lead.pdf.contact') })
       ]),
-      h('footer', { class: 'jt-pdf__foot', text: T('lead.pdf.foot') })
+      h('footer', { class: 'jt-pdf__foot', text: opt.foot || T('lead.pdf.foot') })
     ]);
     // the page is wrapped in its own #jt-app so the scoped styles apply; it sits off screen while we measure it
     var dir = JT.lang === 'ar' ? 'rtl' : 'ltr';
