@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-25T02:02 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-25T03:18 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -19,6 +19,9 @@
     clock: S('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/>'),
     plus: S('<path d="M12 5v14"/><path d="M5 12h14"/>'),
     trash: S('<path d="M5 7h14"/><path d="M9 7V4h6v3"/><path d="M7 7l1 13h8l1-13"/>'),
+    photo: S('<rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M4 18l5.2-5 3.4 3.2L16 13l4.5 4"/>'),
+    video: S('<rect x="3" y="6" width="12.5" height="12" rx="2.5"/><path d="M15.5 11l5.5-3v8l-5.5-3z"/>'),
+    product: S('<path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/>'),
     // tools
     vat: S('<path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M15 12l-5 6"/><circle cx="10.2" cy="12.6" r="1.2"/><circle cx="14.8" cy="17.4" r="1.2"/>'),
     policy: S('<path d="M12 3l7.5 3v5.5c0 4.6-3.1 8-7.5 9.5-4.4-1.5-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12l2.3 2.3 4.2-4.4"/>'),
@@ -1192,6 +1195,152 @@ window.JT_I18N.en = {
   };
 })();
 
+/* ---- i18n/product.ar.js ---- */
+/* Arabic words: «لمسة جودي لمنتجك» + photo + simple video. Merged into JT_I18N.ar. */
+(function () {
+  var D = window.JT_I18N.ar;
+  D.tools.product = { name: 'لمسة جودي لمنتجك', short: 'الصق رابط منتجك وتعرف وش يدور العميل وما يلقاه، وحسن صورته، وسو له فيديو بسيط', go: 'افحص منتجك', icon: 'product', badge: 'new', tags: 'منتج صفحة منتج صورة صور تحسين خلفية بيضاء فيديو وصف عميل product photo video',
+    h1: 'لمسة جودي لمنتجك: افحص صفحته وحسن صورته مجانا', lead: 'الصق رابط منتجك في سلة، ونقول لك وش يدور العميل وما يلقاه في صفحتك. وبعدها حسن صورته وسو له فيديو بسيط، كله من جوالك.', say: 'لمسة من عصاي، وصورة منتجك تصير أوضح', related: ['google', 'check', 'profit'] };
+  D.product = {
+    facts: ['مجانية', 'بدون تسجيل', 'صورك تبقى في جهازك'],
+    pv: ['«كيف شكله من الخلف؟»', 'السعر واضح'],
+    inTitle: 'رابط منتجك', urlL: 'رابط صفحة المنتج في متجرك', go: 'افحص منتجي',
+    urlHelp: 'افتح المنتج في متجرك وانسخ الرابط من فوق. نقرا المعلومات اللي يشوفها أي زائر بس، وما نغير شي في متجرك.',
+    jump: 'ما عندك رابط الحين؟ روح على طول لـ', or: 'أو',
+    wait: 'جودي تتصفح صفحة منتجك...',
+    err: { empty: 'الصق رابط المنتج هنا', url: 'الرابط مو صحيح. انسخه من صفحة المنتج مثل ما هو.', dash: 'هذا رابط لوحة التحكم. افتح المنتج في متجرك وانسخ رابطه من هناك.', short: 'هذا رابط مختصر. افتحه أول، وانسخ الرابط الطويل اللي يطلع فوق.', noid: 'هذا رابط المتجر أو قسم. افتح المنتج نفسه وانسخ رابطه (آخره حرف p وبعده أرقام).' },
+    fail: { notSalla: 'ما لقينا متجر سلة بهالرابط. الفحص يشتغل على متاجر سلة بس، لكن تقدر تحسن صورتك وتسوي الفيديو تحت.', gone: 'ما لقينا المنتج. تأكد إنه منشور وظاهر للعملاء، وإن الرابط منسوخ من متجرك في سلة.', busy: 'فيه ضغط الحين. انتظر دقيقة وجرب مرة ثانية.', net: 'ما قدرنا نوصل للمتجر. تأكد من النت وجرب مرة ثانية.' },
+    resT: 'صفحة منتجك فيها {a} من {b} أشياء يدورها العميل', resAll: 'صفحة منتجك فيها كل اللي يدوره العميل', of: 'من {n}',
+    badT: 'أهم شي تصلحه', tipT: 'شي يزيد ثقة العميل', goodT: 'واضح للعميل',
+    gT: 'وش يقرا قوقل من منتجك ({n})', selfT: 'أشياء شيك عليها بنفسك',
+    selfP: 'الأداة تقرا المعلومات وما تشوف وش داخل الصورة، فجاوب على هذي الأسئلة:',
+    self: ['فيه صورة توضح حجم المنتج؟ مثلا في اليد أو جنب شي معروف.', 'فيه صورة قريبة توضح الخامة أو التفاصيل؟', 'فيه صورة للمنتج وهو مستخدم؟', 'الصور بدون كتابة ولا شعار فوقها؟ قوقل ما يقبلها في نتائج التسوق.', 'الوصف يقول كم ياخذ التوصيل، وهل يرجع المنتج؟'],
+    buy: 'إضافة للسلة', soldOut: 'نفدت الكمية', phoneCap: 'شكل تقريبي لمنتجك في جوال العميل', waCap: 'شكل تقريبي لرابطك لما ترسله واتساب',
+    fixT: { ugc: 'تبي صور تخلي العميل يتخيل المنتج معه؟', words: 'تبي اسم ووصف يجاوب على أسئلة العميل؟', motion: 'تبي فيديو احترافي لمنتجك؟', review: 'تبي نراجع متجرك كله؟' },
+    fixP: { ugc: 'نصور منتجك بطريقة طبيعية كأن عميل حقيقي يستخدمه.', words: 'نكتب وصف منتجاتك وكلماتها، وتوصلك جاهزة.', motion: 'نسوي لمنتجك فيديو موشن 30 ثانية بالذكاء الاصطناعي.', review: 'نحلل متجرك ونقول لك وش تصلح أول، مجانا.' },
+    c: {
+      photos: { none: { q: '«ما أشوف ولا صورة للمنتج»', fix: 'ارفع صورة واضحة على الأقل، وبعدها زد صور من زوايا ثانية. من لوحة سلة: المنتج، ثم «إضافة صورة أو فيديو».' }, one: { q: '«أشوف صورة وحدة بس. كيف شكله من الجنب والخلف؟»', fix: 'زد صور: وحدة قريبة للتفاصيل، ووحدة من زاوية ثانية، ووحدة توضح الحجم. سلة تقبل لين 10 صور للمنتج.' }, good: 'صور المنتج: {n}' },
+      size: { bad: { q: '«الصورة مو واضحة لما أكبرها»', fix: 'صورتك تطلع للعميل بمقاس {w} في {h} بكسل. ارفع صورة أكبر: قوقل يطلب 500 في 500 على الأقل من 31 يناير 2027.' }, good: 'مقاس الصورة الرئيسية مناسب ({w} في {h})' },
+      video: { tip: { q: '«ودي أشوفه وهو يتحرك»', fix: 'سو له فيديو بسيط من تحت، وارفعه مع صور المنتج. سلة تقبل لين 3 فيديوهات للمنتج.' }, good: 'فيه فيديو للمنتج' },
+      name: { code: { q: '«وش هو {name}؟»', fix: 'الاسم رمز ما يفهمه العميل ولا قوقل. اكتب نوع المنتج ولونه أو خامته، وخل الرمز في خانة SKU.' }, short: { q: '«{name}... وش هو بالضبط؟»', fix: 'كلمة وحدة ما تكفي. زد نوع المنتج ولونه أو خامته، مثل: عباية كلوش كريب سوداء.' }, long: { q: '«الاسم طويل، وش المهم فيه؟»', fix: 'الاسم {n} حرف. خل أهم الكلام في أوله، لأن العميل ينتبه لأول 70 حرف أو أقل.' }, good: 'اسم المنتج واضح' },
+      price: { sale: 'السعر واضح، ويعرف إنه يوفر {save}', good: 'السعر واضح' },
+      desc: { none: { q: '«ما فيه ولا كلمة عن المنتج»', fix: 'اكتب وصف يجاوب: وش هو؟ من ايش مصنوع؟ كم حجمه؟ وش يجي معه؟' }, short: { q: '«الكلام قليل، ودي أعرف أكثر»', fix: 'الوصف {n} حرف بس. اكتب أهم التفاصيل في أول 160 إلى 500 حرف: الخامة والحجم والاستخدام.' }, img: { q: '«الكلام كله داخل صورة»', fix: 'الكلام اللي داخل الصور ما ينقرا مثل النص. اكتب نفس الكلام نص في الوصف.' }, good: 'الوصف فيه كلام كافي' },
+      shape: { tip: { q: '«فقرة طويلة، تعبت أقراها من الجوال»', fix: 'قسم الوصف نقاط قصيرة وعناوين: المميزات، المقاسات، طريقة الاستخدام.' }, good: 'الوصف مقسم وسهل القراءة' },
+      sizes: { bad: { q: '«أي مقاس يناسبني؟»', fix: 'اكتب القياسات بالسنتيمتر في الوصف، أو فعل جدول المقاسات من: المنتجات، ثم إدارة التصنيفات والخيارات، ثم جداول المقاسات (في الباقات المدفوعة).' }, good: 'المقاسات واضحة' },
+      stock: { bad: { q: '«خلص! متى يرجع؟»', fix: 'المنتج غير متوفر الحين. زد الكمية، أو اكتب للعميل متى يرجع.' }, some: { q: '«اللي أبيه منه خلص»', fix: 'خيارات نافدة: {list}. زد كميتها، أو اكتب متى ترجع.' }, good: 'المنتج متوفر للطلب' },
+      reviews: { tip: { q: '«أحد جربه قبلي؟»', fix: 'ما فيه تقييم ظاهر على المنتج. أرسل لعملائك بعد الاستلام رسالة تطلب تقييمهم.' }, good: 'تقييم العملاء {s} من 5 ({n})' }
+    },
+    g: {
+      alt: { tip: { q: 'صور نصها ما يوصف المنتج: {n} من {all}', fix: 'النص اسم ملف أو فاضي. من صفحة المنتج اضغط «Alt» تحت الصورة واكتب وش فيها (لين 70 حرف).' } },
+      gtin: { tip: { q: 'ما فيه رقم عالمي (باركود)', fix: 'لو على منتجك باركود من المصنع، حطه في بيانات المنتج، يفيد في نتائج التسوق في قوقل. ولو منتجك من صنعك، ما تحتاجه.' } },
+      sub: { tip: { q: 'السطر اللي تحت الاسم فاضي', fix: 'اكتب «العنوان الفرعي» جملة قصيرة تقول أهم ميزة.' } }
+    },
+    nextT: 'تبي نراجع متجرك كله؟', nextP: 'نحلل متجرك ونقول لك وش تصلح أول عشان العميل يطلب وهو مطمن، مجانا.', nextBtn: 'اطلب التحليل المجاني', nextWa: 'السلام عليكم، فحصت منتجي في أداة جودي وأبي تحليل متجري'
+  };
+  D.photo = {
+    t: 'لمسة جودي لصورة منتجك', p: 'ارفع صورة منتجك، ونضبط إضاءتها وألوانها ووضوحها داخل جهازك، وتنزلها مربعة جاهزة لمتجرك. صورة وحدة مجانا لكل تاجر.',
+    from: 'اختر من صور منتجك', pick: 'الصورة {n}', drop: 'ارفع صورة منتجك', dropHelp: 'JPG أو PNG أو WebP، وتبقى في جهازك',
+    badFile: 'الصورة هذي ما تنفتح. جرب JPG أو PNG.', big: 'الصورة كبيرة مرة. جرب صورة أقل من 20 ميجا.', opening: 'نفتح الصورة...', empty: 'اختر صورة منتجك، وجودي تحط لمستها عليها',
+    kQ: 'قوة التحسين', k: { low: 'خفيف', mid: 'متوسط', high: 'قوي' }, sqQ: 'شكل الصورة', sq: { sq: 'مربعة', as: 'مثل ما هي' },
+    bgQ: 'خلفية الصورة', bg: { keep: 'مثل ما هي', white: 'بيضاء', color: 'لون تختاره' }, colL: 'لون الخلفية',
+    bgYes: 'خلفية صورتك سادة، فتقدر تبيضها أو تغير لونها. تأكد من حواف المنتج قبل ما تنزلها.', bgNo: 'خلفية صورتك فيها تفاصيل، وتغيير الخلفية هنا يشتغل على الخلفيات السادة الفاتحة بس.',
+    cmp: 'اسحب للمقارنة بين قبل وبعد', before: 'قبل', after: 'بعد',
+    did: { light: 'رفعنا الإضاءة', contrast: 'وضحنا الألوان الغامقة', cast: 'ضبطنا لون الإضاءة', sharp: 'زدنا الوضوح', bg: 'غيرنا الخلفية', square: 'صارت مربعة' },
+    small: 'صورتك الأصلية صغيرة ({w} في {h})، كبرناها بس التفاصيل ما تزيد. الأفضل صورة أكبر.',
+    dl: 'نزل الصورة', size: 'المقاس {w} في {h} بكسل، JPG جاهزة لسلة', done: 'نزلت الصورة ({kb} كيلوبايت). ارفعها من صفحة المنتج في سلة.', fail: 'ما قدرنا نجهز الملف. جرب من متصفح ثاني.',
+    lock: 'خذت صورتك المجانية. باقي صور منتجاتك نجهزها لك، كلمنا واتساب.', lockWa: 'كلمنا واتساب', waText: 'السلام عليكم، استخدمت أداة تحسين صورة المنتج وأبي أحسن باقي صور منتجاتي',
+    moreT: 'عندك صور أكثر؟', moreP: 'نصور منتجاتك ونجهز صورها بشكل احترافي.', moreBtn: 'تصفح خدمة التصوير'
+  };
+  D.clip = {
+    t: 'فيديو بسيط لمنتجك', p: 'فيديو طولي 6 ثواني من صور منتجك واسمه وسعره، جاهز لسناب وتيك توك وستوري انستقرام. بدون صوت، وتضيف الصوت من التطبيق.',
+    from: 'صور الفيديو (لين 3)', drop: 'ارفع صورة للفيديو', dropHelp: 'أو افحص منتجك فوق وتجي صوره هنا لحالها',
+    name: 'اسم المنتج', price: 'السعر', store: 'اسم متجرك', ctaQ: 'الجملة الأخيرة', ctas: ['اطلبه الحين', 'متوفر في متجرنا', 'الرابط في البايو'], colL: 'لون الفيديو', colOwn: 'لون من اختيارك',
+    pvAlt: 'معاينة الفيديو', empty: 'اختر صورة وتطلع معاينة الفيديو هنا', mark: 'جودي ماركتينج',
+    make: 'سو الفيديو', busy: 'نجهز الفيديو، لا تقفل الصفحة...', dl: 'نزل الفيديو', share: 'شاركه',
+    done: 'الفيديو جاهز ({mb} ميجا، MP4). تقدر ترفعه مع صور المنتج في سلة كمان.', doneWebm: 'الفيديو جاهز ({mb} ميجا) بصيغة WebM لأن متصفحك ما يطلع MP4. الأفضل تسويه من كروم أو سفاري.',
+    fail: 'متصفحك ما يقدر يجهز الفيديو. جرب من كروم أو سفاري محدث، أو أرسل لنا صورتك واتساب.', failWa: 'كلمنا واتساب', waText: 'السلام عليكم، أبي فيديو بسيط لمنتجي',
+    moreT: 'تبي فيديو احترافي؟', moreP: 'فيديو موشن 30 ثانية لمنتجك، نكتب فكرته ونجهزه لك.', moreBtn: 'تصفح خدمة الفيديو'
+  };
+  D.hub.lead = D.hub.lead.replace('14 أداة', '15 أداة');
+  D.hub.leadNoCheck = D.hub.leadNoCheck.replace('13 أداة', '14 أداة');
+  D.hub.groups.google.goalSub = 'فحص متجرك ومنتجك وقوقل';
+  D.hub.groups.google.name = 'فحص المتجر والمنتج';
+  D.hub.groups.google.line = 'افحص متجرك ومنتجك، وتصفح شكل منتجك في قوقل قبل ما تحفظه.';
+})();
+
+/* ---- i18n/product.en.js ---- */
+/* English words: product page check + photo + simple video. Merged into JT_I18N.en. */
+(function () {
+  var D = window.JT_I18N.en;
+  D.tools.product = { name: "Judy's touch for your product", short: 'Paste your product link to see what shoppers look for and cannot find, improve its photo, and make a simple video', go: 'Check your product', icon: 'product', badge: 'new', tags: 'product page photo image white background video description customer',
+    h1: "Judy's touch for your product: free page check, photo and video", lead: 'Paste your Salla product link and see what a shopper looks for and cannot find on the page. Then improve its photo and make a simple video, all from your phone.', say: 'One touch of my wand and your product photo gets clearer', related: ['google', 'check', 'profit'] };
+  D.product = {
+    facts: ['Free', 'No sign-up', 'Your photos stay on your device'],
+    pv: ['“What does the back look like?”', 'Clear price'],
+    inTitle: 'Your product link', urlL: 'The product page link in your store', go: 'Check my product',
+    urlHelp: 'Open the product in your store and copy the link from the address bar. We read only what any visitor sees, and change nothing in your store.',
+    jump: 'No link right now? Go straight to', or: 'or',
+    wait: 'Judy is browsing your product page...',
+    err: { empty: 'Paste the product link here', url: 'The link is not valid. Copy it from the product page as it is.', dash: 'This is a dashboard link. Open the product in your store and copy its link there.', short: 'This is a short link. Open it first, then copy the long link from the address bar.', noid: 'This is a store or category link. Open the product itself and copy its link (it ends with p and a number).' },
+    fail: { notSalla: 'We found no Salla store at this link. The check works for Salla stores only, but you can still improve a photo and make a video below.', gone: 'We could not find the product. Make sure it is published and visible to shoppers, and that the link comes from your Salla store.', busy: 'It is busy right now. Wait a minute and try again.', net: 'We could not reach the store. Check your connection and try again.' },
+    resT: 'Your product page has {a} of {b} things shoppers look for', resAll: 'Your product page has everything shoppers look for', of: 'of {n}',
+    badT: 'Fix these first', tipT: 'Worth adding', goodT: 'Clear to the shopper',
+    gT: 'What Google reads from your product ({n})', selfT: 'Check these yourself',
+    selfP: 'The tool reads the data and cannot see what is inside a photo, so answer these:',
+    self: ['Is there a photo that shows the size? For example in a hand or next to something familiar.', 'Is there a close-up of the material or details?', 'Is there a photo of the product in use?', 'Are the photos free of text and logos? Google does not accept them in shopping results.', 'Does the description say how long delivery takes and whether returns are accepted?'],
+    buy: 'Add to cart', soldOut: 'Sold out', phoneCap: "Roughly how your product looks on a shopper's phone", waCap: 'Roughly how your link looks in WhatsApp',
+    fixT: { ugc: 'Want photos that help shoppers picture the product with them?', words: "Want a name and description that answer shoppers' questions?", motion: 'Want a professional video of your product?', review: 'Want us to review your whole store?' },
+    fixP: { ugc: 'We shoot your product naturally, as if a real customer is using it.', words: 'We write your product descriptions and keywords, ready to use.', motion: 'We make a 30-second AI motion video for your product.', review: 'We analyse your store and tell you what to fix first, for free.' },
+    c: {
+      photos: { none: { q: '“I see no photo of the product”', fix: 'Upload at least one clear photo, then add other angles. In Salla: the product, then “إضافة صورة أو فيديو”.' }, one: { q: '“I see only one photo. What about the side and the back?”', fix: 'Add a close-up of the details, another angle, and one that shows the size. Salla takes up to 10 photos per product.' }, good: 'Product photos: {n}' },
+      size: { bad: { q: '“The photo is blurry when I zoom in”', fix: 'Shoppers get your photo at {w} x {h} pixels. Upload a larger one: Google asks for at least 500 x 500 from 31 January 2027.' }, good: 'The main photo size is fine ({w} x {h})' },
+      video: { tip: { q: '“I want to see it move”', fix: 'Make a simple video below and upload it with the product photos. Salla takes up to 3 videos per product.' }, good: 'There is a product video' },
+      name: { code: { q: '“What is {name}?”', fix: 'The name is a code that neither shoppers nor Google understand. Write the product type and its color or material, and keep the code in the SKU field.' }, short: { q: '“{name}... what is it exactly?”', fix: 'One word is not enough. Add the product type and its color or material, for example: black crepe flared abaya.' }, long: { q: '“Long name. What matters in it?”', fix: 'The name is {n} characters. Put the key words first, because shoppers notice the first 70 characters or fewer.' }, good: 'The product name is clear' },
+      price: { sale: 'The price is clear and shows a saving of {save}', good: 'The price is clear' },
+      desc: { none: { q: '“Not one word about the product”', fix: 'Write a description that answers: what is it, what is it made of, how big is it, what comes with it?' }, short: { q: '“Too little text, I want to know more”', fix: 'The description is only {n} characters. Put the most important details in the first 160 to 500: material, size and use.' }, img: { q: '“All the text is inside an image”', fix: 'Words inside images are not read like text. Write the same words as text in the description.' }, good: 'The description has enough text' },
+      shape: { tip: { q: '“One long paragraph, tiring to read on a phone”', fix: 'Split the description into short points and headings: features, sizes, how to use.' }, good: 'The description is split and easy to read' },
+      sizes: { bad: { q: '“Which size fits me?”', fix: 'Write the measurements in centimetres in the description, or turn on the size chart: Products, then categories and options, then size charts (paid plans).' }, good: 'Sizes are clear' },
+      stock: { bad: { q: '“Sold out! When is it back?”', fix: 'The product is not available now. Add stock, or tell shoppers when it returns.' }, some: { q: '“The one I want is sold out”', fix: 'Sold-out options: {list}. Add stock, or say when they return.' }, good: 'The product is available to order' },
+      reviews: { tip: { q: '“Has anyone tried it before me?”', fix: 'No review shows on the product. Message your customers after delivery and ask for a review.' }, good: 'Customer rating {s} of 5 ({n})' }
+    },
+    g: {
+      alt: { tip: { q: 'Photos whose text does not describe the product: {n} of {all}', fix: 'The text is a file name or empty. On the product page click “Alt” under the photo and write what it shows (up to 70 characters).' } },
+      gtin: { tip: { q: 'No barcode number (GTIN)', fix: 'If your product has a factory barcode, add it to the product data; it helps in Google shopping results. If you make the product yourself, you do not need it.' } },
+      sub: { tip: { q: 'The line under the name is empty', fix: 'Write a short subtitle that states the main benefit.' } }
+    },
+    nextT: "Want us to review your whole store?", nextP: 'We analyse your store and tell you what to fix first so shoppers order with confidence, for free.', nextBtn: 'Ask for the free analysis', nextWa: 'Hello, I checked my product with the Judy tool and would like my store analysed'
+  };
+  D.photo = {
+    t: "Judy's touch for your photo", p: 'Upload a product photo and we adjust its light, color and sharpness on your device. Download it square and ready for your store. One free photo per merchant.',
+    from: 'Pick one of your product photos', pick: 'Photo {n}', drop: 'Upload your product photo', dropHelp: 'JPG, PNG or WebP, it stays on your device',
+    badFile: 'This photo does not open. Try JPG or PNG.', big: 'The photo is too large. Try one under 20 MB.', opening: 'Opening the photo...', empty: 'Pick your product photo and Judy adds her touch',
+    kQ: 'Strength', k: { low: 'Light', mid: 'Medium', high: 'Strong' }, sqQ: 'Shape', sq: { sq: 'Square', as: 'As it is' },
+    bgQ: 'Background', bg: { keep: 'As it is', white: 'White', color: 'Your color' }, colL: 'Background color',
+    bgYes: 'Your photo has a plain background, so you can make it white or change its color. Check the product edges before you download.', bgNo: 'Your photo has a detailed background. Changing the background here works on plain light backgrounds only.',
+    cmp: 'Drag to compare before and after', before: 'Before', after: 'After',
+    did: { light: 'Raised the light', contrast: 'Deepened the darks', cast: 'Corrected the light color', sharp: 'Made it sharper', bg: 'Changed the background', square: 'Made it square' },
+    small: 'Your original photo is small ({w} x {h}). We enlarged it, but detail does not increase. A larger photo is better.',
+    dl: 'Download the photo', size: '{w} x {h} pixels, JPG, ready for Salla', done: 'Photo downloaded ({kb} KB). Upload it on the product page in Salla.', fail: 'We could not prepare the file. Try another browser.',
+    lock: 'You have used your free photo. We can prepare the rest of your product photos, message us on WhatsApp.', lockWa: 'Message us on WhatsApp', waText: 'Hello, I used the product photo tool and would like the rest of my product photos improved',
+    moreT: 'Have more photos?', moreP: 'We shoot your products and prepare their photos professionally.', moreBtn: 'Browse the photo service'
+  };
+  D.clip = {
+    t: 'A simple video of your product', p: 'A 6-second vertical video from your product photos, name and price, ready for Snapchat, TikTok and Instagram stories. No sound: add music in the app.',
+    from: 'Video photos (up to 3)', drop: 'Upload a photo for the video', dropHelp: 'Or check your product above and its photos appear here',
+    name: 'Product name', price: 'Price', store: 'Store name', ctaQ: 'Last line', ctas: ['Order now', 'In our store', 'Link in bio'], colL: 'Video color', colOwn: 'Your color',
+    pvAlt: 'Video preview', empty: 'Pick a photo and the video preview appears here', mark: 'Judy Marketing',
+    make: 'Make the video', busy: 'Making the video, keep the page open...', dl: 'Download the video', share: 'Share it',
+    done: 'The video is ready ({mb} MB, MP4). You can also upload it with the product photos in Salla.', doneWebm: 'The video is ready ({mb} MB) as WebM because your browser cannot export MP4. Chrome or Safari is better.',
+    fail: 'Your browser cannot make the video. Try an updated Chrome or Safari, or send us your photo on WhatsApp.', failWa: 'Message us on WhatsApp', waText: 'Hello, I would like a simple video of my product',
+    moreT: 'Want a professional video?', moreP: 'A 30-second motion video of your product: we write the idea and make it for you.', moreBtn: 'Browse the video service'
+  };
+  D.hub.lead = D.hub.lead.replace('14 tools', '15 tools');
+  D.hub.leadNoCheck = D.hub.leadNoCheck.replace('13 tools', '14 tools');
+  D.hub.groups.google.goalSub = 'Store, product and Google';
+  D.hub.groups.google.name = 'Store and product check';
+  D.hub.groups.google.line = "Check your store and your product, and preview it on Google before you save it.";
+})();
+
 /* ---- src/data/themes.js ---- */
 /* Salla theme store data, read 2026-11-22 from salla.com/themes (research/facts-20261122.md). [id, name, developer, shown price SAR, rating, ratings count, demo store categories, by Salla] */
 window.JT_THEMES = [[1375036016, "رائد", "سلة", 0, 4.5, 2, ["electronics"], 1], [946727618, "كليك", "سلة", 0, 4.9, 1140, ["home"], 1], [1661298851, "عطاء", "سلة", 0, 4.9, 28, ["charity"], 1], [1046112065, "وسام", "سلة", 228, 4.9, 166, ["home"], 1], [1355517291, "ماركت", "سلة", 228, 4.9, 20, ["grocery"], 1], [1307231275, "منيو", "سلة", 228, 4.9, 11, ["food"], 1], [1587789257, "رقمي", "سلة", 228, 5, 11, ["digital"], 1], [1248180887, "موعد", "سلة", 228, 4.5, 4, ["clinic"], 1], [520022191, "مُختلف", "سلة", 228, 4.9, 34, ["grocery"], 1], [170177462, "زين", "سلة", 228, 4.9, 45, ["electronics"], 1], [546250460, "امتياز", "سلة", 228, 4.6, 90, ["electronics"], 1], [3401524, "عالي", "مؤسسة عادل الجهمي لتقنية المعلومات", 296.4, 5, 1560, ["digital"], 0], [1777895842, "اروماتك", "أحمد عبدالغني", 330.6, 5, 4, ["beauty"], 0], [1399399001, "سيليا", "Selia Tech", 395.58, 5, 1391, ["fashion"], 0], [1499917793, "ملاك", "أفتر أدز", 342, 4.9, 1048, ["electronics"], 0], [137195413, "جلامور", "Madar Technical Solutions FZC", 285, 4.7, 815, ["gifts", "beauty", "home"], 0], [468249652, "لوفيزا", "Madar Technical Solutions FZC", 285, 4.8, 282, ["home"], 0], [1556551807, "فخامة", "الشريف بونعاس", 285, 4.7, 262, ["fashion", "electronics", "beauty", "home"], 0], [188267752, "ساجي", "Ahmed Abdel Hamid", 395.58, 5, 200, ["fashion", "gifts", "beauty", "digital"], 0], [1948506485, "متجر", "باسم تركي", 296.4, 4.9, 192, ["grocery", "gifts", "home"], 0], [1894386675, "يافا", "BAYO LTD", 285, 4.2, 152, ["electronics", "digital"], 0], [491378254, "بريستيج", "كرافو لتقنية المعلومات", 285, 4.6, 113, ["fashion", "electronics", "jewelry", "beauty"], 0], [1248491026, "بلور", "Madar Technical Solutions FZC", 285, 4.6, 101, ["electronics"], 0], [1448593138, "رناواي", "Madar Technical Solutions FZC", 467.4, 4.7, 88, ["fashion"], 0], [85911406, "علا", "كرافو لتقنية المعلومات", 296.4, 4.6, 85, ["fashion", "jewelry", "beauty", "home"], 0], [471614860, "قصص", "Madar Technical Solutions FZC", 285, 4.8, 77, ["books"], 0], [71816946, "كيان", "كرافو لتقنية المعلومات", 296.4, 4.7, 71, ["fashion", "electronics", "jewelry", "beauty"], 0]];
@@ -1228,7 +1377,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       hub: 'point-both', season: 'idea-bulb', know: 'microphone', cta: 'thumbs-up', done: 'clapping',
       profit: 'calculator', ads: 'tablet-chart', offers: 'box-surprise', cost: 'blueprint',
       colors: 'painter', theme: 'idea-bulb', seasons: 'megaphone', check: 'magnifier', whatsapp: 'headset',
-      prompts: 'vr', google: 'chart-board', vat: 'card-pay', policy: 'umbrella', quote: 'cart',
+      prompts: 'vr', google: 'chart-board', vat: 'card-pay', policy: 'umbrella', quote: 'cart', product: 'wand',
       g_start: 'blueprint', g_ready: 'painter', g_price: 'calculator', g_market: 'megaphone', g_google: 'magnifier'
     },
     // her real services (prices read from the store 2026-11-22)
@@ -1236,7 +1385,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       basic: { id: 1514969843, price: 499 }, silver: { id: 837163313, price: 799 }, gold: { id: 1571309363, price: 999 },
       redesign: { id: 955821044, price: 350 }, front: { id: 467939401, price: 99 }, care: { id: 245739294, price: 25 }, seo: { id: 1681749402, price: 499 }, geo: { id: 804605573, price: 599 },
       snap: { id: 698503056, price: 299 }, gads: { id: 900983740, price: 299 }, social: { id: 675496799, price: 300 },
-      consult: { id: 408047677, price: 0 }, review: { id: 1069491163, price: 0 }, wa: { id: 1518367887, price: 0 },
+      consult: { id: 408047677, price: 0 }, review: { id: 1069491163, price: 0 }, wa: { id: 1518367887, price: 0 }, ugc: { id: 1687798457, price: 35 }, words: { id: 39542453, price: 45 }, motion: { id: 1181924747, price: 75 },
       packages: { page: 1085189397 }, prices: { page: 1673610507 }
     }
   };
@@ -1475,7 +1624,7 @@ window.JT_THEMES_DATE = '2026-11-22';
           h('a', { class: 'jt-back', href: JT.pageUrl('hub') }, [h('span', { class: 'jt-arr jt-arr--back', html: JT.svg('arrow'), 'aria-hidden': 'true' }), T('common.allTools')]),
           title,
           h('p', { class: 'jt-lead', text: t.lead }),
-          h('ul', { class: 'jt-facts' }, T(key === 'check' ? 'check.facts' : 'common.facts').map(function (f) { return h('li', {}, [h('span', { class: 'jt-ic', html: JT.svg('check'), 'aria-hidden': 'true' }), f]); })),
+          h('ul', { class: 'jt-facts' }, T(key === 'check' || key === 'product' ? key + '.facts' : 'common.facts').map(function (f) { return h('li', {}, [h('span', { class: 'jt-ic', html: JT.svg('check'), 'aria-hidden': 'true' }), f]); })),
           JT.needStore ? JT.needStore() : null
         ]),
         h('div', { class: 'jt-thero__judy' }, [h('p', { class: 'jt-say', text: t.say }), JT.img(key, 'jt-thero__img')])
@@ -1688,10 +1837,10 @@ window.JT_THEMES_DATE = '2026-11-22';
     { k: 'ready', tools: ['colors', 'policy', 'vat'] },
     { k: 'price', tools: ['profit', 'ads', 'offers'] },
     { k: 'market', tools: ['seasons', 'whatsapp', 'prompts'] },
-    { k: 'google', tools: ['check', 'google'] }
+    { k: 'google', tools: ['check', 'product', 'google'] }
   ];
   // the store check needs the free PageSpeed key (keyless quota is blocked); hide it until the key is set
-  if (!JT.CFG.psiKey) JT.GROUPS[4].tools = ['google'];
+  if (!JT.CFG.psiKey) JT.GROUPS[4].tools = ['product', 'google'];
 
   JT.hub = function (root, h1, body) {
     var title = h1 || h('h1', { text: T('hub.h1') });
@@ -3561,6 +3710,806 @@ window.JT_THEMES_DATE = '2026-11-22';
     box.id = 'jt-ledger';
     if (location.hash === '#jt-ledger') setTimeout(function () { if (box.isConnected) box.scrollIntoView({ block: 'center' }); }, 900);
     return box;
+  };
+})();
+
+/* ---- src/tools/photo.js ---- */
+/* حسن صورة منتجك: one photo per visitor, all on the visitor's device (canvas). Measured light, colour cast, contrast and
+   sharpness; a plain light background can become white; square 1:1. No model runs here, so the words never say AI. */
+(function () {
+  var JT = window.JT, h = JT.h, T = JT.T;
+  var MAX = 1500, MIN = 800;
+
+  function canvas(w, hh) { var c = document.createElement('canvas'); c.width = Math.max(1, Math.round(w)); c.height = Math.max(1, Math.round(hh)); return c; }
+  function ctx(c) { return c.getContext('2d', { willReadFrequently: true }); }
+  JT.loadImg = function (src) {
+    return new Promise(function (ok, bad) { var im = new Image(); if (!/^(blob|data):/.test(src)) im.crossOrigin = 'anonymous'; im.onload = function () { ok(im); }; im.onerror = bad; im.src = src; });
+  };
+
+  // a blur every browser can do (Safari has no canvas filter before 18): down to a tiny picture and back up in steps
+  JT.softCopy = function (src, w, hh, tiny) {
+    var k = tiny / Math.max(w, hh), a = canvas(w * k, hh * k), b = canvas(w * k * 4, hh * k * 4), c = canvas(w, hh);
+    [[a, src], [b, a], [c, b]].forEach(function (p) { var x = p[0].getContext('2d'); x.imageSmoothingEnabled = true; x.imageSmoothingQuality = 'high'; x.drawImage(p[1], 0, 0, p[0].width, p[0].height); });
+    return c;
+  };
+
+  /* ---------- measuring ---------- */
+  function measure(d) {
+    var hist = new Uint32Array(256), n = 0, sum = 0, i, l;
+    for (i = 0; i < d.length; i += 4) { l = (d[i] * 54 + d[i + 1] * 183 + d[i + 2] * 19) >> 8; hist[l]++; n++; sum += l; }
+    function pct(p) { var t = n * p, a = 0; for (var k = 0; k < 256; k++) { a += hist[k]; if (a >= t) return k; } return 255; }
+    var lo = pct(0.005), hi = pct(0.995), cut = pct(0.92), r = 0, g = 0, b = 0, c = 0;
+    // colour cast: read on the brightest nearly grey pixels
+    for (i = 0; i < d.length; i += 4) {
+      l = (d[i] * 54 + d[i + 1] * 183 + d[i + 2] * 19) >> 8; if (l < cut || l > 252) continue;
+      var mx = Math.max(d[i], d[i + 1], d[i + 2]), mn = Math.min(d[i], d[i + 1], d[i + 2]);
+      if (mx && (mx - mn) / mx < 0.22) { r += d[i]; g += d[i + 1]; b += d[i + 2]; c++; }
+    }
+    var gain = [1, 1, 1];
+    if (c > n * 0.01) { r /= c; g /= c; b /= c; var m = (r + g + b) / 3; gain = [m / r, m / g, m / b].map(function (x) { return Math.max(0.955, Math.min(1.045, x)); }); }
+    return { lo: lo, hi: hi, mean: sum / n, med: pct(0.5), gain: gain };
+  }
+  JT.photoMeasure = measure;
+
+  /* k = 0..1.  Light is only raised, never lowered; the stretch is capped so a dark mood photo stays itself. */
+  JT.photoLight = function (d, m, k) {
+    var lo = Math.min(m.lo, 46) * k, hi = 255 - (255 - Math.max(m.hi, 190)) * k;
+    var gam = 1; if (m.med < 118) gam = Math.max(0.72, Math.log(118 / 255) / Math.log(Math.max(20, m.med) / 255)); gam = 1 - (1 - gam) * k;
+    // one curve for the brightness; each pixel keeps its own hue (changing the channels one by one turns yellow into lemon)
+    var lut = new Float32Array(256);
+    for (var v = 0; v < 256; v++) {
+      var x = Math.pow(Math.max(0, Math.min(1, (v - lo) / (hi - lo))), gam);
+      lut[v] = 255 * (x + k * 0.1 * (x - 0.5) * 4 * x * (1 - x)); // soft contrast, the ends stay put
+    }
+    var g0 = 1 + (m.gain[0] - 1) * k, g1 = 1 + (m.gain[1] - 1) * k, g2 = 1 + (m.gain[2] - 1) * k;
+    for (var i = 0; i < d.length; i += 4) {
+      var R = d[i] * g0, G = d[i + 1] * g1, B = d[i + 2] * g2, y = Math.min(255, R * 0.213 + G * 0.715 + B * 0.072), t = lut[y | 0];
+      if (y < 1) { d[i] = d[i + 1] = d[i + 2] = t; continue; }
+      var q = t / y, mx = Math.max(R, G, B) * q;
+      if (mx > 255) { // too bright for this colour: blend towards its own brightness instead of clipping one channel
+        var f = mx > t ? (255 - t) / (mx - t) : 0; f = Math.max(0, Math.min(1, f));
+        d[i] = t + (R * q - t) * f; d[i + 1] = t + (G * q - t) * f; d[i + 2] = t + (B * q - t) * f;
+      } else { d[i] = R * q; d[i + 1] = G * q; d[i + 2] = B * q; }
+    }
+  };
+  function sharpen(id, k) {
+    var w = id.width, hh = id.height, s = new Uint8ClampedArray(id.data), d = id.data, a = 0.55 * k;
+    for (var y = 1; y < hh - 1; y++) for (var x = 1; x < w - 1; x++) {
+      var i = (y * w + x) * 4;
+      for (var c = 0; c < 3; c++) {
+        var p = i + c, bl = (s[p - 4] + s[p + 4] + s[p - w * 4] + s[p + w * 4] + s[p] * 4) / 8, df = s[p] - bl;
+        if (df > 2 || df < -2) d[p] = s[p] + df * a * 2; // skip flat noise
+      }
+    }
+  }
+
+  /* ---------- plain background ---------- */
+  function lumOf(c) { return c[0] * 0.213 + c[1] * 0.715 + c[2] * 0.072; }
+  function diff(d, i, c) { var r = d[i] - c[0], g = d[i + 1] - c[1], b = d[i + 2] - c[2]; return Math.sqrt(0.3 * r * r + 0.59 * g * g + 0.11 * b * b); }
+  // the border is one light colour -> {color, plain}
+  JT.photoPlain = function (src) {
+    var sc = 160 / Math.max(src.width, src.height), c = canvas(src.width * sc, src.height * sc), x = ctx(c);
+    x.fillStyle = '#fff'; x.fillRect(0, 0, c.width, c.height); x.drawImage(src, 0, 0, c.width, c.height);
+    var d = x.getImageData(0, 0, c.width, c.height).data, w = c.width, hh = c.height, list = [];
+    for (var y = 0; y < hh; y++) for (var q = 0; q < w; q++) if (y < 3 || q < 3 || y >= hh - 3 || q >= w - 3) list.push((y * w + q) * 4);
+    function med(ch) { var a = list.map(function (i) { return d[i + ch]; }).sort(function (p, r) { return p - r; }); return a[a.length >> 1]; }
+    var col = [med(0), med(1), med(2)];
+    var near = list.filter(function (i) { return diff(d, i, col) < 24; }).length / list.length;
+    return { color: col, plain: near > 0.86 && lumOf(col) > 150, near: near };
+  };
+  function edgeColor(c) {
+    var t = canvas(64, 64), x = ctx(t); x.drawImage(c, 0, 0, 64, 64); var d = x.getImageData(0, 0, 64, 64).data, a = [];
+    for (var y = 0; y < 64; y++) for (var q = 0; q < 64; q++) if (c.height >= c.width ? (q < 2 || q > 61) : (y < 2 || y > 61)) { var i = (y * 64 + q) * 4; a.push([d[i], d[i + 1], d[i + 2]]); }
+    a.sort(function (p, r) { return lumOf(p) - lumOf(r); }); var m = a[Math.floor(a.length * 0.68)];
+    return 'rgb(' + m.join(',') + ')';
+  }
+  // 0..255 mask of the background (flood from the edges), drawn back at full size, plus the product box
+  function bgMask(src, col) {
+    var sc = Math.min(1, 560 / Math.max(src.width, src.height)), c = canvas(src.width * sc, src.height * sc), x = ctx(c);
+    x.fillStyle = '#fff'; x.fillRect(0, 0, c.width, c.height); x.drawImage(src, 0, 0, c.width, c.height);
+    var id = x.getImageData(0, 0, c.width, c.height), d = id.data, w = c.width, hh = c.height, seen = new Uint8Array(w * hh), st = [];
+    function push(i, from) {
+      if (seen[i]) return; var p = i * 4;
+      if (diff(d, p, col) > 44) return;
+      if (from >= 0) { var f = from * 4; if (Math.abs(d[p] - d[f]) + Math.abs(d[p + 1] - d[f + 1]) + Math.abs(d[p + 2] - d[f + 2]) > 30) return; }
+      seen[i] = 1; st.push(i);
+    }
+    var k; for (k = 0; k < w; k++) { push(k, -1); push((hh - 1) * w + k, -1); } for (k = 0; k < hh; k++) { push(k * w, -1); push(k * w + w - 1, -1); }
+    while (st.length) { var i = st.pop(), px = i % w; if (px) push(i - 1, i); if (px < w - 1) push(i + 1, i); if (i >= w) push(i - w, i); if (i < w * (hh - 1)) push(i + w, i); }
+    var x0 = w, y0 = hh, x1 = 0, y1 = 0, bgN = 0;
+    for (i = 0; i < seen.length; i++) {
+      var on = seen[i]; d[i * 4] = d[i * 4 + 1] = d[i * 4 + 2] = 255; d[i * 4 + 3] = on ? 255 : 0; bgN += on;
+      if (!on) { var xx = i % w, yy = (i / w) | 0; if (xx < x0) x0 = xx; if (xx > x1) x1 = xx; if (yy < y0) y0 = yy; if (yy > y1) y1 = yy; }
+    }
+    x.putImageData(id, 0, 0);
+    var soft = canvas(src.width, src.height), s = soft.getContext('2d');
+    if ('filter' in s) s.filter = 'blur(' + Math.max(0.8, 1 / sc) + 'px)';
+    s.imageSmoothingQuality = 'high'; s.drawImage(c, 0, 0, soft.width, soft.height);
+    return { mask: soft, part: bgN / seen.length, box: x1 > x0 ? [x0 / w, y0 / hh, (x1 - x0 + 1) / w, (y1 - y0 + 1) / hh] : [0, 0, 1, 1] };
+  }
+
+  /* o: {k, bg: 'keep'|'white'|'color', color, square} -> canvas */
+  JT.photoRender = function (img, o) {
+    var iw = img.naturalWidth || img.width, ih = img.naturalHeight || img.height;
+    var side = Math.max(MIN, Math.min(MAX, Math.max(iw, ih))), sc = side / Math.max(iw, ih);
+    var work = canvas(iw * sc, ih * sc), x = ctx(work); x.imageSmoothingQuality = 'high';
+    x.fillStyle = '#fff'; x.fillRect(0, 0, work.width, work.height); x.drawImage(img, 0, 0, work.width, work.height);
+    var before = canvas(work.width, work.height); before.getContext('2d').drawImage(work, 0, 0);
+    var pl = JT.photoPlain(work), id = x.getImageData(0, 0, work.width, work.height), m = measure(id.data);
+    JT.photoLight(id.data, m, o.k); sharpen(id, o.k); x.putImageData(id, 0, 0);
+    var fill = o.bg === 'color' ? (o.color || '#f1efff') : '#ffffff', box = [0, 0, 1, 1], swap = o.bg !== 'keep' && pl.plain, part = 0;
+    if (swap) {
+      var mk = bgMask(before, pl.color); part = mk.part; box = mk.box;
+      var layer = canvas(work.width, work.height), l = layer.getContext('2d');
+      l.fillStyle = fill; l.fillRect(0, 0, layer.width, layer.height); l.globalCompositeOperation = 'destination-in'; l.drawImage(mk.mask, 0, 0);
+      x.drawImage(layer, 0, 0);
+    }
+    var out = work;
+    if (o.square) {
+      out = canvas(side, side); var q = out.getContext('2d'); q.imageSmoothingQuality = 'high';
+      if (swap) { // product centred, about 84% of the frame (Google asks for 75 to 90%)
+        q.fillStyle = fill; q.fillRect(0, 0, side, side);
+        var bw = box[2] * work.width, bh = box[3] * work.height, z = Math.min(side * 0.84 / Math.max(bw, bh), 1.6);
+        // a product cut by the photo's edge stays on that edge, it never floats
+        var bx = box[0] * work.width, by = box[1] * work.height, cutB = box[1] + box[3] > 0.988, cutT = box[1] < 0.012, cutR = box[0] + box[2] > 0.988, cutL = box[0] < 0.012;
+        if (cutT && cutB) z = side / work.height; else if (cutL && cutR) z = side / work.width;
+        var ox = cutL && !cutR ? 0 : cutR && !cutL ? side - work.width * z : side / 2 - (bx + bw / 2) * z, oy = cutB && !cutT ? side - work.height * z : cutT && !cutB ? 0 : side / 2 - (by + bh / 2) * z;
+        q.drawImage(work, ox, oy, work.width * z, work.height * z);
+      } else {
+        if (o.bg !== 'keep') { q.fillStyle = fill; q.fillRect(0, 0, side, side); }
+        else if (pl.near > 0.8) { var c0 = x.getImageData(2, 2, 1, 1).data; q.fillStyle = 'rgb(' + c0[0] + ',' + c0[1] + ',' + c0[2] + ')'; q.fillRect(0, 0, side, side); }
+        else { var ec = edgeColor(work); q.fillStyle = ec; q.fillRect(0, 0, side, side); } // the light colour of the photo's own edges
+        var rt = work.width / work.height, cz = o.bg === 'keep' && rt > 0.9 && rt < 1.11 ? Math.max(side / work.width, side / work.height) : 1; // almost square: fill the frame
+        q.drawImage(work, (side - work.width * cz) / 2, (side - work.height * cz) / 2, work.width * cz, work.height * cz);
+      }
+    }
+    return { canvas: out, before: before, plain: pl.plain, swapped: swap, part: part, m: m, w: iw, h: ih, small: Math.max(iw, ih) < MIN };
+  };
+  // a small fingerprint, so the same photo can be downloaded again with other choices
+  function sign(img) {
+    var c = canvas(16, 16), x = ctx(c); x.drawImage(img, 0, 0, 16, 16); var d = x.getImageData(0, 0, 16, 16).data, s = 0;
+    for (var i = 0; i < d.length; i += 4) s = (s * 31 + ((d[i] >> 4) * 7 + (d[i + 1] >> 4) * 3 + (d[i + 2] >> 4))) >>> 0;
+    return (img.naturalWidth || 0) + 'x' + (img.naturalHeight || 0) + '-' + s.toString(36);
+  }
+  JT.saveBlob = function (blob, name) {
+    var a = h('a', { href: URL.createObjectURL(blob), download: name }); document.body.appendChild(a); a.click(); a.remove(); setTimeout(function () { URL.revokeObjectURL(a.href); }, 60000);
+  };
+  // file input + drop zone; onFile(file)
+  JT.dropImg = function (id, title, help, onFile) {
+    var inp = h('input', { type: 'file', accept: 'image/png,image/jpeg,image/webp', class: 'jt-sr-only jt-dropin', id: id });
+    var zone = h('label', { class: 'jt-drop', for: id }, [h('span', { class: 'jt-drop__ic', html: JT.svg('upload'), 'aria-hidden': 'true' }), h('b', { text: title }), h('span', { class: 'jt-help', text: help })]);
+    inp.addEventListener('change', function () { if (inp.files && inp.files[0]) onFile(inp.files[0]); inp.value = ''; });
+    ['dragenter', 'dragover'].forEach(function (e) { zone.addEventListener(e, function (v) { v.preventDefault(); zone.classList.add('is-over'); }); });
+    ['dragleave', 'drop'].forEach(function (e) { zone.addEventListener(e, function (v) { v.preventDefault(); zone.classList.remove('is-over'); }); });
+    zone.addEventListener('drop', function (v) { var f = v.dataTransfer && v.dataTransfer.files[0]; if (f) onFile(f); });
+    return h('div', {}, [inp, zone]);
+  };
+  JT.thumbs = function (label, onPick) {
+    var row = h('div', { class: 'jt-ph__row' }), el = h('div', { class: 'jt-ph__th', hidden: true }, [h('p', { class: 'jt-lab', text: label }), row]);
+    return { el: el, set: function (list) {
+      row.innerHTML = ''; el.hidden = !list.length;
+      list.forEach(function (u, i) { var b = h('button', { type: 'button', class: 'jt-ph__t', 'aria-label': T('photo.pick', { n: i + 1 }) }, [h('img', { src: u, alt: '', crossorigin: 'anonymous', loading: 'lazy' })]); b.addEventListener('click', function () { onPick(u, b); }); row.appendChild(b); });
+    }, mark: function (b) { row.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); } };
+  };
+
+  /* Judy with her wand: body + arm (two layers of one picture, so the wand really moves). Always on the right of the photo, facing it. */
+  JT.wiz = function (cls) {
+    function im(n) { return h('img', { class: 'jt-wiz__' + n, src: JT.CFG.asset + 'judy-wand-' + n + '.webp', alt: '', loading: 'lazy', decoding: 'async', draggable: 'false' }); }
+    var star = h('i', { class: 'jt-wiz__star' }), arm = h('span', { class: 'jt-wiz__arm' }, [im('a'), star]), el = h('span', { class: 'jt-wiz ' + cls, 'aria-hidden': 'true' }, [im('b'), arm]);
+    return { el: el,
+      wave: function () {
+        var r = parseFloat(getComputedStyle(arm).rotate) || 0;
+        arm.animate([{ rotate: r + 'deg' }, { rotate: (r - 13) + 'deg', offset: 0.24 }, { rotate: (r + 7) + 'deg', offset: 0.55 }, { rotate: r + 'deg' }], { duration: 1500, easing: 'cubic-bezier(.77,0,.175,1)' });
+      },
+      tip: function () { var b = star.getBoundingClientRect(); return { x: b.left + b.width / 2, y: b.top + b.height / 2 }; } };
+  };
+  var STAR = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1c1 6.2 4.8 10 11 11-6.2 1-10 4.8-11 11-1-6.2-4.8-10-11-11 6.2-1 10-4.8 11-11z"/></svg>';
+  function sparks(box, from) {
+    var b = box.getBoundingClientRect(), x0 = Math.max(0, Math.min(b.width, from.x - b.left)), y0 = Math.max(0, Math.min(b.height, from.y - b.top)), layer = h('div', { class: 'jt-sparks', 'aria-hidden': 'true' });
+    for (var i = 0; i < 26; i++) {
+      // even spread over the photo, nearest to the wand first
+      var fx = ((i * 0.5698 + 0.5) % 1) * 0.94 + 0.03, fy = ((i * 0.7549 + 0.5) % 1) * 0.9 + 0.05, x = fx * b.width, y = fy * b.height, s = 14 + (i * 7) % 20;
+      var el = h('span', { html: STAR });
+      el.style.cssText = 'left:' + (x - s / 2) + 'px;top:' + (y - s / 2) + 'px;width:' + s + 'px;height:' + s + 'px;color:' + ['#f5b301', '#fff', '#b9a6ff', '#ffd86b'][i % 4];
+      el.animate([{ transform: 'translate(' + (x0 - x) * 0.28 + 'px,' + (y0 - y) * 0.28 + 'px) scale(.5) rotate(0deg)', opacity: 0 }, { transform: 'translate(0,0) scale(1) rotate(60deg)', opacity: 1, offset: 0.4 }, { transform: 'translate(0,10px) scale(.6) rotate(110deg)', opacity: 0 }], { duration: 950, delay: 350 + (1 - fx) * 1050 + (i % 4) * 40, easing: 'cubic-bezier(.23,1,.32,1)', fill: 'both' });
+      layer.appendChild(el);
+    }
+    box.appendChild(layer); setTimeout(function () { layer.remove(); }, 2700);
+  }
+
+  JT.photoCard = function () {
+    var api = { onPick: null }, img = null, sig = '', out = null, busy = false, o = { k: 0.65, bg: 'keep', color: '#f1efff', square: true };
+    var st = h('p', { class: 'jt-help', role: 'status' });
+    var th = JT.thumbs(T('photo.from'), function (u, b) { th.mark(b); open(u); });
+    var drop = JT.dropImg('jt-ph-file', T('photo.drop'), T('photo.dropHelp'), function (f) {
+      if (!/^image\/(png|jpe?g|webp)$/.test(f.type)) { st.textContent = T('photo.badFile'); return; }
+      if (f.size > 20e6) { st.textContent = T('photo.big'); return; }
+      th.mark(null); open(URL.createObjectURL(f));
+    });
+    var kSeg = JT.seg({ id: 'ph-k', label: T('photo.kQ'), value: 'mid', options: [['low', T('photo.k.low')], ['mid', T('photo.k.mid')], ['high', T('photo.k.high')]], onChange: function (v) { o.k = v === 'low' ? 0.35 : v === 'mid' ? 0.65 : 0.9; paint(); } });
+    var bgSeg = JT.seg({ id: 'ph-bg', label: T('photo.bgQ'), value: 'keep', options: [['keep', T('photo.bg.keep')], ['white', T('photo.bg.white')], ['color', T('photo.bg.color')]], onChange: function (v) { o.bg = v; colWrap.hidden = v !== 'color'; paint(); } });
+    var col = h('input', { type: 'color', class: 'jt-color', id: 'jt-ph-col', value: o.color });
+    col.addEventListener('input', function () { o.color = col.value; clearTimeout(col.t); col.t = setTimeout(paint, 120); });
+    var colWrap = h('div', { class: 'jt-role', hidden: true }, [h('label', { for: 'jt-ph-col', text: T('photo.colL') }), col]);
+    var bgNote = h('p', { class: 'jt-help jt-ph__note' });
+    var sqSeg = JT.seg({ id: 'ph-sq', label: T('photo.sqQ'), value: 'sq', options: [['sq', T('photo.sq.sq')], ['as', T('photo.sq.as')]], onChange: function (v) { o.square = v === 'sq'; paint(); } });
+    var opts = h('div', { class: 'jt-ph__opts', hidden: true }, [kSeg.el, sqSeg.el, bgSeg.el, colWrap, bgNote]);
+
+    // before / after: the «after» layer is clipped; a real range input carries the keyboard and the touch
+    var bC = h('canvas', { 'aria-hidden': 'true' }), aC = h('canvas', { class: 'jt-cmp__a', 'aria-hidden': 'true' }), line = h('span', { class: 'jt-cmp__l', 'aria-hidden': 'true' });
+    var rng = h('input', { type: 'range', class: 'jt-cmp__r', min: 0, max: 100, value: 50, 'aria-label': T('photo.cmp') });
+    var cmp = h('div', { class: 'jt-cmp', dir: 'ltr' }, [bC, aC, line, h('span', { class: 'jt-cmp__t jt-cmp__t--b', text: T('photo.before') }), h('span', { class: 'jt-cmp__t jt-cmp__t--a', text: T('photo.after') }), rng]);
+    function slide() { aC.style.clipPath = 'inset(0 0 0 ' + rng.value + '%)'; line.style.left = rng.value + '%'; }
+    rng.addEventListener('input', slide); slide();
+    var did = h('ul', { class: 'jt-ph__did' }), warn = h('p', { class: 'jt-ph__warn', hidden: true });
+    var wiz = JT.wiz('jt-wiz--by'), stage = h('div', { class: 'jt-touch', dir: 'ltr' }, [cmp, h('div', { class: 'jt-touch__j' }, [did, wiz.el])]);
+    var dl = JT.btn(T('photo.dl'), { icon: 'download' }), dlHelp = h('p', { class: 'jt-help', role: 'status' });
+    var lock = h('div', { class: 'jt-ph__lock', hidden: true }, [h('p', { class: 'jt-warn', text: T('photo.lock') }), h('div', { class: 'jt-actions' }, [JT.btn(T('photo.lockWa'), { kind: 'wa', icon: 'wa', href: JT.waUrl(T('photo.waText')), blank: true })])]);
+    var view = h('div', { class: 'jt-ph__view', hidden: true }, [stage, warn, h('div', { class: 'jt-actions' }, [dl]), dlHelp, lock]);
+    var empty = h('div', { class: 'jt-ph__empty' }, [JT.wiz('jt-wiz--empty').el, h('p', { text: T('photo.empty') })]);
+    var fix = JT.fixLine ? JT.fixLine('ugc') : null;
+
+    api.el = h('section', { class: 'jt-card jt-ph', id: 'jt-photo', 'aria-label': T('photo.t') }, [
+      h('h2', { class: 'jt-card__t', text: T('photo.t') }), h('p', { class: 'jt-fee__p', text: T('photo.p') }),
+      h('div', { class: 'jt-ph__grid' }, [h('div', { class: 'jt-ph__in' }, [th.el, drop, st]), h('div', { class: 'jt-ph__out' }, [empty, view]), opts]),
+      h('div', { class: 'jt-ph__more' }, [h('p', {}, [h('b', { text: T('photo.moreT') }), ' ' + T('photo.moreP')]), fix, h('div', { class: 'jt-actions' }, [JT.btn(T('photo.moreBtn'), { kind: 'soft', href: JT.prod('ugc') }), JT.btn(T('photo.lockWa'), { kind: 'wa', icon: 'wa', href: JT.waUrl(T('photo.waText')), blank: true })])])
+    ]);
+
+    function open(src) {
+      st.textContent = T('photo.opening');
+      JT.loadImg(src).then(function (im) {
+        img = im; sig = sign(im); st.textContent = '';
+        empty.hidden = true; view.hidden = false; opts.hidden = false;
+        var pl = JT.photoPlain(im);
+        bgSeg.el.querySelectorAll('input').forEach(function (x) { if (x.value !== 'keep') { x.disabled = !pl.plain; x.parentNode.classList.toggle('jt-seg__o--off', !pl.plain); } });
+        if (!pl.plain) { o.bg = 'keep'; bgSeg.set('keep'); colWrap.hidden = true; }
+        bgNote.textContent = T(pl.plain ? 'photo.bgYes' : 'photo.bgNo');
+        paint(); touch();
+        if (api.onPick) api.onPick(src);
+      }, function () { st.textContent = T('photo.badFile'); });
+    }
+    function paint() {
+      if (!img || busy) return; busy = true;
+      requestAnimationFrame(function () {
+        busy = false; out = JT.photoRender(img, o);
+        var c = out.canvas; aC.width = bC.width = c.width; aC.height = bC.height = c.height;
+        aC.getContext('2d').drawImage(c, 0, 0);
+        var b = bC.getContext('2d'); b.fillStyle = '#fff'; b.fillRect(0, 0, c.width, c.height);
+        var z = Math.min(c.width / out.before.width, c.height / out.before.height);
+        b.drawImage(out.before, (c.width - out.before.width * z) / 2, (c.height - out.before.height * z) / 2, out.before.width * z, out.before.height * z);
+        cmp.style.aspectRatio = c.width + ' / ' + c.height;
+        did.innerHTML = '';
+        // only what was really done, from the measured numbers
+        var m = out.m, L = [];
+        if (m.med < 118 || m.hi < 235) L.push('light');
+        if (m.lo > 12) L.push('contrast');
+        if (m.gain.some(function (g) { return Math.abs(g - 1) > 0.015; })) L.push('cast');
+        L.push('sharp'); if (out.swapped) L.push('bg'); if (o.square) L.push('square');
+        L.forEach(function (k) { did.appendChild(h('li', {}, [h('span', { class: 'jt-ic', html: JT.svg('check'), 'aria-hidden': 'true' }), T('photo.did.' + k)])); });
+        warn.hidden = !out.small; warn.textContent = out.small ? T('photo.small', { w: out.w, h: out.h }) : '';
+        dlHelp.textContent = T('photo.size', { w: c.width, h: c.height });
+        var used = (JT.store.get('photo') || {}).sig; lock.hidden = !(used && used !== sig); dl.hidden = !lock.hidden;
+      });
+    }
+    // the one show moment: a new photo opens as it was, Judy's wand passes over it, then the slider rests in the middle.
+    // Any touch or key on the slider stops it. No show with reduced motion.
+    var show = 0, io = null;
+    function stop() { show++; if (io) { io.disconnect(); io = null; } }
+    ['pointerdown', 'keydown', 'touchstart'].forEach(function (e) { rng.addEventListener(e, stop, { passive: true }); });
+    function put(v) { rng.value = v; slide(); }
+    function touch() {
+      stop();
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches || !window.IntersectionObserver || !cmp.animate) { put(50); return; }
+      put(100);
+      io = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { io.disconnect(); io = null; play(); } }, { threshold: 0.35 });
+      io.observe(cmp);
+    }
+    function ease(x) { return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
+    function play() {
+      var me = ++show, t0 = 0;
+      wiz.wave(); sparks(cmp, wiz.tip());
+      requestAnimationFrame(function step(now) {
+        if (me !== show) return;
+        if (!t0) t0 = now;
+        var t = now - t0;
+        if (t < 420) put(100); else if (t < 1620) put(100 - 100 * ease((t - 420) / 1200)); else if (t < 2300) put(0); else if (t < 3000) put(50 * ease((t - 2300) / 700));
+        else { put(50); return; }
+        requestAnimationFrame(step);
+      });
+    }
+    dl.addEventListener('click', function () {
+      if (!out) return;
+      out.canvas.toBlob(function (b) {
+        if (!b) { dlHelp.textContent = T('photo.fail'); return; }
+        JT.store.set('photo', { sig: sig, at: Date.now() });
+        JT.saveBlob(b, 'judy-product-photo.jpg');
+        dlHelp.textContent = T('photo.done', { kb: Math.round(b.size / 1024) }); JT.announce(dlHelp.textContent);
+      }, 'image/jpeg', 0.9);
+    });
+    api.setProduct = function (list) { th.set(list); };
+    return api;
+  };
+})();
+
+/* ---- src/tools/clip.js ---- */
+/* فيديو بسيط لمنتجك: 6 seconds, 1080x1920, no sound. Made on the visitor's device.
+   1) WebCodecs H.264 + mp4-muxer (MIT, 32 KB, loaded only on click): a real MP4, frame by frame.
+   2) MediaRecorder on the canvas (mp4 when the browser can, else webm).
+   3) neither, or the finished file does not open: a WhatsApp button, said plainly. */
+(function () {
+  var JT = window.JT, h = JT.h, T = JT.T;
+  var W = 1080, H = 1920, FPS = 30, DUR = 6, MUX = 'https://cdn.jsdelivr.net/npm/mp4-muxer@5.2.2/build/mp4-muxer.min.js';
+  var FONT = 'Almarai, "Segoe UI", Tahoma, Arial, sans-serif';
+
+  /* ---------- drawing (t in seconds) ---------- */
+  function clamp(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+  function out(t, from, dur) { var k = clamp((t - from) / dur); return 1 - Math.pow(1 - k, 4); }
+  function rr(x, a, b, w, hh, r) { x.beginPath(); x.moveTo(a + r, b); x.arcTo(a + w, b, a + w, b + hh, r); x.arcTo(a + w, b + hh, a, b + hh, r); x.arcTo(a, b + hh, a, b, r); x.arcTo(a, b, a + w, b, r); x.closePath(); }
+  function rgb(hx) { var n = parseInt(hx.slice(1), 16); return [n >> 16 & 255, n >> 8 & 255, n & 255]; }
+  function mix(a, b, t) { return 'rgb(' + [0, 1, 2].map(function (i) { return Math.round(a[i] + (b[i] - a[i]) * t); }).join(',') + ')'; }
+  function lum(c) { var a = c.map(function (v) { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }); return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2]; }
+  function wrap(x, text, max, lines) {
+    var ws = String(text).trim().split(/\s+/), L = [], cur = '';
+    ws.forEach(function (w) { var t = cur ? cur + ' ' + w : w; if (x.measureText(t).width <= max || !cur) cur = t; else { L.push(cur); cur = w; } });
+    if (cur) L.push(cur);
+    if (L.length > lines) { L = L.slice(0, lines); while (L[lines - 1].indexOf(' ') > 0 && x.measureText(L[lines - 1] + '…').width > max) L[lines - 1] = L[lines - 1].replace(/\s+\S+$/, ''); L[lines - 1] += '…'; }
+    return L;
+  }
+  function fitFont(x, weight, size, text, max, min) { do { x.font = weight + ' ' + size + 'px ' + FONT; if (x.measureText(text).width <= max) break; size -= 4; } while (size > min); return size; }
+  JT.clipDraw = function (x, t, s) {
+    var c = rgb(s.color), white = [255, 255, 255], dark = lum(c) < 0.42, top = mix(c, dark ? white : [0, 0, 0], dark ? 0.1 : 0.02), bot = mix(c, [0, 0, 0], dark ? 0.28 : 0.08);
+    var ink = dark ? '#ffffff' : '#191744', soft = dark ? 'rgba(255,255,255,.78)' : 'rgba(25,23,68,.72)';
+    x.save(); x.direction = s.rtl ? 'rtl' : 'ltr'; x.textAlign = 'center'; x.textBaseline = 'alphabetic';
+    var g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, top); g.addColorStop(1, bot); x.fillStyle = g; x.fillRect(0, 0, W, H);
+    var tall = s.photos[0] && (s.photos[0].naturalWidth || s.photos[0].width) / (s.photos[0].naturalHeight || s.photos[0].height) < 0.85;
+    var sy = tall ? 168 : 236;
+    // store name
+    var e0 = out(t, 0.1, 0.6);
+    if (s.store) { x.globalAlpha = e0; x.fillStyle = soft; fitFont(x, 700, 50, s.store, 860, 30); x.fillText(s.store, W / 2, sy - (1 - e0) * 24); x.globalAlpha = 1; }
+    // photo card
+    var e1 = out(t, 0, 0.8), P = tall ? 860 : 900, Q = tall ? 1060 : 900, px = (W - P) / 2, py = tall ? 226 : 296, sc = 0.94 + 0.06 * e1;
+    x.save(); x.translate(W / 2, py + Q / 2); x.scale(sc, sc); x.translate(-W / 2, -(py + Q / 2)); x.globalAlpha = 0.25 + 0.75 * e1;
+    x.save(); x.shadowColor = 'rgba(10,8,40,.34)'; x.shadowBlur = 70; x.shadowOffsetY = 34; x.fillStyle = '#fff'; rr(x, px, py, P, Q, 56); x.fill(); x.restore();
+    rr(x, px, py, P, Q, 56); x.clip(); x.fillStyle = '#fff'; x.fillRect(px, py, P, Q);
+    var n = s.photos.length, seg = DUR / Math.max(1, n);
+    for (var i = 0; i < n; i++) {
+      var st = i * seg, inn = i === 0 ? 1 : clamp((t - st + 0.25) / 0.5); if (inn <= 0 || (i < n - 1 && t > st + seg + 0.3)) continue;
+      var im = s.photos[i], iw = im.naturalWidth || im.width, ih = im.naturalHeight || im.height, z0 = Math.max(P / iw, Q / ih), fit = Math.min(P / iw, Q / ih);
+      var part = z0 / fit > 1.35; if (part) z0 = Math.max(fit, z0 * 0.82); // very tall or wide photos keep more of the product, on a soft copy of themselves
+      var pr = clamp((t - st + 0.25) / (seg + 0.5)), z = z0 * (1.01 + 0.09 * (i % 2 ? 1 - pr : pr)), w = iw * z, hh = ih * z;
+      x.globalAlpha = (0.25 + 0.75 * e1) * inn; if (part && JT.softCopy) { im.jtSoft = im.jtSoft || JT.softCopy(im, 270, 270 * ih / iw, 20); var bz = Math.max(P / im.jtSoft.width, Q / im.jtSoft.height) * 1.1; x.drawImage(im.jtSoft, px + (P - im.jtSoft.width * bz) / 2, py + (Q - im.jtSoft.height * bz) / 2, im.jtSoft.width * bz, im.jtSoft.height * bz); }
+      x.drawImage(im, px + (P - w) / 2, py + (Q - hh) / 2 + (hh > Q ? (hh - Q) * (0.2 - 0.12 * pr) : 0), w, hh);
+    }
+    x.restore();
+    // name
+    var e2 = out(t, 0.5, 0.7), y = tall ? 1392 : 1310; x.globalAlpha = e2; x.fillStyle = ink; x.font = '800 68px ' + FONT;
+    var L = wrap(x, s.name || '', 920, 2); L.forEach(function (l, k) { x.fillText(l, W / 2, y + k * 88 + (1 - e2) * 34); }); y += Math.max(1, L.length) * 88 + 22; x.globalAlpha = 1;
+    // price
+    if (s.price) {
+      var e3 = out(t, 1, 0.6); x.globalAlpha = e3; x.font = '800 60px ' + FONT;
+      var pw = x.measureText(s.price).width + 92, ph = 108, wasW = 0; if (s.was) { x.font = '700 44px ' + FONT; wasW = x.measureText(s.was).width + 34; }
+      var tot = pw + wasW, dir = s.rtl ? -1 : 1, cx = W / 2 - dir * (tot / 2 - pw / 2);
+      x.save(); x.translate(cx, y + 24); x.scale(0.9 + 0.1 * e3, 0.9 + 0.1 * e3); x.fillStyle = '#f5b301'; rr(x, -pw / 2, -ph / 2, pw, ph, 54); x.fill(); x.fillStyle = '#191744'; x.font = '800 60px ' + FONT; x.fillText(s.price, 0, 21); x.restore();
+      if (s.was) { var wx = cx + dir * (pw / 2 + wasW / 2); x.fillStyle = soft; x.font = '700 44px ' + FONT; x.fillText(s.was, wx, y + 40); var mw = x.measureText(s.was).width; x.fillRect(wx - mw / 2 - 4, y + 23, mw + 8, 4); }
+      x.globalAlpha = 1; y += 128;
+    }
+    // call to action
+    if (s.cta) {
+      var e4 = out(t, 1.5, 0.6), beat = t > 4.2 ? Math.sin((t - 4.2) * 5.2) * 0.018 : 0; x.globalAlpha = e4; fitFont(x, 800, 46, s.cta, 760, 30);
+      var cw = x.measureText(s.cta).width + 110; x.save(); x.translate(W / 2, y + 44 + (1 - e4) * 24); x.scale(1 + beat, 1 + beat); x.fillStyle = dark ? '#ffffff' : '#191744'; rr(x, -cw / 2, -52, cw, 104, 52); x.fill(); x.fillStyle = dark ? '#191744' : '#ffffff'; x.fillText(s.cta, 0, 16); x.restore(); x.globalAlpha = 1;
+    }
+    // her mark, small
+    x.globalAlpha = 0.55; x.fillStyle = ink; x.font = '700 28px ' + FONT; x.fillText(s.mark, W / 2, 1866); x.restore();
+  };
+
+  /* ---------- making the file ---------- */
+  var muxing;
+  function loadMux() {
+    if (window.Mp4Muxer) return Promise.resolve();
+    muxing = muxing || new Promise(function (ok, bad) { var sc = h('script', { src: MUX, crossorigin: 'anonymous' }); sc.onload = ok; sc.onerror = function () { muxing = null; bad(new Error('mux')); }; document.head.appendChild(sc); });
+    return muxing;
+  }
+  function pickConfig() {
+    if (!window.VideoEncoder || !window.VideoFrame) return Promise.resolve(null);
+    var list = ['avc1.640028', 'avc1.4d0028', 'avc1.42e028', 'avc1.64002a'], i = 0;
+    function next() {
+      if (i >= list.length) return null;
+      var cfg = { codec: list[i++], width: W, height: H, bitrate: 6e6, framerate: FPS, avc: { format: 'avc' } };
+      return VideoEncoder.isConfigSupported(cfg).then(function (r) { return r.supported ? cfg : next(); }, next);
+    }
+    return Promise.resolve(next());
+  }
+  function byCodecs(cv, draw, cfg, prog) {
+    return loadMux().then(function () {
+      return new Promise(function (ok, bad) {
+        var mx = new window.Mp4Muxer.Muxer({ target: new window.Mp4Muxer.ArrayBufferTarget(), video: { codec: 'avc', width: W, height: H, frameRate: FPS }, fastStart: 'in-memory' });
+        var enc = new VideoEncoder({ output: function (c, m) { mx.addVideoChunk(c, m); }, error: bad }), n = FPS * DUR, i = 0;
+        enc.configure(cfg);
+        (function step() {
+          try {
+            while (i < n && enc.encodeQueueSize < 5) {
+              draw(i / FPS); var f = new VideoFrame(cv, { timestamp: Math.round(i * 1e6 / FPS), duration: Math.round(1e6 / FPS) });
+              enc.encode(f, { keyFrame: i % FPS === 0 }); f.close(); i++;
+              if (i % 6 === 0) break;
+            }
+          } catch (e) { return bad(e); }
+          prog(i / n);
+          if (i < n) return setTimeout(step, 4);
+          enc.flush().then(function () { mx.finalize(); enc.close(); ok(new Blob([mx.target.buffer], { type: 'video/mp4' })); }, bad);
+        })();
+      });
+    });
+  }
+  function recType() { return window.MediaRecorder && HTMLCanvasElement.prototype.captureStream ? ['video/mp4;codecs=avc1.640028', 'video/mp4', 'video/webm;codecs=vp9', 'video/webm'].filter(function (t) { return MediaRecorder.isTypeSupported(t); })[0] : null; }
+  function byRecorder(cv, draw, type, prog) {
+    return new Promise(function (ok, bad) {
+      var rec, parts = [], t0; draw(0);
+      try { rec = new MediaRecorder(cv.captureStream(FPS), { mimeType: type, videoBitsPerSecond: 6e6 }); } catch (e) { return bad(e); }
+      rec.ondataavailable = function (e) { if (e.data && e.data.size) parts.push(e.data); };
+      rec.onerror = function () { bad(new Error('rec')); };
+      rec.onstop = function () { ok(new Blob(parts, { type: type.split(';')[0] })); };
+      rec.start(250); t0 = performance.now();
+      (function loop() { var t = (performance.now() - t0) / 1000; draw(Math.min(t, DUR - 0.01)); prog(t / DUR); if (t < DUR) requestAnimationFrame(loop); else rec.stop(); })();
+    });
+  }
+  // the file must open and show a picture before anyone gets it
+  function opens(blob) {
+    return new Promise(function (ok) {
+      if (blob.size < 20000) return ok(false);
+      var v = document.createElement('video'); v.muted = true; v.playsInline = true; v.preload = 'auto'; var u = URL.createObjectURL(blob), t = setTimeout(function () { end(false); }, 9000);
+      function end(r) { clearTimeout(t); v.onloadeddata = v.onerror = null; URL.revokeObjectURL(u); ok(r); }
+      v.onloadeddata = function () { end(v.videoWidth === W && (!isFinite(v.duration) || v.duration > DUR - 1.2)); }; v.onerror = function () { end(false); };
+      v.src = u; v.load();
+    });
+  }
+  JT.clipMake = function (cv, draw, prog) {
+    return pickConfig().then(function (cfg) {
+      var go = cfg ? byCodecs(cv, draw, cfg, prog).then(function (b) { return opens(b).then(function (y) { if (!y) throw new Error('file'); return { blob: b, how: 'codecs' }; }); }) : Promise.reject(new Error('none'));
+      return go.catch(function () {
+        var type = recType(); if (!type) throw new Error('none');
+        return byRecorder(cv, draw, type, prog).then(function (b) { return opens(b).then(function (y) { if (!y) throw new Error('file'); return { blob: b, how: 'recorder' }; }); });
+      });
+    });
+  };
+
+  /* ---------- card ---------- */
+  JT.clipCard = function () {
+    var api = {}, s = { name: '', price: '', was: '', store: '', cta: T('clip.ctas')[0], color: '#5b47d6', photos: [], rtl: JT.lang === 'ar', mark: T('clip.mark') }, urls = [], all = [], blob = null, raf = 0, making = false, seen = true;
+    var st = h('p', { class: 'jt-help', role: 'status' });
+    var th = JT.thumbs(T('clip.from'), function (u) { var k = urls.indexOf(u); if (k >= 0) urls.splice(k, 1); else { urls.push(u); if (urls.length > 3) urls.shift(); } marks(); load(); });
+    var drop = JT.dropImg('jt-cl-file', T('clip.drop'), T('clip.dropHelp'), function (f) {
+      if (!/^image\/(png|jpe?g|webp)$/.test(f.type) || f.size > 20e6) { st.textContent = T('photo.badFile'); return; }
+      api.addPhoto(URL.createObjectURL(f));
+    });
+    var nameF = JT.textField({ id: 'cl-name', label: T('clip.name'), maxlength: 70, wide: true, onInput: edit });
+    var priceF = JT.field({ id: 'cl-price', label: T('clip.price'), unit: T('common.sar'), optional: true, min: 0, onInput: edit });
+    var storeF = JT.textField({ id: 'cl-store', label: T('clip.store'), maxlength: 34, onInput: edit });
+    var ctaSeg = JT.seg({ id: 'cl-cta', label: T('clip.ctaQ'), value: '0', wide: true, options: T('clip.ctas').map(function (c, i) { return [String(i), c]; }), onChange: function (v) { s.cta = T('clip.ctas')[+v]; edit(); } });
+    var cols = h('div', { class: 'jt-cl__cols', role: 'group', 'aria-label': T('clip.colL') });
+    var own = h('input', { type: 'color', class: 'jt-color', id: 'jt-cl-col', value: s.color, 'aria-label': T('clip.colOwn') });
+    own.addEventListener('input', function () { color(own.value); });
+    function color(c) { s.color = c; own.value = c; cols.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-c') === c ? 'true' : 'false'); }); edit(); }
+    function showCols(list) {
+      cols.innerHTML = ''; list.forEach(function (c) { var b = h('button', { type: 'button', class: 'jt-cl__c', 'data-c': c, style: 'background:' + c, 'aria-label': T('clip.colL') + ' ' + c }); b.addEventListener('click', function () { color(c); }); cols.appendChild(b); });
+      cols.appendChild(own); color(list[0]);
+    }
+    var cv = h('canvas', { class: 'jt-cl__cv', width: W, height: H, role: 'img', 'aria-label': T('clip.pvAlt') }), x = cv.getContext('2d');
+    var vid = h('video', { class: 'jt-cl__v', controls: true, muted: true, loop: true, playsinline: true, hidden: true });
+    var make = JT.btn(T('clip.make'), { icon: 'video' }); make.disabled = true;
+    var dl = JT.btn(T('clip.dl'), { icon: 'download' }); dl.hidden = true;
+    var share = JT.btn(T('clip.share'), { kind: 'soft', icon: 'ext' }); share.hidden = true;
+    var bar = h('div', { class: 'jt-cl__bar', hidden: true }, [h('span')]);
+    var msg = h('p', { class: 'jt-help', role: 'status' });
+    var fail = h('div', { hidden: true }, [h('p', { class: 'jt-warn', text: T('clip.fail') }), h('div', { class: 'jt-actions' }, [JT.btn(T('clip.failWa'), { kind: 'wa', icon: 'wa', href: JT.waUrl(T('clip.waText')), blank: true })])]);
+    var holder = h('div', { class: 'jt-cl__ph' }, [cv, vid, h('div', { class: 'jt-cl__empty' }, [h('span', { html: JT.svg('video'), 'aria-hidden': 'true' }), h('p', { text: T('clip.empty') })])]);
+
+    api.el = h('section', { class: 'jt-card jt-ph jt-cl', id: 'jt-clip', 'aria-label': T('clip.t') }, [
+      h('h2', { class: 'jt-card__t', text: T('clip.t') }), h('p', { class: 'jt-fee__p', text: T('clip.p') }),
+      h('div', { class: 'jt-cl__grid' }, [
+        h('div', { class: 'jt-ph__in' }, [th.el, drop, st, h('div', { class: 'jt-fields' }, [nameF.el, priceF.el, storeF.el, ctaSeg.el]), h('div', {}, [h('p', { class: 'jt-lab', text: T('clip.colL') }), cols]), h('div', { class: 'jt-actions' }, [make, dl, share]), bar, msg, fail]),
+        h('div', { class: 'jt-cl__side' }, [holder])
+      ]),
+      h('div', { class: 'jt-ph__more' }, [h('p', {}, [h('b', { text: T('clip.moreT') }), ' ' + T('clip.moreP')]), JT.fixLine ? JT.fixLine('motion') : null, h('div', { class: 'jt-actions' }, [JT.btn(T('clip.moreBtn'), { kind: 'soft', href: JT.prod('motion') })])])
+    ]);
+
+    function reset() { blob = null; vid.hidden = true; cv.hidden = false; if (vid.src) { URL.revokeObjectURL(vid.src); vid.removeAttribute('src'); } dl.hidden = share.hidden = true; make.hidden = false; msg.textContent = ''; fail.hidden = true; }
+    function edit() {
+      if (making) return; if (blob) reset();
+      s.name = nameF.get(); s.store = storeF.get(); var p = JT.parse(priceF.raw()); s.price = isFinite(p) && p > 0 ? JT.money(p, 2) : ''; s.was = api.was > p && p === api.price ? JT.num(api.was, 2) : '';
+      paint();
+    }
+    function marks() { th.el.querySelectorAll('button').forEach(function (b) { var i = b.querySelector('img'); b.setAttribute('aria-pressed', urls.indexOf(i.getAttribute('src')) >= 0 ? 'true' : 'false'); }); }
+    var turn = 0;
+    function load() {
+      var me = ++turn, list = urls.slice();
+      return Promise.all(list.map(function (u) { return JT.loadImg(u).catch(function () { return null; }); })).then(function (a) {
+        if (me !== turn) return; s.photos = a.filter(Boolean); if (blob) reset();
+        var on = s.photos.length > 0; make.disabled = !on; holder.classList.toggle('jt-cl__ph--on', on);
+        st.textContent = a.length && !on ? T('photo.badFile') : '';
+        if (on) { try { var pal = JT.colorPalette(s.photos[0]).map(function (c) { return '#' + c.c.map(function (v) { return ('0' + Math.round(v).toString(16)).slice(-2); }).join(''); }); showCols(['#5b47d6', '#191744'].concat(pal.filter(function (c) { var q = rgb(c), mx = Math.max.apply(0, q), mn = Math.min.apply(0, q); return mx > 40 && mn < 235; }).slice(0, 3))); } catch (e) { showCols(['#5b47d6', '#191744', '#0f7a55']); } }
+        play();
+      });
+    }
+    function paint() { if (s.photos.length && !making && !raf) JT.clipDraw(x, DUR - 1, s); }
+    var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function play() {
+      cancelAnimationFrame(raf); raf = 0; if (!s.photos.length || making || blob) return;
+      if (still) return paint();
+      var t0 = performance.now(), lastT = 0;
+      (function loop(n) { if (making || blob || !document.body.contains(cv)) { raf = 0; return; } raf = requestAnimationFrame(loop); if (!seen || n - lastT < 32) return; lastT = n; JT.clipDraw(x, ((n - t0) / 1000) % (DUR + 0.8) > DUR ? DUR - 0.01 : ((n - t0) / 1000) % (DUR + 0.8), s); })(t0);
+    }
+    if (window.IntersectionObserver) new IntersectionObserver(function (e) { seen = e[0].isIntersecting; }).observe(cv);
+    function fonts() { return document.fonts && document.fonts.load ? Promise.all([700, 800].map(function (w) { return document.fonts.load(w + ' 60px Almarai', 'منتج A1'); })).catch(function () { }) : Promise.resolve(); }
+
+    make.addEventListener('click', function () {
+      if (making || !s.photos.length) return; making = true; cancelAnimationFrame(raf); raf = 0;
+      make.disabled = true; bar.hidden = false; fail.hidden = true; msg.textContent = T('clip.busy'); JT.announce(T('clip.busy'));
+      fonts().then(function () { return JT.clipMake(cv, function (t) { JT.clipDraw(x, t, s); }, function (p) { bar.firstChild.style.transform = 'scaleX(' + Math.min(1, p) + ')'; }); }).then(function (r) {
+        blob = r.blob; var ext = /mp4/.test(blob.type) ? 'mp4' : 'webm'; api.last = { how: r.how, ext: ext, size: blob.size };
+        vid.src = URL.createObjectURL(blob); vid.hidden = false; cv.hidden = true; var pl = vid.play(); if (pl && pl.catch) pl.catch(function () { });
+        make.hidden = true; dl.hidden = false;
+        var f; try { f = new File([blob], 'judy-product-video.' + ext, { type: blob.type }); } catch (e) { }
+        share.hidden = !(f && navigator.canShare && navigator.canShare({ files: [f] }));
+        share.onclick = function () { navigator.share({ files: [f] }).catch(function () { }); };
+        msg.textContent = T(ext === 'mp4' ? 'clip.done' : 'clip.doneWebm', { mb: JT.num(blob.size / 1048576, 1) }); JT.announce(msg.textContent);
+      }, function () { fail.hidden = false; msg.textContent = ''; JT.announce(T('clip.fail')); }).then(function () { making = false; make.disabled = false; bar.hidden = true; bar.firstChild.style.transform = 'scaleX(0)'; if (!blob) play(); });
+    });
+    dl.addEventListener('click', function () { if (blob) JT.saveBlob(blob, 'judy-product-video.' + (/mp4/.test(blob.type) ? 'mp4' : 'webm')); });
+
+    api.addPhoto = function (u) { if (all.indexOf(u) < 0) { all.push(u); th.set(all); } if (urls.indexOf(u) < 0) { urls.push(u); if (urls.length > 3) urls.shift(); } marks(); load(); };
+    api.setProduct = function (p) {
+      api.price = p.price; api.was = p.was; nameF.set(p.name || ''); priceF.set(p.price > 0 ? String(p.price) : ''); storeF.set(p.store || (/\//.test(p.host || '') ? '' : p.host || '')); storeF.input.placeholder = p.host || '';
+      all = p.photos.slice(); th.set(all); urls = all.slice(0, 3); marks(); fonts().then(load).then(edit);
+    };
+    showCols(['#5b47d6', '#191744', '#0f7a55', '#b42318']);
+    JT.clipApi = api;
+    return api;
+  };
+})();
+
+/* ---- src/tools/product.js ---- */
+/* لمسة جودي لمنتجك: reads one public Salla product (Store API, open CORS, no key) and says what a shopper can
+   and cannot learn from the page. Only facts that are in the data; every rule's source is listed in product.srcs.
+   The photo part is photo.js (JT.photoCard), the video part is clip.js (JT.clipCard). */
+(function () {
+  var JT = window.JT, h = JT.h, T = JT.T;
+  var API = 'https://api.salla.dev/store/v1/products/';
+
+  /* ---------- link ---------- */
+  function dig(v) { return v.replace(/[٠-٩]/g, function (d) { return d.charCodeAt(0) - 0x0660; }); }
+  // -> {store, id} or {err: 'empty'|'url'|'dash'|'short'|'noid'}
+  JT.productLink = function (v) {
+    v = (v || '').trim(); if (!v) return { err: 'empty' };
+    var m = /https?:\/\/\S+/i.exec(v); if (m) v = m[0]; // people paste «name + link» from the share sheet
+    if (!/^https?:\/\//i.test(v)) v = 'https://' + v;
+    var u; try { u = new URL(v); } catch (e) { return { err: 'url' }; }
+    var host = u.hostname.toLowerCase().replace(/^www\./, '');
+    if (!/\./.test(host)) return { err: 'url' };
+    if (host === 's.salla.sa') return { err: 'dash' };
+    if (/^(mtjr\.(at|co|shop|me|site)|bit\.ly|t\.co|tinyurl\.com|wa\.me)$/.test(host)) return { err: 'short' };
+    var path; try { path = decodeURIComponent(u.pathname); } catch (e) { path = u.pathname; }
+    var segs = dig(path).split('/').filter(Boolean), id = null;
+    segs.forEach(function (s) { var x = /^p(\d{5,})$/i.exec(s); if (x) id = x[1]; });
+    var store = host;
+    if (host === 'salla.sa' || host === 'demostore.salla.sa') {
+      var rest = segs.filter(function (s) { return !/^(ar|en)$/i.test(s); });
+      store = rest[0]; if (!store) return { err: 'noid' };
+      if (!/^p\d+$/i.test(store) && !id) return { err: 'noid' };
+    }
+    if (!id) return { err: 'noid' };
+    return { store: store, id: id };
+  };
+
+  /* ---------- rules: facts in, states out (no page needed, tested in tests/product.mjs) ---------- */
+  function textOf(html) {
+    return String(html || '').replace(/<(style|script)[\s\S]*?<\/\1>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/&amp;/g, '&').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim();
+  }
+  JT.productText = textOf;
+  function fileLike(a) { // «bebo-kids-bed-main webp», «IMG_2231», «exec-f618...», «صورة webp»
+    a = String(a || '').trim();
+    return !a || /\b(webp|jpe?g|png|gif|heic)\b/i.test(a) || /^(img|dsc|image|photo|screenshot|whatsapp|exec)[\W_\d]/i.test(a) || /[0-9a-f]{8}-[0-9a-f]{4}/i.test(a) || /^[\W\d_]+$/.test(a.replace(/[؀-ۿ]/g, 'x'));
+  }
+  JT.productFileLike = fileLike;
+  function words(s) { return (String(s || '').match(/[A-Za-z؀-ۿ]{2,}/g) || []); }
+  function sizeOpt(o) { return /مقاس|قياس|size/i.test(o.name || ''); }
+
+  // q = customer questions, g = what Google reads, opt = extras. st: good | bad | tip
+  JT.productRules = function (p, px) {
+    var q = [], g = [], text = textOf(p.description), html = String(p.description || '');
+    var imgs = (p.images || []), pics = imgs.filter(function (i) { return i.type !== 'video' && !i.video_url && i.url; });
+    var vids = imgs.filter(function (i) { return i.type === 'video' || i.video_url; });
+    var service = p.type === 'service' || p.type === 'digital' || p.type === 'donating' || p.type === 'booking';
+    function add(list, id, st, v, k) { list.push({ id: id, st: st, v: v || {}, k: k || st }); }
+
+    // photos
+    var n = pics.length || (p.image && p.image.url ? 1 : 0);
+    if (n === 0) add(q, 'photos', 'bad', {}, 'none');
+    else if (n === 1) add(q, 'photos', 'bad', {}, 'one');
+    else add(q, 'photos', 'good', { n: n });
+    // main photo size, as the shopper gets it
+    if (px && px.w && px.h) add(q, 'size', Math.min(px.w, px.h) < 500 ? 'bad' : 'good', { w: px.w, h: px.h });
+    if (p.type !== 'donating') add(q, 'video', vids.length ? 'good' : 'tip');
+    // name
+    var ws = words(p.name), name = String(p.name || '').trim();
+    if (!ws.some(function (w) { return w.length > 2; })) add(q, 'name', 'bad', { name: name }, 'code');
+    else if (ws.length < 2) add(q, 'name', 'tip', { name: name }, 'short');
+    else if (name.length > 70) add(q, 'name', 'tip', { n: name.length }, 'long');
+    else add(q, 'name', 'good', {});
+    // price
+    var price = Number(p.price), was = Number(p.regular_price);
+    if (price > 0) add(q, 'price', 'good', { save: was - price, was: was }, p.is_on_sale && was > price ? 'sale' : 'good');
+    // description
+    var dImgs = (html.match(/<img\b/gi) || []).length;
+    if (!text.length && !dImgs) add(q, 'desc', 'bad', {}, 'none');
+    else if (text.length < 160) add(q, 'desc', 'bad', { n: text.length }, dImgs ? 'img' : 'short');
+    else add(q, 'desc', 'good', {});
+    if (text.length >= 300) add(q, 'shape', /<(li|h[1-6]|table)\b/i.test(html) || (text.match(/[•●▪✔✅✓]/g) || []).length > 1 || (html.match(/<(p|div)[^>]*>\s*(<[^>]+>\s*)*[-–—*]\s/gi) || []).length > 1 ? 'good' : 'tip');
+    // sizes
+    var so = (p.options || []).filter(sizeOpt);
+    if (so.length && !service) {
+      var vals = so.map(function (o) { return (o.details || []).map(function (d) { return d.name; }).join(' '); }).join(' ');
+      var told = p.has_size_guide || /جدول\s*(ال)?(مقاس|قياس)|size (chart|guide)/i.test(text) || /\d\s*(سم|cm|م\b|متر|مل|جم|كجم|إنش|انش|inch|ml|kg)/i.test(dig(text + ' ' + vals));
+      add(q, 'sizes', told ? 'good' : 'bad');
+    }
+    // options that are sold out, stock
+    var out = [], all = 0;
+    (p.options || []).forEach(function (o) { (o.details || []).forEach(function (d) { all++; if (d.is_out) out.push(d.name); }); });
+    if (p.is_out_of_stock || p.is_available === false || p.status === 'out') add(q, 'stock', 'bad');
+    else if (out.length && out.length === all) add(q, 'stock', 'bad');
+    else if (out.length) add(q, 'stock', 'tip', { list: out.slice(0, 4).join('، ') }, 'some');
+    else add(q, 'stock', 'good');
+    // reviews
+    var r = p.rating;
+    if (p.type !== 'donating') add(q, 'reviews', r && r.count > 0 ? 'good' : 'tip', r && r.count > 0 ? { n: r.count, s: r.stars } : {});
+
+    // Google
+    var bad = pics.filter(function (i) { return fileLike(i.alt); }).length;
+    if (pics.length) add(g, 'alt', bad ? 'tip' : 'good', { n: bad, all: pics.length });
+    if (p.type === 'product') add(g, 'gtin', p.gtin ? 'good' : 'tip');
+    if (!p.subtitle) add(g, 'sub', 'tip'); else add(g, 'sub', 'good');
+
+    return { q: q, g: g, ok: q.filter(function (x) { return x.st === 'good'; }).length, all: q.length, pics: pics, vids: vids, text: text };
+  };
+  // the first thing to fix decides the service
+  var SVC = { photos: 'ugc', size: 'ugc', name: 'words', desc: 'words', shape: 'words', video: 'motion', sizes: 'review', stock: 'review', reviews: 'review' };
+  JT.productTop = function (r) {
+    var b = r.q.filter(function (x) { return x.st === 'bad'; })[0] || r.q.filter(function (x) { return x.st === 'tip'; })[0];
+    return b ? { id: b.id, svc: SVC[b.id] || 'review' } : null;
+  };
+
+  function getProduct(l) {
+    var q = '/details?with[]=images&with[]=options&with[]=rating&with[]=brand';
+    return fetch(API + l.id + q, { headers: { 'Store-Identifier': l.store, 'Accept-Language': JT.lang } }).then(function (r) {
+      if (r.ok) return r.json().then(function (j) { if (!j.data || !j.data.id) throw { code: 404 }; return j.data; });
+      throw { code: r.status };
+    }, function () { throw { code: 0 }; });
+  }
+  function measure(url) {
+    return new Promise(function (ok) {
+      var im = new Image(); im.crossOrigin = 'anonymous';
+      var t = setTimeout(function () { ok(null); }, 9000);
+      im.onload = function () { clearTimeout(t); ok({ w: im.naturalWidth, h: im.naturalHeight, img: im }); };
+      im.onerror = function () { clearTimeout(t); ok(null); };
+      im.src = url;
+    });
+  }
+  function hostOf(p) { try { var u = new URL(p.url); return u.hostname.replace(/^www\./, '') + (u.hostname === 'salla.sa' ? '/' + decodeURIComponent(u.pathname.split('/')[1]) : ''); } catch (e) { return ''; } }
+
+  JT.tools.product = {
+    noShare: true, noLead: true,
+    facts: true,
+    preview: function () {
+      return h('div', { class: 'jt-pv__ask' }, T('product.pv').map(function (x, i) { return h('p', { class: i ? 'jt-pv__k' : '' }, [h('span', { class: 'jt-ic', html: JT.svg(i ? 'check' : 'info'), 'aria-hidden': 'true' }), x]); }));
+    },
+    render: function (el) {
+      var urlIn = h('input', { id: 'jt-pd-url', class: 'jt-in jt-ck__in', type: 'text', inputmode: 'url', dir: 'ltr', autocomplete: 'off', placeholder: 'mystore.com/…/p123456789', 'aria-describedby': 'jt-pd-e jt-pd-h' });
+      var last = JT.store.get('product') || {}; if (last.url) urlIn.value = last.url;
+      var err = h('p', { class: 'jt-err', id: 'jt-pd-e', role: 'alert' });
+      var go = JT.btn(T('product.go'), { icon: 'product', cls: 'jt-ck__go' }); go.type = 'submit';
+      var form = h('form', { class: 'jt-ck__f', novalidate: true }, [
+        h('label', { class: 'jt-lab', for: 'jt-pd-url', text: T('product.urlL') }),
+        h('div', { class: 'jt-lead__row' }, [urlIn, go]), err,
+        h('p', { class: 'jt-help', id: 'jt-pd-h', text: T('product.urlHelp') })
+      ]);
+      var jump = h('p', { class: 'jt-pd__jump' }, [T('product.jump') + ' ', h('a', { href: '#jt-photo', text: T('photo.t') }), ' ' + T('product.or') + ' ', h('a', { href: '#jt-clip', text: T('clip.t') })]);
+      el.appendChild(h('div', { class: 'jt-card jt-card--in jt-ck' }, [h('h2', { class: 'jt-card__t', text: T('product.inTitle') }), form, jump]));
+      var wait = h('div', { class: 'jt-ck__wait', hidden: true, role: 'status' }, [JT.img('product', 'jt-ck__judy'), h('p', { class: 'jt-ck__msg', text: T('product.wait') }), h('div', { class: 'jt-ck__bar' }, [h('span')])]);
+      var res = h('div', { class: 'jt-ck__res', hidden: true });
+      el.appendChild(wait); el.appendChild(res);
+      var photo = JT.photoCard(), clip = JT.clipCard();
+      el.appendChild(photo.el); el.appendChild(clip.el);
+      photo.onPick = function (src) { clip.addPhoto(src); };
+      el.appendChild(JT.nextStep({ title: T('product.nextT'), text: T('product.nextP'), btn: T('product.nextBtn'), svc: 'review', href: JT.prod('review'), wa: T('product.nextWa') }));
+
+      var run = 0;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var l = JT.productLink(urlIn.value);
+        err.textContent = l.err ? T('product.err.' + l.err) : ''; urlIn.setAttribute('aria-invalid', l.err ? 'true' : 'false');
+        if (l.err) { urlIn.focus(); return; }
+        JT.store.set('product', Object.assign(JT.store.get('product') || {}, { url: urlIn.value.trim() }));
+        var me = ++run; res.hidden = true; wait.hidden = false; go.disabled = true;
+        getProduct(l).then(function (p) {
+          var main = (p.images || []).filter(function (i) { return i.main; })[0] || (p.images || [])[0] || p.image;
+          return (main && main.url ? measure(main.url) : Promise.resolve(null)).then(function (px) { return [p, px, main]; });
+        }).then(function (a) {
+          if (me !== run) return; wait.hidden = true; go.disabled = false; show(a[0], a[1], a[2]);
+        }, function (x) {
+          if (me !== run) return; wait.hidden = true; go.disabled = false; res.hidden = false; res.innerHTML = '';
+          var c = x && x.code, k = c === 422 ? 'notSalla' : c === 410 || c === 404 ? 'gone' : c === 429 ? 'busy' : 'net';
+          res.appendChild(h('div', { class: 'jt-card jt-ck__fail' }, [h('p', { class: 'jt-warn', text: T('product.fail.' + k) })]));
+          JT.announce(T('product.fail.' + k));
+        });
+      });
+
+      function row(c, kind) {
+        var base = 'product.' + kind + '.' + c.id + '.' + c.k;
+        var v = Object.assign({}, c.v); if (v.save) v.save = JT.money(v.save, 2);
+        var good = c.st === 'good';
+        return h('li', { class: 'jt-pt ' + (good ? 'is-good' : c.st === 'bad' ? 'is-bad' : 'jt-pt--tip'), 'data-id': c.id }, [
+          h('span', { class: 'jt-ic', html: JT.svg(good ? 'check' : c.st === 'bad' ? 'info' : 'plus'), 'aria-hidden': 'true' }),
+          h('div', {}, good ? [h('p', { class: 'jt-pt__t', text: T(base, v) })] : [h('p', { class: 'jt-pt__t', text: T(base + '.q', v) }), h('p', { class: 'jt-pt__w', text: T(base + '.fix', v) })])
+        ]);
+      }
+      function phone(p, main) {
+        var price = Number(p.price), was = Number(p.regular_price), sale = p.is_on_sale && was > price;
+        var pics = (p.images || []).filter(function (i) { return i.type !== 'video' && i.url; });
+        var opts = (p.options || []).filter(function (o) { return (o.details || []).length; }).slice(0, 2);
+        return h('figure', { class: 'jt-pd__fig' }, [
+          h('div', { class: 'jt-pd__phone' }, [h('div', { class: 'jt-pd__scr' }, [
+            main && main.url ? h('div', { class: 'jt-pd__img' }, [h('img', { src: main.url, crossorigin: 'anonymous', alt: main.alt || p.name }), pics.length > 1 ? h('span', { class: 'jt-pd__n jt-num', text: '1/' + pics.length }) : null]) : h('div', { class: 'jt-pd__img', html: JT.svg('product') }),
+            h('div', { class: 'jt-pd__b' }, [
+              h('p', { class: 'jt-pd__name', text: p.name }),
+              p.subtitle ? h('p', { class: 'jt-pd__sub', text: p.subtitle }) : null,
+              h('p', { class: 'jt-pd__price jt-num' }, [price > 0 ? JT.money(price, 2) : T('svc.free'), sale ? h('s', { text: JT.num(was, 2) }) : null]),
+              p.rating && p.rating.count ? h('p', { class: 'jt-pd__rate jt-num', text: '★ ' + p.rating.stars + ' (' + p.rating.count + ')' }) : null
+            ].concat(opts.map(function (o) { return h('div', { class: 'jt-pd__opt' }, [h('span', { text: o.name }), h('div', {}, o.details.slice(0, 4).map(function (d) { return h('i', { class: d.is_out ? 'jt-pd__gone' : '', text: d.name }); }).concat(o.details.length > 4 ? [h('i', { text: '+' + (o.details.length - 4) })] : []))]); })).concat([h('span', { class: 'jt-pd__buy', text: p.is_out_of_stock ? T('product.soldOut') : T('product.buy') })]))
+          ])]),
+          h('figcaption', { text: T('product.phoneCap') })
+        ]);
+      }
+      function wapp(p, main) {
+        var host = hostOf(p);
+        return h('figure', { class: 'jt-pd__fig jt-pd__fig--wa' }, [
+          h('div', { class: 'jt-pd__wa' }, [h('div', { class: 'jt-pd__bub' }, [
+            main && main.url ? h('img', { src: main.url, crossorigin: 'anonymous', alt: '' }) : null,
+            h('div', {}, [h('b', { text: p.name }), JT.productText(p.description) ? h('span', { text: JT.productText(p.description).slice(0, 70) }) : null, h('small', { dir: 'ltr', text: host })])
+          ])]),
+          h('figcaption', { text: T('product.waCap') })
+        ]);
+      }
+      function show(p, px, main) {
+        var r = JT.productRules(p, px), top = JT.productTop(r);
+        res.hidden = false; res.innerHTML = '';
+        function pick(st) { return r.q.filter(function (x) { return x.st === st; }); }
+        var bad = pick('bad'), tip = pick('tip'), good = pick('good');
+        var gTip = r.g.filter(function (x) { return x.st !== 'good'; });
+        var list = h('div', { class: 'jt-pd__list' }, [
+          bad.length ? h('h3', { class: 'jt-mini-t', text: T('product.badT') }) : null, bad.length ? h('ul', { class: 'jt-pts' }, bad.map(function (c) { return row(c, 'c'); })) : null,
+          tip.length ? h('h3', { class: 'jt-mini-t', text: T('product.tipT') }) : null, tip.length ? h('ul', { class: 'jt-pts' }, tip.map(function (c) { return row(c, 'c'); })) : null,
+          good.length ? h('h3', { class: 'jt-mini-t', text: T('product.goodT') }) : null, good.length ? h('ul', { class: 'jt-pts jt-pts--good' }, good.map(function (c) { return row(c, 'c'); })) : null,
+          gTip.length ? h('details', { class: 'jt-more' }, [h('summary', {}, [h('span', { text: T('product.gT', { n: gTip.length }) }), h('span', { class: 'jt-how__ch', html: JT.svg('chev'), 'aria-hidden': 'true' })]), h('div', { class: 'jt-more__b' }, [h('ul', { class: 'jt-pts' }, gTip.map(function (c) { return row(c, 'g'); }))])]) : null,
+          h('details', { class: 'jt-more' }, [h('summary', {}, [h('span', { text: T('product.selfT') }), h('span', { class: 'jt-how__ch', html: JT.svg('chev'), 'aria-hidden': 'true' })]), h('div', { class: 'jt-more__b' }, [h('p', { class: 'jt-help', text: T('product.selfP') }), h('ul', { class: 'jt-pd__self' }, T('product.self').map(function (x) { return h('li', { text: x }); }))])])
+        ]);
+        var card = h('section', { class: 'jt-card jt-card--res jt-ck__sum jt-pd' }, [
+          h('div', { class: 'jt-pd__head' }, [
+            h('p', { class: 'jt-pd__score' }, [h('b', { class: 'jt-num', text: String(r.ok) }), h('span', { text: T('product.of', { n: r.all }) })]),
+            h('div', {}, [h('h2', { class: 'jt-card__t', text: T(r.ok === r.all ? 'product.resAll' : 'product.resT', { a: r.ok, b: r.all }) }), h('p', { class: 'jt-help' }, [p.name + ' · ', h('span', { dir: 'ltr', text: hostOf(p) })])])
+          ]),
+          h('div', { class: 'jt-pd__cols' }, [list, h('div', { class: 'jt-pd__side' }, [phone(p, main), wapp(p, main)])])
+        ]);
+        res.appendChild(card);
+        if (top && JT.fixBox) res.appendChild(JT.fixBox({ svc: top.svc, title: T('product.fixT.' + top.svc), text: T('product.fixP.' + top.svc), btn: T('svc.fix') }));
+        if (JT.shareBar) res.appendChild(JT.shareBar('product', function () {
+          return [p.name, T('product.resT', { a: r.ok, b: r.all })].concat(bad.concat(tip).map(function (c) { return '- ' + T('product.c.' + c.id + '.' + c.k + '.q', c.v); }));
+        }));
+        var srcs = r.pics.slice(0, 6).map(function (i) { return i.url; }); if (!srcs.length && main && main.url) srcs = [main.url];
+        photo.setProduct(srcs);
+        clip.setProduct({ name: p.name, price: Number(p.price), was: p.is_on_sale ? Number(p.regular_price) : 0, store: p.brand && p.brand.name ? p.brand.name : '', host: hostOf(p), photos: srcs, main: px && px.img });
+        JT.announce(T('product.resT', { a: r.ok, b: r.all }));
+        card.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+      }
+    }
   };
 })();
 
