@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-25T01:54 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-25T01:55 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -1161,7 +1161,7 @@ window.JT_I18N.en = {
   };
   D.ledger = {
     t: 'دفتر أرباح متجر سلة', p: 'ملف إكسل جاهز ومجاني: سجل طلباتك، ويحسب لك رسوم الدفع والضريبة وصافي الربح لكل طلب، وملخص كل شهر بعد مصاريفك.',
-    btn: 'نزل الدفتر', file: 'دفتر-ارباح-متجر-سلة.xlsx', src: 'judy-profit-ledger-ar.xlsx',
+    btn: 'نزل الدفتر', file: 'دفتر-ارباح-متجر-سلة.xlsx', src: 'judy-profit-ledger-ar.json',
     hubT: 'دفتر أرباح متجر سلة', hubP: 'ملف إكسل مجاني فيه كل تكاليفك والربح من كل طلب، وملخص لكل شهر.', hubBtn: 'تصفح الدفتر'
   };
 })();
@@ -1187,7 +1187,7 @@ window.JT_I18N.en = {
   };
   D.ledger = {
     t: 'Salla store profit ledger', p: 'A free ready Excel file: log your orders and it works out payment fees, VAT and net profit for each order, plus a monthly summary after your expenses.',
-    btn: 'Download the ledger', file: 'salla-store-profit-ledger.xlsx', src: 'judy-profit-ledger-en.xlsx',
+    btn: 'Download the ledger', file: 'salla-store-profit-ledger.xlsx', src: 'judy-profit-ledger-en.json',
     hubT: 'Salla store profit ledger', hubP: 'A free Excel file with all your costs, the profit of every order and a summary for each month.', hubBtn: 'See the ledger'
   };
 })();
@@ -3546,7 +3546,11 @@ window.JT_THEMES_DATE = '2026-11-22';
       title: T('ledger.t'), text: T('ledger.p'), btn: T('ledger.btn'), img: 'profit',
       summary: function () { return 'دفتر أرباح متجر سلة (' + JT.lang + ')'; },
       pdf: function () {
-        return fetch(JT.CFG.asset + '../files/' + T('ledger.src')).then(function (r) { if (!r.ok) throw new Error(r.status); return r.blob(); }).then(function (b) {
+        return fetch(JT.CFG.asset + '../files/' + T('ledger.src')).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (j) {
+          // the CDN refuses .xlsx, so the file travels as base64 in JSON
+          var bin = atob(j.b64), arr = new Uint8Array(bin.length);
+          for (var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+          var b = new Blob([arr], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
           var u = URL.createObjectURL(b), a = h('a', { href: u, download: T('ledger.file') });
           document.body.appendChild(a); a.click(); a.remove();
           setTimeout(function () { URL.revokeObjectURL(u); }, 5000);
