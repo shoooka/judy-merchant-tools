@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-25T01:55 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-25T02:02 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -3518,7 +3518,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       rows.forEach(function (r) {
         s[r.k] = [r.pct.raw(), r.fix.raw()];
         var rate = r.pct.get() / 100, fix = r.fix.get(), has = rate !== 0 || fix !== 0;
-        r.el.classList.toggle('is-on', has); r.out.innerHTML = '';
+        r.out.innerHTML = '';
         function idle(t) { r.out.appendChild(h('span', { class: 'jt-fee__idle', text: t })); }
         if (!has) return idle(T('fee.idle'));
         if (!last || !(last.price > 0)) return idle(T('fee.noPrice'));
