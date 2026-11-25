@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-24T17:29 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-25T01:54 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -111,7 +111,7 @@ window.JT_I18N.ar = {
     dl: 'نزل النتيجة PDF', btn: 'نزل الملف', busy: 'نجهز الملف...', done: 'نزل الملف. لو ما نزل، اضغط الزر مرة ثانية.',
     err: 'اكتب رقم واتساب سعودي يبدأ بـ05، أو إيميل صحيح', fail: 'ما قدرنا نجهز الملف. جرب مرة ثانية أو كلمنا واتساب.',
     privacy: 'نستخدم رقمك أو إيميلك عشان نرسل لك اللي طلبته، والتحديثات بس لو وافقت. ما نعطيه لأحد.',
-    pdf: { madeBy: 'أدوات التاجر المجانية من جودي ماركتينج', yours: 'أرقامك', result: 'النتيجة', next: 'الخطوة الجاية مع جودي', extra: 'أضفت', contact: 'واتساب: 966552261549+  ·  judymarketing.com', foot: 'جودي ماركتينج، شريك خدمات تجار سلة من 2018. الأرقام حسبت من اللي كتبته، ومو ضمان لنتيجة.' }
+    pdf: { madeBy: 'أدوات التاجر المجانية من جودي ماركتينج', yours: 'أرقامك', result: 'النتيجة', next: 'الخطوة الجاية مع جودي', extra: 'أضفت', contact: 'واتساب: 966552261549+  ·  judymarketing.com', foot: 'جودي ماركتينج، نصمم متاجر إلكترونية من 2018 وتخصصنا في سلة. الأرقام حسبت من اللي كتبته، ومو ضمان لنتيجة.' }
   },
 
   check: {
@@ -511,7 +511,7 @@ window.JT_I18N.en = {
     dl: 'Download the result as PDF', btn: 'Download the file', busy: 'Preparing the file...', done: 'The file is downloading. If it did not, tap the button again.',
     err: 'Type a Saudi WhatsApp number starting with 05, or a valid email', fail: "We couldn't prepare the file. Try again or chat with us on WhatsApp.",
     privacy: 'We use your number or email to send what you asked for, and updates only if you agree. We never share it.',
-    pdf: { madeBy: 'Free merchant tools by Judy Marketing', yours: 'Your numbers', result: 'Result', next: 'Your next step with Judy', extra: 'Added', contact: 'WhatsApp: +966552261549  ·  judymarketing.com', foot: 'Judy Marketing, a Salla merchant services partner since 2018. Numbers come from what you typed and are not a guarantee of results.' }
+    pdf: { madeBy: 'Free merchant tools by Judy Marketing', yours: 'Your numbers', result: 'Result', next: 'Your next step with Judy', extra: 'Added', contact: 'WhatsApp: +966552261549  ·  judymarketing.com', foot: 'Judy Marketing, designing online stores since 2018 and now specialised in Salla. Numbers come from what you typed and are not a guarantee of results.' }
   },
 
   check: {
@@ -864,10 +864,10 @@ window.JT_I18N.en = {
     total: 'المجموع', for: 'عرض سعر: {n}', date: 'تاريخ العرض: {d}',
     note: 'الأسعار من متجر جودي ماركتينج بتاريخ {d}. مدة كل خدمة تبدأ من يوم ما توصلنا كل المتطلبات.',
     fail: 'ما قدرنا نجيب الأسعار الحين. جرب بعد شوي أو اكتب لنا واتساب ونرسلها لك.',
-    order: 'اطلب العرض واتساب', share: 'أرسله لشريكك', all: 'تصفح باقات تصميم المتاجر كاملة',
+    order: 'اطلب العرض واتساب', share: 'أرسله لشريكك', all: 'تصفح أسعار تصميم متجر سلة 2026',
     waHi: 'السلام عليكم، سويت عرض سعر في أدوات التاجر وأبي أبدأ:',
     leadT: 'خذ عرض السعر في ملف PDF', leadP: 'ملف مرتب بشعار جودي فيه الخدمات والأسعار والمدد وتاريخ العرض، ترسله لشريكك أو تحفظه.', leadBtn: 'نزل عرض السعر',
-    pdfT: 'عرض سعر من جودي ماركتينج', pdfFoot: 'جودي ماركتينج، شريك خدمات تجار سلة من 2018.', pdfNote: 'الأسعار مأخوذة من متجر جودي ماركتينج وقت إصدار العرض. مدة كل خدمة تبدأ من يوم ما توصلنا كل المتطلبات.', pdfNext: 'اكتب لنا واتساب ونبدأ لك، أو اطلب الخدمة من متجرنا مباشرة.'
+    pdfT: 'عرض سعر من جودي ماركتينج', pdfFoot: 'جودي ماركتينج، نصمم متاجر إلكترونية من 2018 وتخصصنا في سلة.', pdfNote: 'الأسعار مأخوذة من متجر جودي ماركتينج وقت إصدار العرض. مدة كل خدمة تبدأ من يوم ما توصلنا كل المتطلبات.', pdfNext: 'اكتب لنا واتساب ونبدأ لك، أو اطلب الخدمة من متجرنا مباشرة.'
   };
   D.quote.nextP = D.quote.pdfNext;
 })();
@@ -893,10 +893,10 @@ window.JT_I18N.en = {
     total: 'Total', for: 'Quote for: {n}', date: 'Quote date: {d}',
     note: "Prices are from the Judy Marketing store on {d}. Each service's time starts once we receive everything we need.",
     fail: "We couldn't load the prices right now. Try again shortly, or message us on WhatsApp and we'll send them.",
-    order: 'Order on WhatsApp', share: 'Send to your partner', all: 'Browse all store design packages',
+    order: 'Order on WhatsApp', share: 'Send to your partner', all: 'Browse Salla store design prices 2026',
     waHi: 'Hello, I made a price quote with the merchant tools and would like to start:',
     leadT: 'Get the quote as a PDF', leadP: "A neat file with Judy's logo, the services, prices, times and quote date, to send to your partner or keep.", leadBtn: 'Download the quote',
-    pdfT: 'Price quote from Judy Marketing', pdfFoot: 'Judy Marketing, a Salla merchant services partner since 2018.', pdfNote: "Prices are taken from the Judy Marketing store when the quote was made. Each service's time starts once we receive everything we need.", pdfNext: 'Message us on WhatsApp and we will start, or order the service directly from our store.'
+    pdfT: 'Price quote from Judy Marketing', pdfFoot: 'Judy Marketing, designing online stores since 2018 and now specialised in Salla.', pdfNote: "Prices are taken from the Judy Marketing store when the quote was made. Each service's time starts once we receive everything we need.", pdfNext: 'Message us on WhatsApp and we will start, or order the service directly from our store.'
   };
   D.quote.nextP = D.quote.pdfNext;
 })();
@@ -1140,6 +1140,58 @@ window.JT_I18N.en = {
   D.hub.groups.ready = { icon: 'policy', goal: 'Set up my store', goalSub: 'Colors, policies, VAT', name: 'Set up your store', line: 'Your colors, policies and VAT prices, ready to put in your store.' };
   })();
 
+/* ---- i18n/fee.ar.js ---- */
+/* «كم أزيد سعري» + «دفتر أرباح متجر سلة» (box row 13) */
+(function () {
+  var D = window.JT_I18N.ar;
+  D.fee = {
+    t: 'كم أزيد سعري عشان أغطي رسوم البطاقة وتابي وتمارا؟',
+    p: 'اكتب نسبتك من عقدك مع كل جهة، ونقول لك كم تزيد على سعر البيع عشان يبقى لك نفس المبلغ بعد الرسوم.',
+    card: 'البطاقة ومدى', tabby: 'تابي', tamara: 'تمارا',
+    pct: 'النسبة', fix: 'رسوم ثابتة', ph: 'من عقدك',
+    vatQ: 'تنضاف ضريبة 15% على الرسوم؟', vatHelp: 'لو متجرك مسجل في الضريبة وتستردها، خلها «لا».',
+    idle: 'اكتب النسبة وتطلع لك الزيادة', add: 'زد {n}', be: 'يصير سعرك {n}', now: 'رسومها على سعرك الحين {n}', bad: 'راجع النسبة',
+    one: 'سعر واحد يغطي كل اللي كتبته', oneP: 'من {a} إلى {b}، على أعلى رسوم بين طرق الدفع عندك.',
+    noPrice: 'اكتب سعر البيع فوق أول.',
+    incl: 'السعر شامل الضريبة', excl: 'السعر بدون الضريبة',
+    how: ['ما يكفي تزيد السعر بنفس النسبة، لأن الرسوم تنحسب على السعر الجديد بعد الزيادة.',
+      'لو متجرك مو مسجل في الضريبة: السعر الجديد = (السعر + الرسوم الثابتة) ÷ (1 - النسبة).',
+      'لو متجرك مسجل، نحسب معها الضريبة اللي تطلع من الزيادة نفسها، عشان يبقى لك نفس المبلغ بعد الضريبة والرسوم.',
+      'ما حطينا أي نسبة جاهزة، لأنها تختلف من عقد لعقد.']
+  };
+  D.ledger = {
+    t: 'دفتر أرباح متجر سلة', p: 'ملف إكسل جاهز ومجاني: سجل طلباتك، ويحسب لك رسوم الدفع والضريبة وصافي الربح لكل طلب، وملخص كل شهر بعد مصاريفك.',
+    btn: 'نزل الدفتر', file: 'دفتر-ارباح-متجر-سلة.xlsx', src: 'judy-profit-ledger-ar.xlsx',
+    hubT: 'دفتر أرباح متجر سلة', hubP: 'ملف إكسل مجاني فيه كل تكاليفك والربح من كل طلب، وملخص لكل شهر.', hubBtn: 'تصفح الدفتر'
+  };
+})();
+
+/* ---- i18n/fee.en.js ---- */
+/* raise-your-price card + profit ledger file */
+(function () {
+  var D = window.JT_I18N.en;
+  D.fee = {
+    t: 'How much should I raise my price to cover card, Tabby and Tamara fees?',
+    p: 'Type the rate from each of your contracts and see how much to add to the selling price so you keep the same amount after fees.',
+    card: 'Card and mada', tabby: 'Tabby', tamara: 'Tamara',
+    pct: 'Rate', fix: 'Fixed fee', ph: 'Contract',
+    vatQ: 'Is 15% VAT added to the fees?', vatHelp: 'If your store is VAT registered and you recover it, choose "No".',
+    idle: 'Type the rate to see how much to add', add: 'Add {n}', be: 'New price {n}', now: 'Fee on your current price {n}', bad: 'Check the rate',
+    one: 'One price that covers everything you typed', oneP: 'From {a} to {b}, based on the highest fee among your payment methods.',
+    noPrice: 'Type the selling price above first.',
+    incl: 'VAT included', excl: 'before VAT',
+    how: ['Adding the same rate to the price is not enough, because the fee is taken from the new, higher price.',
+      'If your store is not VAT registered: new price = (price + fixed fee) ÷ (1 - rate).',
+      'If it is registered, we also count the VAT on the increase itself, so you keep the same amount after VAT and fees.',
+      'We put in no ready rates, because they differ from one contract to another.']
+  };
+  D.ledger = {
+    t: 'Salla store profit ledger', p: 'A free ready Excel file: log your orders and it works out payment fees, VAT and net profit for each order, plus a monthly summary after your expenses.',
+    btn: 'Download the ledger', file: 'salla-store-profit-ledger.xlsx', src: 'judy-profit-ledger-en.xlsx',
+    hubT: 'Salla store profit ledger', hubP: 'A free Excel file with all your costs, the profit of every order and a summary for each month.', hubBtn: 'See the ledger'
+  };
+})();
+
 /* ---- src/data/themes.js ---- */
 /* Salla theme store data, read 2026-11-22 from salla.com/themes (research/facts-20261122.md). [id, name, developer, shown price SAR, rating, ratings count, demo store categories, by Salla] */
 window.JT_THEMES = [[1375036016, "رائد", "سلة", 0, 4.5, 2, ["electronics"], 1], [946727618, "كليك", "سلة", 0, 4.9, 1140, ["home"], 1], [1661298851, "عطاء", "سلة", 0, 4.9, 28, ["charity"], 1], [1046112065, "وسام", "سلة", 228, 4.9, 166, ["home"], 1], [1355517291, "ماركت", "سلة", 228, 4.9, 20, ["grocery"], 1], [1307231275, "منيو", "سلة", 228, 4.9, 11, ["food"], 1], [1587789257, "رقمي", "سلة", 228, 5, 11, ["digital"], 1], [1248180887, "موعد", "سلة", 228, 4.5, 4, ["clinic"], 1], [520022191, "مُختلف", "سلة", 228, 4.9, 34, ["grocery"], 1], [170177462, "زين", "سلة", 228, 4.9, 45, ["electronics"], 1], [546250460, "امتياز", "سلة", 228, 4.6, 90, ["electronics"], 1], [3401524, "عالي", "مؤسسة عادل الجهمي لتقنية المعلومات", 296.4, 5, 1560, ["digital"], 0], [1777895842, "اروماتك", "أحمد عبدالغني", 330.6, 5, 4, ["beauty"], 0], [1399399001, "سيليا", "Selia Tech", 395.58, 5, 1391, ["fashion"], 0], [1499917793, "ملاك", "أفتر أدز", 342, 4.9, 1048, ["electronics"], 0], [137195413, "جلامور", "Madar Technical Solutions FZC", 285, 4.7, 815, ["gifts", "beauty", "home"], 0], [468249652, "لوفيزا", "Madar Technical Solutions FZC", 285, 4.8, 282, ["home"], 0], [1556551807, "فخامة", "الشريف بونعاس", 285, 4.7, 262, ["fashion", "electronics", "beauty", "home"], 0], [188267752, "ساجي", "Ahmed Abdel Hamid", 395.58, 5, 200, ["fashion", "gifts", "beauty", "digital"], 0], [1948506485, "متجر", "باسم تركي", 296.4, 4.9, 192, ["grocery", "gifts", "home"], 0], [1894386675, "يافا", "BAYO LTD", 285, 4.2, 152, ["electronics", "digital"], 0], [491378254, "بريستيج", "كرافو لتقنية المعلومات", 285, 4.6, 113, ["fashion", "electronics", "jewelry", "beauty"], 0], [1248491026, "بلور", "Madar Technical Solutions FZC", 285, 4.6, 101, ["electronics"], 0], [1448593138, "رناواي", "Madar Technical Solutions FZC", 467.4, 4.7, 88, ["fashion"], 0], [85911406, "علا", "كرافو لتقنية المعلومات", 296.4, 4.6, 85, ["fashion", "jewelry", "beauty", "home"], 0], [471614860, "قصص", "Madar Technical Solutions FZC", 285, 4.8, 77, ["books"], 0], [71816946, "كيان", "كرافو لتقنية المعلومات", 296.4, 4.7, 71, ["fashion", "electronics", "jewelry", "beauty"], 0]];
@@ -1185,7 +1237,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       redesign: { id: 955821044, price: 350 }, front: { id: 467939401, price: 99 }, care: { id: 245739294, price: 25 }, seo: { id: 1681749402, price: 499 }, geo: { id: 804605573, price: 599 },
       snap: { id: 698503056, price: 299 }, gads: { id: 900983740, price: 299 }, social: { id: 675496799, price: 300 },
       consult: { id: 408047677, price: 0 }, review: { id: 1069491163, price: 0 }, wa: { id: 1518367887, price: 0 },
-      packages: { page: 1085189397 }
+      packages: { page: 1085189397 }, prices: { page: 1673610507 }
     }
   };
 
@@ -1732,6 +1784,15 @@ window.JT_THEMES_DATE = '2026-11-22';
       groupsWrap.querySelectorAll('.jt-group').forEach(function (s) { io.observe(s); });
     }
 
+    // free file: the profit ledger lives on the profit page
+    root.appendChild(h('section', { class: 'jt-wrap jt-strip-w', 'aria-label': T('ledger.hubT') }, [
+      h('div', { class: 'jt-strip jt-strip--file' }, [
+        h('div', { class: 'jt-strip__count', html: JT.svg('download'), 'aria-hidden': 'true' }),
+        h('div', { class: 'jt-strip__txt' }, [h('h2', { class: 'jt-strip__t', text: T('ledger.hubT') }), h('p', { class: 'jt-strip__p', text: T('ledger.hubP') })]),
+        JT.btn(T('ledger.hubBtn'), { href: JT.pageUrl('profit') + '#jt-ledger', cls: 'jt-strip__btn' }),
+        JT.img('profit', 'jt-strip__judy')
+      ])
+    ]));
     if (body) root.appendChild(JT.know(body, 'hub'));
     root.appendChild(JT.ctaBand());
   };
@@ -1873,12 +1934,15 @@ window.JT_THEMES_DATE = '2026-11-22';
         JT.how(T('common.howT'), T('profit.how'))
       ], 'jt-card--res');
       el.appendChild(h('div', { class: 'jt-tool__grid' }, [inputs, res]));
+      var feeC = JT.feeCard(); el.appendChild(feeC.el);
       var next = JT.nextStep({ title: T('profit.nextT'), text: T('profit.nextP'), btn: T('profit.nextBtn'), svc: 'review', href: JT.prod('review'), wa: T('profit.nextWa') });
       el.appendChild(next);
+      if (JT.ledgerBox) el.appendChild(JT.ledgerBox());
       var mbar = JT.mobileBar(T('profit.perOrder'));
 
       var COLORS = ['cost', 'vat', 'ship', 'ad', 'fee', 'ret', 'gain'];
       function run() {
+        feeC.update({ price: f.price.get(), reg: vc.reg.get() === 'yes', incl: vc.incl.get() === 'yes' });
         var ok = ['price', 'cost'].every(function (k) { return isFinite(f[k].get()) && f[k].get() >= 0; }) && f.price.get() > 0;
         if (!ok) { res.classList.add('is-empty'); return; }
         res.classList.remove('is-empty');
@@ -3360,7 +3424,7 @@ window.JT_THEMES_DATE = '2026-11-22';
         h('div', { class: 'jt-res', 'aria-live': 'polite' }, [bigL, h('p', { class: 'jt-res__big' }, [big, h('span', { class: 'jt-res__u', text: T('common.sar') })]), sub]),
         fail, h('h3', { class: 'jt-mini-t', text: T('quote.billT') }), none, list, note,
         h('div', { class: 'jt-actions' }, [order, share, copyB]),
-        h('p', { class: 'jt-qt__all' }, [h('a', { href: '/' + JT.lang + '/-/page-' + JT.CFG.svc.packages.page, text: T('quote.all') })])
+        h('p', { class: 'jt-qt__all' }, [h('a', { href: '/' + JT.lang + '/-/page-' + JT.CFG.svc.prices.page, text: T('quote.all') })])
       ]);
       el.appendChild(h('div', { class: 'jt-tool__grid' }, [inputs, res]));
       var mbar = JT.mobileBar(T('quote.bigL'));
@@ -3412,6 +3476,87 @@ window.JT_THEMES_DATE = '2026-11-22';
       }, function () { fail.hidden = false; order.href = JT.waUrl(T('quote.waHi')); body.hidden = true; });
       order.href = JT.waUrl(T('quote.waHi'));
     }
+  };
+})();
+
+/* ---- src/tools/fee.js ---- */
+/* «كم أزيد سعري عشان أغطي رسوم البطاقة وتابي وتمارا» card on the profit page + the ledger file box.
+   The merchant types every rate; nothing is built in. Price that keeps the same net after VAT and fees:
+   a*P - g*(r*pm*P + f) = a*P0  ->  P = (a*P0 + g*f) / (a - g*r*pm)
+   (not registered: a = pm = 1, so P = (P0 + f) / (1 - r)) */
+(function () {
+  var JT = window.JT, h = JT.h, T = JT.T, VAT = 0.15;
+  JT.feeCover = function (o) {
+    var a = o.reg ? (o.incl ? 1 / (1 + VAT) : 1) : 1, pm = o.reg && !o.incl ? 1 + VAT : 1, g = o.feeVat ? 1 + VAT : 1;
+    var den = a - g * (o.rate || 0) * pm;
+    if (!(den > 0)) return null;
+    var p = (a * o.price + g * (o.fix || 0)) / den;
+    p = Math.ceil(p * 100 - 1e-6) / 100;
+    return { price: p, add: p - o.price, feeNow: g * (o.price * pm * (o.rate || 0) + (o.fix || 0)) };
+  };
+  JT.feeCard = function () {
+    var ui = JT.money.ui, last = null, saved = JT.store.get('profitfee') || {}, upd = function () { draw(); };
+    var rows = ['card', 'tabby', 'tamara'].map(function (k) {
+      var pct = JT.field({ id: 'fe-' + k + '-p', label: T('fee.pct'), unit: '%', min: 0, max: 50, optional: true, placeholder: T('fee.ph'), onInput: upd, value: (saved[k] || [])[0] || '' });
+      var fix = JT.field({ id: 'fe-' + k + '-f', label: T('fee.fix'), unit: T('common.sar'), min: 0, max: 100, optional: true, placeholder: '0', onInput: upd, value: (saved[k] || [])[1] || '' });
+      var out = h('p', { class: 'jt-fee__out', 'aria-live': 'polite' });
+      pct.input.setAttribute('aria-label', T('fee.' + k) + ': ' + T('fee.pct'));
+      fix.input.setAttribute('aria-label', T('fee.' + k) + ': ' + T('fee.fix'));
+      return { k: k, pct: pct, fix: fix, out: out, el: h('div', { class: 'jt-fee__row' }, [h('h3', { class: 'jt-fee__n', text: T('fee.' + k) }), h('div', { class: 'jt-fee__in' }, [pct.el, fix.el]), out]) };
+    });
+    var vat = JT.seg({ id: 'fe-vat', label: T('fee.vatQ'), value: saved.vat || 'no', options: [['no', T('common.no')], ['yes', T('common.yes')]], help: T('fee.vatHelp'), onChange: upd });
+    var one = h('div', { class: 'jt-fee__one', hidden: true, 'aria-live': 'polite' });
+    var el = ui.card(T('fee.t'), [
+      h('p', { class: 'jt-fee__p', text: T('fee.p') }),
+      h('div', { class: 'jt-fee__rows' }, rows.map(function (r) { return r.el; })),
+      h('div', { class: 'jt-fee__foot' }, [vat.el, one]),
+      JT.how(T('common.howT'), T('fee.how'))
+    ], 'jt-card--fee');
+    el.id = 'jt-fee';
+    function draw() {
+      var best = null, s = { vat: vat.get() };
+      rows.forEach(function (r) {
+        s[r.k] = [r.pct.raw(), r.fix.raw()];
+        var rate = r.pct.get() / 100, fix = r.fix.get(), has = rate !== 0 || fix !== 0;
+        r.el.classList.toggle('is-on', has); r.out.innerHTML = '';
+        function idle(t) { r.out.appendChild(h('span', { class: 'jt-fee__idle', text: t })); }
+        if (!has) return idle(T('fee.idle'));
+        if (!last || !(last.price > 0)) return idle(T('fee.noPrice'));
+        var c = rate < 0 || rate > 0.5 || fix < 0 ? null : JT.feeCover({ price: last.price, reg: last.reg, incl: last.incl, rate: rate, fix: fix, feeVat: vat.get() === 'yes' });
+        if (!c) return idle(T('fee.bad'));
+        r.out.appendChild(h('b', { class: 'jt-fee__add', text: T('fee.add', { n: JT.money(c.add, 2) }) }));
+        r.out.appendChild(h('span', { text: T('fee.be', { n: JT.money(c.price, 2) }) }));
+        r.out.appendChild(h('span', { class: 'jt-fee__s', text: T('fee.now', { n: JT.money(c.feeNow, 2) }) }));
+        if (!best || c.price > best.price) best = c;
+      });
+      JT.store.set('profitfee', s);
+      one.hidden = !best; one.innerHTML = '';
+      if (best) {
+        one.appendChild(h('p', { class: 'jt-fee__onel', text: T('fee.one') }));
+        one.appendChild(h('p', { class: 'jt-fee__onev' }, [h('b', { class: 'jt-num', text: JT.num(best.price, 2) }), ' ' + T('common.sar')]));
+        one.appendChild(h('p', { class: 'jt-fee__s', text: T('fee.oneP', { a: JT.money(last.price, 2), b: JT.money(best.price, 2) }) + (last.reg ? ' (' + T(last.incl ? 'fee.incl' : 'fee.excl') + ')' : '') }));
+      }
+    }
+    draw();
+    return { el: el, update: function (o) { last = o; draw(); } };
+  };
+  // free Excel ledger: same contact box as the PDF files
+  JT.ledgerBox = function () {
+    var box = JT.leadBox('ledger', {
+      title: T('ledger.t'), text: T('ledger.p'), btn: T('ledger.btn'), img: 'profit',
+      summary: function () { return 'دفتر أرباح متجر سلة (' + JT.lang + ')'; },
+      pdf: function () {
+        return fetch(JT.CFG.asset + '../files/' + T('ledger.src')).then(function (r) { if (!r.ok) throw new Error(r.status); return r.blob(); }).then(function (b) {
+          var u = URL.createObjectURL(b), a = h('a', { href: u, download: T('ledger.file') });
+          document.body.appendChild(a); a.click(); a.remove();
+          setTimeout(function () { URL.revokeObjectURL(u); }, 5000);
+          return true;
+        });
+      }
+    });
+    box.id = 'jt-ledger';
+    if (location.hash === '#jt-ledger') setTimeout(function () { if (box.isConnected) box.scrollIntoView({ block: 'center' }); }, 900);
+    return box;
   };
 })();
 
@@ -3653,7 +3798,7 @@ window.JT_THEMES_DATE = '2026-11-22';
       h('p', { class: 'jt-help', id: id + '-p', text: T('lead.privacy') }), status
     ]);
     var box = h('section', { class: 'jt-leadbox', 'aria-label': o.title || T('lead.boxT') }, [
-      JT.img('done', 'jt-lead__judy'),
+      JT.img(o.img || 'done', 'jt-lead__judy'),
       h('div', { class: 'jt-lead__body' }, [h('h2', { class: 'jt-lead__t', text: o.title || T('lead.boxT') }), h('p', { class: 'jt-lead__p', text: o.text || T('lead.boxP') }), form])
     ]);
     form.addEventListener('submit', function (e) {

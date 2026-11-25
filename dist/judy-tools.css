@@ -862,3 +862,35 @@ body.jt-page #main-content > .container { max-width: none !important; padding-le
   #jt-app .jt-pol__new { padding: 16px; }
   #jt-app .jt-vt td, #jt-app .jt-vt th { padding-inline: 10px; }
 }
+
+/* ---- raise the price to cover payment fees (profit page) + ledger strip (hub) ---- */
+#jt-app .jt-card--fee { margin-top: 22px; }
+#jt-app .jt-card--fee .jt-card__t { margin-bottom: 6px; text-wrap: balance; }
+#jt-app .jt-fee__p { color: var(--ink2); font-size: 15px; line-height: 1.75; max-width: 68ch; }
+#jt-app .jt-fee__rows { margin-top: 10px; }
+#jt-app .jt-fee__row { display: grid; grid-template-columns: 130px minmax(0, 1.2fr) minmax(0, 1fr); gap: 8px 24px; align-items: center; padding: 16px 0; border-top: 1px solid var(--line); }
+#jt-app .jt-fee__row:first-child { border-top: 0; }
+#jt-app .jt-fee__n { font-size: 16px; font-weight: 800; color: var(--navy); margin: 0; }
+#jt-app .jt-fee__in { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+#jt-app .jt-fee__out { display: flex; flex-direction: column; gap: 1px; font-size: 15px; line-height: 1.6; color: var(--navy); min-height: 44px; justify-content: center; margin: 0; }
+#jt-app .jt-fee__out span { font-weight: 700; }
+#jt-app .jt-fee__add { font-size: 20px; font-weight: 800; color: var(--vd); font-variant-numeric: tabular-nums; }
+#jt-app .jt-fee__out .jt-fee__s, #jt-app .jt-fee__s { font-size: 13.5px; font-weight: 400; color: var(--ink2); line-height: 1.6; margin: 0; }
+#jt-app .jt-fee__out .jt-fee__idle { font-weight: 400; font-size: 14px; color: var(--ink3); }
+#jt-app .jt-fee__foot { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: center; padding-top: 18px; border-top: 1px solid var(--line); }
+#jt-app .jt-fee__one { background: var(--okbg); color: var(--ok); border-radius: var(--r2); padding: 14px 18px; }
+#jt-app .jt-fee__onel { font-weight: 700; margin: 0; }
+#jt-app .jt-fee__onev { font-size: 15px; font-weight: 700; margin: 0; }
+#jt-app .jt-fee__onev b { font-size: 30px; line-height: 1.3; font-weight: 800; }
+#jt-app .jt-fee__one .jt-fee__s { color: var(--ok); }
+#jt-app .jt-strip--file { background: linear-gradient(100deg, #efeaff 0%, #f8f7ff 60%, #ffffff 100%); }
+#jt-app .jt-strip--file .jt-strip__count svg { width: 34px; height: 34px; color: var(--gold); }
+#jt-app #jt-ledger { scroll-margin-top: 110px; }
+@media (max-width: 900px) {
+  #jt-app .jt-fee__row { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  #jt-app .jt-fee__out { min-height: 0; }
+  #jt-app .jt-fee__foot { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+}
+@media (max-width: 700px) {
+  #jt-app .jt-fee__in { gap: 10px; }
+}
