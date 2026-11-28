@@ -1034,3 +1034,67 @@ body.jt-page #main-content > .container { max-width: none !important; padding-le
   #jt-app .jt-ph__did { padding: 40px 0 0; }
   #jt-app .jt-cl__ph { width: min(248px, 70vw); }
 }
+
+/* ---------- tool 16 «وش الأنسب لمتجرك؟»: questions on one side, the three roads move with every answer ---------- */
+#jt-app .jt-fit__in .jt-seg + .jt-seg { margin-top: 16px; }
+#jt-app .jt-fit__in .jt-seg__row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+#jt-app .jt-fit__in .jt-seg__o span { min-height: 48px; font-size: 14px; line-height: 1.45; padding: 6px 8px; }
+#jt-app .jt-fit__head .jt-help { margin-top: 0; }
+#jt-app .jt-fit__lanes { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
+#jt-app .jt-fit__lane { border: 1.5px solid var(--line); border-radius: var(--r2); padding: 14px 16px; background: #fff; transition: opacity .3s var(--ease), border-color .3s, box-shadow .3s; }
+#jt-app .jt-fit__lane.is-dim { opacity: .66; }
+#jt-app .jt-fit__lane.is-win { border-color: var(--v); background: linear-gradient(180deg, #fbfaff, #fff); box-shadow: var(--sh); opacity: 1; }
+#jt-app .jt-fit__top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+#jt-app .jt-fit__name { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 16px; color: var(--navy); }
+#jt-app .jt-fit__ic { width: 32px; height: 32px; border-radius: 10px; background: var(--lav); color: var(--v); display: grid; place-items: center; flex: none; }
+#jt-app .jt-fit__ic svg { width: 18px; height: 18px; }
+#jt-app .jt-fit__lane.is-win .jt-fit__ic { background: var(--v); color: #fff; }
+#jt-app .jt-fit__st { font-size: 13px; font-weight: 700; color: var(--ink3); white-space: nowrap; }
+#jt-app .jt-fit__bar { height: 10px; border-radius: 99px; background: var(--lav); margin-top: 10px; overflow: hidden; }
+#jt-app .jt-fit__bar b { display: block; height: 100%; border-radius: 99px; background: var(--line2); transition: width .6s var(--ease); }
+#jt-app .jt-fit__lane.is-win .jt-fit__bar b { background: linear-gradient(90deg, var(--v2), var(--v)); }
+#jt-app[dir="rtl"] .jt-fit__bar b { margin-inline-start: 0; }
+#jt-app .jt-fit__more { margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--line2); }
+#jt-app .jt-fit__lead { font-weight: 700; color: var(--navy); line-height: 1.7; }
+#jt-app .jt-fit__why { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 6px; font-size: 14.5px; color: var(--ink2); }
+#jt-app .jt-fit__why li { display: flex; gap: 8px; line-height: 1.65; }
+#jt-app .jt-fit__why li::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--v); margin-top: 9px; flex: none; }
+#jt-app .jt-fit__links { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+#jt-app .jt-fit__links a { color: var(--vd); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+#jt-app .jt-fit__warn { margin-top: 12px; font-size: 14px; font-weight: 700; color: var(--gold-d); background: var(--goldbg); border-radius: var(--r3); padding: 10px 12px; line-height: 1.6; }
+#jt-app .jt-fit__more .jt-fix { margin-top: 12px; }
+#jt-app .jt-fit__more .jt-actions { margin-top: 14px; }
+#jt-app .jt-fit__note { margin-top: 14px; border-radius: var(--r2); background: var(--goldbg); padding: 14px 16px; color: var(--navy); font-size: 14.5px; line-height: 1.7; }
+#jt-app .jt-fit__nt { font-weight: 800; margin-bottom: 4px; }
+#jt-app .jt-pv__fit { display: flex; gap: 6px; }
+#jt-app .jt-pv__fit span { flex: 1; text-align: center; border: 1.5px solid var(--line); background: #fff; border-radius: 10px; padding: 7px 4px; font-weight: 800; font-size: 13px; }
+#jt-app .jt-pv__fit span.is-on { border-color: var(--v); color: var(--vd); }
+@media (max-width: 700px) {
+  #jt-app .jt-fit__in .jt-seg__o span { font-size: 13px; padding: 6px 4px; }
+  #jt-app .jt-fit__lane { padding: 12px 14px; }
+}
+/* tool 16: the comparison table in the page text (Google reads it), and its phone cards */
+#jt-app .jt-prose table.jt-fit__tbl { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid var(--line); border-radius: var(--r2); overflow: hidden; font-size: 15px; line-height: 1.7; }
+#jt-app .jt-fit__tbl th, #jt-app .jt-fit__tbl td { padding: 12px 14px; text-align: start; vertical-align: top; border-bottom: 1px solid var(--line); }
+#jt-app .jt-fit__tbl tbody tr:last-child > * { border-bottom: 0; }
+#jt-app .jt-fit__tbl thead th { background: var(--navy); color: #fff; font-weight: 800; }
+#jt-app .jt-fit__tbl tbody th { background: var(--lav2); font-weight: 800; color: var(--navy); width: 22%; }
+#jt-app .jt-fit__tbl td + td { border-inline-start: 1px solid var(--line); }
+#jt-app .jt-fit__tbl tbody th + td { border-inline-start: 1px solid var(--line); }
+#jt-app .jt-fit__cards { display: none; }
+@media (max-width: 700px) {
+  #jt-app .jt-prose table.jt-fit__tbl { display: none; }
+  #jt-app .jt-fit__cards { display: grid; gap: 12px; }
+  #jt-app .jt-fit__card { border: 1px solid var(--line); border-radius: var(--r2); padding: 14px 16px; background: #fff; }
+  #jt-app .jt-fit__ct { font-weight: 800; font-size: 17px; color: var(--vd); }
+  #jt-app .jt-fit__card dl { margin: 8px 0 0; display: grid; gap: 2px; }
+  #jt-app .jt-fit__card dt { font-size: 13px; font-weight: 800; color: var(--ink3); margin-top: 8px; }
+  #jt-app .jt-fit__card dd { margin: 0; font-size: 15px; line-height: 1.65; }
+}
+#jt-app .jt-fit__jump { display: none; }
+@media (max-width: 700px) {
+  #jt-app .jt-fit__jump { display: flex; align-items: center; gap: 6px; margin-top: 14px; min-height: 48px; padding: 10px 14px; border-radius: var(--r3); background: var(--lav); color: var(--navy); font-weight: 700; font-size: 14.5px; }
+  #jt-app .jt-fit__jump b { color: var(--vd); font-weight: 800; }
+  #jt-app .jt-fit__jar { margin-inline-start: auto; width: 18px; height: 18px; color: var(--v); }
+  #jt-app .jt-fit__jar svg { width: 18px; height: 18px; display: block; }
+}

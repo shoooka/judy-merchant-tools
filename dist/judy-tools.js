@@ -1,4 +1,4 @@
-/* JUDY - MERCHANT TOOLS bundle, built 2026-11-25T11:28 */
+/* JUDY - MERCHANT TOOLS bundle, built 2026-11-28T08:27 */
 
 /* ---- src/icons.js ---- */
 /* icons: one stroke family (24px grid, 1.9 stroke, round caps), plus the real WhatsApp mark */
@@ -41,6 +41,9 @@
     percent: S('<path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.2"/><circle cx="17" cy="17" r="2.2"/>'),
     bundle: S('<path d="M12 3l8 4-8 4-8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 17l8 4 8-4"/>'),
     calendar: S('<rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/><path d="M12 14v3M10.5 15.5h3"/>'),
+    fit: S('<path d="M12 3v18"/><path d="M5 5.5h10.5L18 8l-2.5 2.5H5z"/><path d="M19 13H8.5L6 15.5 8.5 18H19z"/>'),
+    diy: S('<path d="M14.7 6.3a4 4 0 0 0-5.4 5.1L4 16.7 7.3 20l5.3-5.3a4 4 0 0 0 5.1-5.4l-2.6 2.6-2.5-.6-.6-2.5z"/>'),
+    pro: S('<circle cx="12" cy="8" r="3.6"/><path d="M5 20c.8-3.6 3.6-5.6 7-5.6s6.2 2 7 5.6"/>'),
     store: S('<path d="M4 9l1.5-5h13L20 9"/><path d="M4 9a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0A2.7 2.7 0 0 0 20 9"/><path d="M5 11.5V20h14v-8.5"/>'),
     wa: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 0 1 2.2 12C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.8-9.8 9.8zM20.4 3.6A11.8 11.8 0 0 0 12 .2C5.5.2.2 5.5.2 12c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.7c1.7.9 3.7 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.4-8.3z"/></svg>'
   };
@@ -1341,6 +1344,134 @@ window.JT_I18N.en = {
   D.hub.groups.google.line = "Check your store and your product, and preview it on Google before you save it.";
 })();
 
+/* ---- i18n/fit.ar.js ---- */
+/* Arabic words: tool 16 «وش الأنسب لمتجرك؟». Merged into JT_I18N.ar. Facts checked 27 Nov 2026 (research/tool16-facts-20261127.md). */
+(function () {
+  var D = window.JT_I18N.ar;
+  D.tools.fit = { name: 'وش الأنسب لمتجرك؟', short: 'تسويه بنفسك، ثيم جاهز، أو مع مصمم؟ 4 أسئلة وتعرف بصراحة', go: 'اعرف الأنسب لك', icon: 'fit', badge: 'new',
+    tags: 'كيف اصمم متجري في سلة تصميم متجر سلة بنفسي مجاني ثيم جاهز مصمم متاجر سلة اسعار تصميم كيف اسوي متجر',
+    h1: 'كيف أصمم متجري في سلة؟ بنفسي، بثيم جاهز، أو مع مصمم', lead: 'جاوب على 4 أسئلة وتقول لك جودي بصراحة وش يناسبك الحين، حتى لو كان الجواب إنك ما تحتاجنا.', say: 'بقول لك الصدق، حتى لو ما تحتاجنا', related: ['theme', 'cost', 'quote'] };
+  D.hub.lead = D.hub.lead.replace('15 أداة', '16 أداة');
+  D.fit = {
+    facts: ['مجانية', 'بدون تسجيل', '4 أسئلة بس'], jump: 'الأنسب لك الحين:',
+    pv: ['بنفسك', 'ثيم جاهز', 'مع مصمم'], pvSub: 'جواب صريح من 4 أسئلة',
+    inTitle: 'جاوب وتتغير النتيجة معك',
+    q: { stage: 'وين وصلت؟', time: 'كم وقت عندك للمتجر؟', budget: 'كم ميزانيتك للتصميم؟', need: 'وش أهم شي تبيه؟' },
+    o: {
+      stage: { 'new': 'لسه ما فتحت متجر', salla: 'متجري في سلة', other: 'متجري في منصة ثانية' },
+      time: { lots: 'عندي وقت وأحب أتعلم', some: 'ساعات قليلة بالأسبوع', none: 'ما عندي وقت' },
+      budget: { zero: 'ولا ريال الحين', low: 'حتى 400 ريال', mid: 'أكثر من 400 ريال' },
+      need: { sell: 'متجر مرتب يبيع', brand: 'شكل خاص بهويتي', special: 'ميزة خاصة' }
+    },
+    needHelp: 'الميزة الخاصة مثل: أكثر من بائع في متجر واحد، أو ربط الطلبات بنظام محاسبة.',
+    privacy: 'أجوبتك تبقى في جهازك، وما نطلب منك أي تسجيل.',
+    resT: 'الأنسب لك الحين', resSub: 'تتغير مع كل جواب',
+    road: { diy: 'تسويه بنفسك', theme: 'ثيم جاهز يكفيك', pro: 'مع مصمم' },
+    best: 'الأنسب لك', near: 'يناسبك بعد', some: 'مناسب شوي', not: 'مو الحين',
+    liveSay: 'الأنسب لك الحين: {r}',
+    say: {
+      diy: 'ما تحتاج تدفع على التصميم الحين. ابدأ بنفسك، وأدلتنا المجانية معك خطوة خطوة.',
+      theme: 'ما تحتاج مصمم في هالمرحلة. ثيم جاهز من متجر ثيمات سلة يكفيك، ووفر فلوسك للمنتجات والإعلان.',
+      pro: 'الأريح لك إن مصمم يسويه عنك، وتستلم متجرك جاهز للبيع.'
+    },
+    why: {
+      diy: {
+        stage: { 'new': 'تقدر تبدأ بباقة سلة بيسك المجانية، وتجهز منتجاتك وصورك قبل التوثيق' },
+        time: { lots: 'عندك وقت وتحب تتعلم، وهذا أهم شي إذا بتسويه بنفسك' },
+        budget: { zero: 'ميزانيتك للتصميم صفر الحين، والتصميم بنفسك ما يكلفك شي' }
+      },
+      theme: {
+        stage: { salla: 'متجرك في سلة، وتقدر تجرب لين 5 ثيمات عليه قبل ما تشتري (في الباقات المدفوعة)' },
+        time: { some: 'وقتك قليل، والثيم الجاهز يختصر عليك نص الشغل', none: 'ما عندك وقت كثير، والثيم الجاهز أسرع طريق' },
+        budget: { low: 'ميزانيتك تكفي: فيه ثيمات مجانية، ومتوسط سعر الثيم المدفوع حوالي 200 ريال حسب سلة' },
+        need: { sell: 'تبي متجر مرتب يبيع، والثيم الجاهز مجرب من أول يوم' }
+      },
+      pro: {
+        stage: { other: 'متجرك في منصة ثانية، وننقله لك إلى سلة', salla: 'متجرك موجود، ونعيد تصميمه بدل ما تبدأ من الصفر' },
+        time: { none: 'ما عندك وقت، فالأريح أحد يسويه عنك وتستلمه جاهز' },
+        budget: { mid: 'ميزانيتك تغطي تصميم كامل' },
+        need: { brand: 'تبي شكل خاص بهويتك، وهذا شغل مصمم' }
+      }
+    },
+    special: { t: 'الميزة الخاصة ما يضيفها ثيم ولا مصمم', p: 'أشياء مثل أكثر من بائع في متجر واحد، أو إرسال كل طلب لنظام المحاسبة، أو تغيير خطوات صفحة الدفع، تحتاج تطبيق من متجر تطبيقات سلة أو مطور تطبيقات. ابدأ فيها أول، والتصميم نقدر نساعدك فيه بعدها.' },
+    guidesT: 'أدلة مجانية تبدأ فيها',
+    guides: { checklist: 'قائمة المتجر الاحترافي في سلة', theme: 'كيف تختار ثيم سلة', photo: 'تصوير منتجاتك بالجوال', home: 'ترتيب أقسام الصفحة الرئيسية' },
+    diyBtn: 'تصفح أدوات التاجر المجانية',
+    themePlan: 'انتبه: اختيار ثيم من متجر الثيمات يحتاج باقة سلة بلس أو أعلى، حسب جدول باقات سلة.',
+    themeBtn: 'اختر ثيمك مع جودي', frontBtn: 'نرتب لك الواجهة',
+    proBtn: { basic: 'تصفح الباقة الأساسية', redesign: 'تصفح إعادة التصميم', move: 'تصفح نقل متجرك إلى سلة' },
+    redesignFits: 'إعادة تصميم متجرك تدخل في ميزانيتك، وأوفر من البداية من الصفر', overBudget: 'انتبه: السعر فوق الميزانية اللي اخترتها، فاحسبها قبل ما تقرر',
+    pkgBtn: 'قارن الباقات', costBtn: 'احسب تكلفة متجرك',
+    howT: 'كيف نختار لك؟',
+    how: ['كل جواب يعطي نقاط لكل طريق: وين وصلت، ووقتك، وميزانيتك، ووش تبي.', 'الطريق اللي ياخذ أكثر نقاط هو الأنسب لك، وإذا تساووا نختار لك الأرخص.', 'إذا ما تحتاج مصمم نقولها لك بصراحة، وإذا احتجتنا بعدين حنا موجودين.'],
+    nextT: 'محتار بعد؟ اسأل جودي', nextP: 'استشارة مجانية لمتجرك: نسمع منك ونقول لك وش الخطوة الجاية، بدون أي التزام.', nextBtn: 'اطلب الاستشارة المجانية', nextWa: 'السلام عليكم، جربت أداة وش الأنسب لمتجرك وأبي استشارة مجانية'
+  };
+})();
+
+/* ---- i18n/fit.en.js ---- */
+/* English words: tool 16 «Which road fits your store?». Merged into JT_I18N.en. */
+(function () {
+  var D = window.JT_I18N.en; if (!D) return;
+  D.tools.fit = { name: 'Which road fits your store?', short: 'Do it yourself, a ready theme, or a designer? 4 questions and an honest answer', go: 'Find your road', icon: 'fit', badge: 'new',
+    tags: 'design my salla store myself free ready theme salla store designer design price how to build a store',
+    h1: 'How should you design your Salla store? Yourself, a ready theme, or a designer', lead: 'Answer 4 questions and Judy tells you honestly what fits you right now, even when the answer is that you do not need us.', say: "I'll tell you the truth, even if you don't need us", related: ['theme', 'cost', 'quote'] };
+  D.hub.lead = D.hub.lead.replace('15 tools', '16 tools');
+  D.fit = {
+    facts: ['Free', 'No sign-up', 'Just 4 questions'], jump: 'Best for you now:',
+    pv: ['Yourself', 'Ready theme', 'Designer'], pvSub: 'An honest answer from 4 questions',
+    inTitle: 'Answer and the result moves with you',
+    q: { stage: 'Where are you now?', time: 'How much time do you have for the store?', budget: 'What is your design budget?', need: 'What matters most to you?' },
+    o: {
+      stage: { 'new': 'No store yet', salla: 'My store is on Salla', other: 'My store is on another platform' },
+      time: { lots: 'I have time and like to learn', some: 'A few hours a week', none: 'No time' },
+      budget: { zero: 'Nothing for now', low: 'Up to 400 SAR', mid: 'More than 400 SAR' },
+      need: { sell: 'A tidy store that sells', brand: 'A look of my own', special: 'A special feature' }
+    },
+    needHelp: 'A special feature means things like several sellers in one store, or sending orders to an accounting system.',
+    privacy: 'Your answers stay on your device, and there is no sign-up.',
+    resT: 'Best for you now', resSub: 'Changes with every answer',
+    road: { diy: 'Do it yourself', theme: 'A ready theme is enough', pro: 'With a designer' },
+    best: 'Best for you', near: 'Also fits', some: 'Fits a little', not: 'Not now',
+    liveSay: 'Best for you now: {r}',
+    say: {
+      diy: 'You do not need to pay for design now. Start yourself, and our free guides walk you through it step by step.',
+      theme: 'You do not need a designer at this stage. A ready theme from the Salla theme store is enough, so keep your money for products and ads.',
+      pro: 'The easiest road for you is a designer who builds it, and you receive your store ready to sell.'
+    },
+    why: {
+      diy: {
+        stage: { 'new': 'You can start on the free Salla Basic plan and prepare your products and photos before verification' },
+        time: { lots: 'You have time and like to learn, which matters most when you do it yourself' },
+        budget: { zero: 'Your design budget is zero for now, and doing it yourself costs nothing' }
+      },
+      theme: {
+        stage: { salla: 'Your store is on Salla, and you can try up to 5 themes on it before you buy (on paid plans)' },
+        time: { some: 'Your time is short, and a ready theme saves you half the work', none: 'You have little time, and a ready theme is the fastest road' },
+        budget: { low: 'Your budget is enough: there are free themes, and Salla says a paid theme costs about 200 SAR on average' },
+        need: { sell: 'You want a tidy store that sells, and a ready theme is tested from day one' }
+      },
+      pro: {
+        stage: { other: 'Your store is on another platform, and we move it to Salla for you', salla: 'Your store exists, so we redesign it instead of starting from zero' },
+        time: { none: 'You have no time, so the easiest road is someone who builds it for you' },
+        budget: { mid: 'Your budget covers a full design' },
+        need: { brand: 'You want a look of your own, and that is a designer job' }
+      }
+    },
+    special: { t: 'A special feature is not something a theme or a designer adds', p: 'Things like several sellers in one store, sending every order to your accounting system, or changing the checkout steps need an app from the Salla app store or a Salla app developer. Start there, and we can help with the design after.' },
+    guidesT: 'Free guides to start with (in Arabic)',
+    guides: { checklist: 'The professional Salla store checklist', theme: 'How to choose a Salla theme', photo: 'Product photos with your phone', home: 'Ordering your home page sections' },
+    diyBtn: 'Browse the free merchant tools',
+    themePlan: 'Note: picking a theme from the theme store needs the Salla Plus plan or higher, according to Salla’s plan table.',
+    themeBtn: 'Pick your theme with Judy', frontBtn: 'We tidy your storefront',
+    proBtn: { basic: 'Browse the basic package', redesign: 'Browse the redesign', move: 'Browse moving your store to Salla' },
+    redesignFits: 'A redesign of your store fits your budget, and costs less than starting from zero', overBudget: 'Note: the price is above the budget you picked, so work it out before you decide',
+    pkgBtn: 'Compare packages', costBtn: 'Work out your store cost',
+    howT: 'How do we choose?',
+    how: ['Every answer gives points to each road: where you are, your time, your budget and what you want.', 'The road with the most points fits you best, and on a tie we pick the cheaper one for you.', 'If you do not need a designer we say so plainly, and we are here if you need us later.'],
+    nextT: 'Still unsure? Ask Judy', nextP: 'A free consultation for your store: we listen and tell you the next step, with no commitment.', nextBtn: 'Book the free consultation', nextWa: 'Hello, I tried the which-road-fits-your-store tool and would like a free consultation'
+  };
+})();
+
 /* ---- src/data/themes.js ---- */
 /* Salla theme store data, read 2026-11-22 from salla.com/themes (research/facts-20261122.md). [id, name, developer, shown price SAR, rating, ratings count, demo store categories, by Salla] */
 window.JT_THEMES = [[1375036016, "رائد", "سلة", 0, 4.5, 2, ["electronics"], 1], [946727618, "كليك", "سلة", 0, 4.9, 1140, ["home"], 1], [1661298851, "عطاء", "سلة", 0, 4.9, 28, ["charity"], 1], [1046112065, "وسام", "سلة", 228, 4.9, 166, ["home"], 1], [1355517291, "ماركت", "سلة", 228, 4.9, 20, ["grocery"], 1], [1307231275, "منيو", "سلة", 228, 4.9, 11, ["food"], 1], [1587789257, "رقمي", "سلة", 228, 5, 11, ["digital"], 1], [1248180887, "موعد", "سلة", 228, 4.5, 4, ["clinic"], 1], [520022191, "مُختلف", "سلة", 228, 4.9, 34, ["grocery"], 1], [170177462, "زين", "سلة", 228, 4.9, 45, ["electronics"], 1], [546250460, "امتياز", "سلة", 228, 4.6, 90, ["electronics"], 1], [3401524, "عالي", "مؤسسة عادل الجهمي لتقنية المعلومات", 296.4, 5, 1560, ["digital"], 0], [1777895842, "اروماتك", "أحمد عبدالغني", 330.6, 5, 4, ["beauty"], 0], [1399399001, "سيليا", "Selia Tech", 395.58, 5, 1391, ["fashion"], 0], [1499917793, "ملاك", "أفتر أدز", 342, 4.9, 1048, ["electronics"], 0], [137195413, "جلامور", "Madar Technical Solutions FZC", 285, 4.7, 815, ["gifts", "beauty", "home"], 0], [468249652, "لوفيزا", "Madar Technical Solutions FZC", 285, 4.8, 282, ["home"], 0], [1556551807, "فخامة", "الشريف بونعاس", 285, 4.7, 262, ["fashion", "electronics", "beauty", "home"], 0], [188267752, "ساجي", "Ahmed Abdel Hamid", 395.58, 5, 200, ["fashion", "gifts", "beauty", "digital"], 0], [1948506485, "متجر", "باسم تركي", 296.4, 4.9, 192, ["grocery", "gifts", "home"], 0], [1894386675, "يافا", "BAYO LTD", 285, 4.2, 152, ["electronics", "digital"], 0], [491378254, "بريستيج", "كرافو لتقنية المعلومات", 285, 4.6, 113, ["fashion", "electronics", "jewelry", "beauty"], 0], [1248491026, "بلور", "Madar Technical Solutions FZC", 285, 4.6, 101, ["electronics"], 0], [1448593138, "رناواي", "Madar Technical Solutions FZC", 467.4, 4.7, 88, ["fashion"], 0], [85911406, "علا", "كرافو لتقنية المعلومات", 296.4, 4.6, 85, ["fashion", "jewelry", "beauty", "home"], 0], [471614860, "قصص", "Madar Technical Solutions FZC", 285, 4.8, 77, ["books"], 0], [71816946, "كيان", "كرافو لتقنية المعلومات", 296.4, 4.7, 71, ["fashion", "electronics", "jewelry", "beauty"], 0]];
@@ -1377,13 +1508,13 @@ window.JT_THEMES_DATE = '2026-11-22';
       hub: 'point-both', season: 'idea-bulb', know: 'microphone', cta: 'thumbs-up', done: 'clapping',
       profit: 'calculator', ads: 'tablet-chart', offers: 'box-surprise', cost: 'blueprint',
       colors: 'painter', theme: 'idea-bulb', seasons: 'megaphone', check: 'magnifier', whatsapp: 'headset',
-      prompts: 'vr', google: 'chart-board', vat: 'card-pay', policy: 'umbrella', quote: 'cart', product: 'wand',
+      prompts: 'vr', google: 'chart-board', vat: 'card-pay', policy: 'umbrella', quote: 'cart', product: 'wand', fit: 'clipboard',
       g_start: 'blueprint', g_ready: 'painter', g_price: 'calculator', g_market: 'megaphone', g_google: 'magnifier'
     },
     // her real services (prices read from the store 2026-11-22)
     svc: {
       basic: { id: 1514969843, price: 499 }, silver: { id: 837163313, price: 799 }, gold: { id: 1571309363, price: 999 },
-      redesign: { id: 955821044, price: 350 }, front: { id: 467939401, price: 99 }, care: { id: 245739294, price: 25 }, seo: { id: 1681749402, price: 499 }, geo: { id: 804605573, price: 599 },
+      redesign: { id: 955821044, price: 350 }, move: { id: 522556591, price: 499 }, front: { id: 467939401, price: 99 }, care: { id: 245739294, price: 25 }, seo: { id: 1681749402, price: 499 }, geo: { id: 804605573, price: 599 },
       snap: { id: 698503056, price: 299 }, gads: { id: 900983740, price: 299 }, social: { id: 675496799, price: 300 },
       consult: { id: 408047677, price: 0 }, review: { id: 1069491163, price: 0 }, wa: { id: 1518367887, price: 0 }, ugc: { id: 1687798457, price: 35 }, words: { id: 39542453, price: 45 }, motion: { id: 1181924747, price: 75 },
       packages: { page: 1085189397 }, prices: { page: 1673610507 }
@@ -1624,7 +1755,7 @@ window.JT_THEMES_DATE = '2026-11-22';
           h('a', { class: 'jt-back', href: JT.pageUrl('hub') }, [h('span', { class: 'jt-arr jt-arr--back', html: JT.svg('arrow'), 'aria-hidden': 'true' }), T('common.allTools')]),
           title,
           h('p', { class: 'jt-lead', text: t.lead }),
-          h('ul', { class: 'jt-facts' }, T(key === 'check' || key === 'product' ? key + '.facts' : 'common.facts').map(function (f) { return h('li', {}, [h('span', { class: 'jt-ic', html: JT.svg('check'), 'aria-hidden': 'true' }), f]); })),
+          h('ul', { class: 'jt-facts' }, T(key === 'check' || key === 'product' || key === 'fit' ? key + '.facts' : 'common.facts').map(function (f) { return h('li', {}, [h('span', { class: 'jt-ic', html: JT.svg('check'), 'aria-hidden': 'true' }), f]); })),
           JT.needStore ? JT.needStore() : null
         ]),
         h('div', { class: 'jt-thero__judy' }, [h('p', { class: 'jt-say', text: t.say }), JT.img(key, 'jt-thero__img')])
@@ -1833,7 +1964,7 @@ window.JT_THEMES_DATE = '2026-11-22';
 (function () {
   var JT = window.JT, h = JT.h, T = JT.T;
   JT.GROUPS = [
-    { k: 'start', tools: ['cost', 'quote', 'theme'] },
+    { k: 'start', tools: ['fit', 'cost', 'quote', 'theme'] },
     { k: 'ready', tools: ['colors', 'policy', 'vat'] },
     { k: 'price', tools: ['profit', 'ads', 'offers'] },
     { k: 'market', tools: ['seasons', 'whatsapp', 'prompts'] },
@@ -4509,6 +4640,128 @@ window.JT_THEMES_DATE = '2026-11-22';
         JT.announce(T('product.resT', { a: r.ok, b: r.all }));
         card.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
       }
+    }
+  };
+})();
+
+/* ---- src/tools/fit.js ---- */
+/* tool 16 «وش الأنسب لمتجرك؟»: 4 questions -> the honest road: do it yourself, a ready theme, or a designer.
+   The result card moves with every answer (look A, owner's pick 27 Nov 2026). It must say plainly when Judy is NOT the answer. */
+(function () {
+  var JT = window.JT, h = JT.h, T = JT.T;
+  var Q = ['stage', 'time', 'budget', 'need'];
+  var OPT = { stage: ['new', 'salla', 'other'], time: ['lots', 'some', 'none'], budget: ['zero', 'low', 'mid'], need: ['sell', 'brand', 'special'] };
+  // points per answer for [diy, theme, pro]; a tie goes to the cheaper road
+  var W = {
+    stage: { 'new': [1, 1, 0], salla: [0, 1, 1], other: [0, 0, 2] },
+    time: { lots: [3, 1, 0], some: [0, 2, 1], none: [-3, 1, 3] },
+    budget: { zero: [3, 0, -3], low: [1, 3, 0], mid: [0, 1, 3] },
+    need: { sell: [1, 2, 0], brand: [-1, 0, 3], special: [0, 0, 1] }
+  };
+  var ROADS = ['diy', 'theme', 'pro'];
+  JT.fitScore = function (a) {
+    var s = [0, 0, 0];
+    Q.forEach(function (q) { var w = W[q][a[q]]; for (var i = 0; i < 3; i++) s[i] += w[i]; });
+    // up to 400 SAR: a redesign of a Salla store fits it, a full new design or a move does not
+    if (a.budget === 'low') s[2] += a.stage === 'salla' ? 2 : -2;
+    var win = 0; for (var i = 1; i < 3; i++) if (s[i] > s[win]) win = i;
+    return { s: s, win: ROADS[win] };
+  };
+  var ART = 'https://judymarketing.com/ar/blog/';
+  var GUIDES = [['checklist', 'professional-salla-store-checklist/a-284347411'], ['theme', 'how-to-choose-salla-theme/a-510809572'], ['photo', 'product-photography-with-phone/a-335721191'], ['home', 'salla-homepage-sections-order/a-1751086309']];
+
+  JT.tools.fit = {
+    noLead: true,
+    preview: function () {
+      return h('div', {}, [h('div', { class: 'jt-pv__fit' }, T('fit.pv').map(function (t, i) { return h('span', { class: i === 1 ? 'is-on' : '', text: t }); })), h('p', { class: 'jt-pv__s', style: 'margin-top:8px', text: T('fit.pvSub') })]);
+    },
+    render: function (el) {
+      var saved = JT.store.get('fit') || {};
+      var segs = {};
+      var inputs = h('div', { class: 'jt-card jt-card--in jt-fit__in' }, [h('h2', { class: 'jt-card__t', text: T('fit.inTitle') })]);
+      Q.forEach(function (q) {
+        var def = { stage: 'new', time: 'some', budget: 'low', need: 'sell' }[q];
+        segs[q] = JT.seg({ id: 'fit-' + q, label: T('fit.q.' + q), value: OPT[q].indexOf(saved[q]) >= 0 ? saved[q] : def, options: OPT[q].map(function (o) { return [o, T('fit.o.' + q + '.' + o)]; }), help: q === 'need' ? T('fit.needHelp') : null, onChange: run });
+        inputs.appendChild(segs[q].el);
+      });
+      inputs.appendChild(h('p', { class: 'jt-help', text: T('fit.privacy') }));
+      // phone: the result sits under the questions, so a short line says it and leads down to it
+      var jump = h('a', { class: 'jt-fit__jump', href: '#jt-fit-res' });
+      inputs.appendChild(jump);
+
+      var note = h('div', { class: 'jt-fit__note', hidden: true });
+      var lanes = h('ol', { class: 'jt-fit__lanes' });
+      var res = h('div', { class: 'jt-card jt-card--res jt-fit__res', id: 'jt-fit-res' }, [
+        h('div', { class: 'jt-fit__head' }, [h('h2', { class: 'jt-card__t', text: T('fit.resT') }), h('p', { class: 'jt-help', text: T('fit.resSub') })]),
+        note, lanes, JT.how(T('fit.howT'), T('fit.how'))
+      ]);
+      el.appendChild(h('div', { class: 'jt-tool__grid jt-fit' }, [inputs, res]));
+      el.appendChild(JT.nextStep({ title: T('fit.nextT'), text: T('fit.nextP'), btn: T('fit.nextBtn'), svc: 'consult', href: JT.prod('consult'), wa: T('fit.nextWa') }));
+
+      var last = '';
+      function run() {
+        var a = {}; Q.forEach(function (q) { a[q] = segs[q].get(); });
+        JT.store.set('fit', a);
+        var r = JT.fitScore(a), top = Math.max.apply(null, r.s);
+        // honest notes that change the answer itself
+        note.innerHTML = ''; note.hidden = true;
+        if (a.need === 'special') { note.hidden = false; note.appendChild(h('p', { class: 'jt-fit__nt', text: T('fit.special.t') })); note.appendChild(h('p', { text: T('fit.special.p') })); }
+        lanes.innerHTML = '';
+        ROADS.forEach(function (k, i) {
+          var s = r.s[i], win = k === r.win;
+          var w = Math.max(8, Math.min(100, Math.round(10 + (s + 6) / 17 * 90)));
+          var state = win ? null : s >= top - 2 ? T('fit.near') : s >= 2 ? T('fit.some') : T('fit.not');
+          var li = h('li', { class: 'jt-fit__lane' + (win ? ' is-win' : ' is-dim') }, [
+            h('div', { class: 'jt-fit__top' }, [
+              h('span', { class: 'jt-fit__name' }, [h('span', { class: 'jt-fit__ic', html: JT.svg({ diy: 'diy', theme: 'theme', pro: 'pro' }[k]), 'aria-hidden': 'true' }), T('fit.road.' + k)]),
+              win ? h('span', { class: 'jt-tag jt-tag--hot', text: T('fit.best') }) : h('span', { class: 'jt-fit__st', text: state })
+            ]),
+            h('div', { class: 'jt-fit__bar', 'aria-hidden': 'true' }, [h('b', { style: 'width:' + w + '%' })])
+          ]);
+          if (win) li.appendChild(more(k, a));
+          lanes.appendChild(li);
+        });
+        jump.innerHTML = ''; jump.appendChild(h('span', { text: T('fit.jump') })); jump.appendChild(h('b', { text: T('fit.road.' + r.win) })); jump.appendChild(h('span', { class: 'jt-fit__jar', html: JT.svg('chev'), 'aria-hidden': 'true' }));
+        if (r.win !== last) { last = r.win; var live = document.getElementById('jt-live'); if (live) live.textContent = T('fit.liveSay', { r: T('fit.road.' + r.win) }); }
+      }
+      // the winning road: why (from her own answers), what it really costs, and the next step
+      function more(k, a) {
+        var why = [], all = T('fit.why')[k] || {};
+        Q.forEach(function (q) { var t = all[q] && all[q][a[q]]; if (t) why.push(t); });
+        if (k === 'pro' && a.budget === 'low') why.unshift(a.stage === 'salla' ? T('fit.redesignFits') : T('fit.overBudget'));
+        var box = h('div', { class: 'jt-fit__more' }, [h('p', { class: 'jt-fit__lead', text: T('fit.say.' + k) }), why.length ? h('ul', { class: 'jt-fit__why' }, why.slice(0, 3).map(function (t) { return h('li', { text: t }); })) : null]);
+        var acts = h('div', { class: 'jt-actions' });
+        if (k === 'diy') {
+          box.appendChild(h('p', { class: 'jt-mini-t', text: T('fit.guidesT') }));
+          box.appendChild(h('ul', { class: 'jt-fit__links' }, GUIDES.map(function (g) { return h('li', {}, [h('a', { href: ART + g[1], text: T('fit.guides.' + g[0]) })]); })));
+          acts.appendChild(JT.btn(T('fit.diyBtn'), { href: JT.pageUrl('hub') }));
+        } else if (k === 'theme') {
+          box.appendChild(h('p', { class: 'jt-fit__warn', text: T('fit.themePlan') }));
+          if (JT.fixLine) { var fl = JT.fixLine('front'); if (fl) box.appendChild(fl); }
+          acts.appendChild(JT.btn(T('fit.themeBtn'), { href: JT.pageUrl('theme') }));
+          acts.appendChild(JT.btn(T('fit.frontBtn'), { kind: 'soft', href: JT.prod('front') }));
+        } else {
+          var svc = a.stage === 'other' ? 'move' : a.stage === 'salla' ? 'redesign' : 'basic';
+          if (JT.fixLine) { var f2 = JT.fixLine(svc); if (f2) box.appendChild(f2); }
+          acts.appendChild(JT.btn(T('fit.proBtn.' + svc), { href: JT.prod(svc) }));
+          acts.appendChild(JT.btn(T('fit.pkgBtn'), { kind: 'soft', href: '/' + JT.lang + '/-/page-' + JT.CFG.svc.packages.page }));
+        }
+        acts.appendChild(JT.btn(T('fit.costBtn'), { kind: 'soft', href: JT.pageUrl('cost') }));
+        box.appendChild(acts);
+        return box;
+      }
+      run();
+    },
+    // the page's comparison table stays as text for Google; on a phone it is also shown as one card per road
+    after: function (root) {
+      var tb = root.querySelector('.jt-know table'); if (!tb) return;
+      tb.classList.add('jt-fit__tbl');
+      var heads = [].map.call(tb.querySelectorAll('thead th'), function (th) { return th.textContent.trim(); });
+      var rows = [].map.call(tb.querySelectorAll('tbody tr'), function (tr) { return [].map.call(tr.children, function (c) { return c.textContent.trim(); }); });
+      var cards = h('div', { class: 'jt-fit__cards' }, heads.slice(1).map(function (t, i) {
+        return h('div', { class: 'jt-fit__card' }, [h('p', { class: 'jt-fit__ct', text: t }), h('dl', {}, rows.reduce(function (a, r) { a.push(h('dt', { text: r[0] })); a.push(h('dd', { text: r[i + 1] || '' })); return a; }, []))]);
+      }));
+      tb.parentNode.insertBefore(cards, tb.nextSibling);
     }
   };
 })();
